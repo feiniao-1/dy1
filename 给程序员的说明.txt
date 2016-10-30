@@ -1,0 +1,4 @@
+1，jx.sql是mysql数据库文件，可以导入mysql数据库
+2，src/c3p0-config.xml是数据库链接配置
+3，src/common.properties里配置文件上传的保存路径和前缀
+4，WebContent/config.json配置富文本编辑器里图片上传的路径imageUrlPrefix

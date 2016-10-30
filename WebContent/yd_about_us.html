@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="description" content="饺耳世家">
+		<meta name="keywords" content="饺耳世家、美食">
+		<title>关于饺耳</title>
+		<link href="images/top-icon.png" type="image/x-icon" rel="shortcut icon" />	
+		<link href="css/m-style.css" rel="stylesheet">
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<style>
+		html,body{background: #F0F0F0; width: 100%; height: 100%;}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="head head-rel">
+				<p>关于饺耳</p>
+				<a href="yd_front_index.jsp" class="back02"><img src="images/back.png"></a>
+			</div>
+			<!--关于我们页面-->
+			<div class="our">
+				<div class="our-list">
+					<h3>公司简介</h3>
+					<img src="images/us01_03.jpg">
+					<p class="txt-indent">饺耳世家，是全国首家致力于传承千年养生饮食文化的饺子店。 馅料制作均选用新鲜的原食材，进行合理的营养搭配。以老北京宫廷御厨的秘制配方为基础, 自第一道工序开始，从皮到馅全部纯手工制作，为您奉上传统地道的纯手工水饺。 我们不单纯注重于饺子的口感与味道，同时注重于饺子的营养与功效。让饺子延续其最初诞生的意义， 让大家享受美味的同时养胃健脾，温补身体，吃的美味也吃得健康。 </p>
+				</div>
+				<div class="our-list">
+					<h3>企业文化</h3>
+					<h4>(1)企业宗旨</h4>
+					<p class="mb5">诚实守信诚实守信诚实守信诚实守信诚实守信诚实守信诚实守信</p>
+					<h4>(2)企业环境</h4>
+					<ul class="double-pic clearfix">
+						<li><img src="images/us02_03.jpg"></li>
+						<li><img src="images/us03_03.jpg"></li>
+					</ul>
+					<h4>(3)企业资质</h4>
+					<ul class="double-pic clearfix">
+						<li><img src="images/us07.jpg"></li>
+						<li><img src="images/us07.jpg"></li>
+					</ul>
+				</div>
+				<div class="our-list">
+					<h3>线下活动</h3>
+					<ul class="double-pic clearfix">
+						<li><img src="images/us04_03.jpg"></li>
+						<li><img src="images/us05_03.jpg"></li>
+					</ul>
+				</div>
+				<div class="our-list">
+					<h3>人才招聘</h3>
+					<p>饺耳世家正在招聘以下岗位的小伙伴，加入“饺耳团队”来</p>
+					<h5>1、内容编辑:招聘人数：1-2人</h5>
+					<ul>
+						<li>岗位职责：</li>
+						<li>1、完成相关约稿、采访和文章撰写工作；</li>
+						<li>2、根据全球移动互联网行业热点，及时撰写文章；</li>
+						<li>3、编译外文；</li>
+						<li>4、完成交办的其他临时任务。</li>
+					</ul>
+					<p>联系人： 王经理 18910622378</p>
+				</div>
+				<div class="our-list">
+					<h3>联系我们</h3>
+					<ul>
+						<li>公司名称：饺耳世家</li>
+						<li>公司地址：北京市朝阳区朝阳路福福满街69号</li>
+						<li>联 系 人：张经理</li>
+						<li>联系电话：010-80440188</li>
+						<li>邮 箱：jiaoear@126.com</li>
+					</ul>
+					<img src="images/us06_03.jpg">
+				</div>
+			</div>
+			<!--返回顶部按钮-->
+			<div id="topcontrol" style="display:none; position: fixed; bottom: 180px; right: 0px; cursor: pointer; z-index: 119;" title="返回顶部">
+			<img style="width:36px; height:40px;" src="images/gotop.png">
+		    </div>
+		</div>	
+	</body>
+	<!--返回顶部js-->
+		<script>
+		$(function(e) {
+            var T=0;
+		    $(window).scroll(function(event) {
+		        T=$(window).scrollTop();
+		
+		        if(T>300)
+		        {
+		            $("#topcontrol").fadeIn();
+		        }
+		        else
+		        {
+		            $("#topcontrol").fadeOut();
+		        }
+		
+		    });
+		    $("#topcontrol").click(function(event) {
+		        $("body,html").stop().animate({"scrollTop":0},1000);//一秒钟时间回到顶部
+		    });
+      })
+	 </script>
+</html>

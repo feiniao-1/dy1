@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+.mainbox{ border:1px solid #e5e5e5; padding:20px 50px;}
+.mainbox h3.title{border-bottom:1px solid #e5e5e5; padding-bottom:15px; font-weight: bold; margin-bottom:20px!important;}
+.mainbox .botton-group{ margin-bottom:20px;}
+.mainbox .btn{width:6em; margin-right:30px;}
+.mainbox table{border:1px solid #e5e5e5;}
+.mainbox table th,.mainbox table td{ text-align:center;}
+.mainbox table td:nth-of-type(2){ text-align:left;}
+.mainbox .nav-page{text-align:center;}
+.mb10{ margin-bottom:10px;}
+.mb15{ margin-bottom:15px;}
+.mb20{ margin-bottom:20px;}
+.mainbox h5{ font-weight: bold;}
+.pagination > li.on > a{ background:#dd2727!important; color:#fff; border: 1px solid #dd2727;}
