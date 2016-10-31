@@ -352,7 +352,7 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 						<h5>菜品类别<span style="color:red;">*</span></h5>
 							<select name="productlei">
 								<option><%= menu.get(0).getStringView("productlei") %></option>
-								<option>特色水饺</option>
+								<option>特色锅底</option>
 								<option>开胃凉菜</option>
 								<option>精美热菜</option>
 								<option>酒水饮料</option>

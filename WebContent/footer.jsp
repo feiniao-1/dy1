@@ -28,7 +28,7 @@
         						<a href="#" target="_blank">XML</a>
         					</p>
         					<p>© Copyright 2008-2016. 京ICP备15008545号</p>
-        					<p>饺耳热线：010-80440188 / 010-80443266</p>
+        					<p>舵爷热线：010-80440188 / 010-80443266</p>
         					<p><a href="" target="_blank">技术支持：DESIGN BY IWISDOMS TEAM</a></p>
         					<div class="icon-link bdsharebuttonbox" data-tag="share_1">
 								<a style="background-image:url(img/wx-icon_03.png);" data-cmd="weixin"></a>

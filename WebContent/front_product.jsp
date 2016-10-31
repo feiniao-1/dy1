@@ -64,7 +64,7 @@ String searchtj;
 //) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 String leibie="";
 if(cailei==1){
-	leibie="特色水饺";
+	leibie="特色锅底";
 }
 if(cailei==2){
 	leibie="开胃凉菜";
@@ -241,7 +241,7 @@ if(<%=cailei%>==6){
 	}
  </script>
 			    <div class="course-slide">
-			    	<!--板块一部分开始 特色水饺-->
+			    	<!--板块一部分开始 特色锅底-->
 			    <%if(cailei==1){ %>
 
 			    	<div class="product-list">
@@ -277,17 +277,44 @@ if(<%=cailei%>==6){
 			    			
 			    		<!--分页内容标签开始-->
 								<div class="nav-page">
+								<%if(count_page>4){ %>
 								  <ul class="pagination">
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=<%=minus%>">&laquo;</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=0">1</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=1">2</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=2">3</a></li>
+								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=<%=minus%>">&laquo;</a></li>
+								    <%if(Integer.parseInt(index_page)<3) {%>
+								    <li id="t1"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=0">1</a></li>
+								    <li id="t2"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=1">2</a></li>
+								    <li id="t3"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=2">3</a></li>
+								    <%}else if((Integer.parseInt(index_page)>=3)&&(Integer.parseInt(index_page)<(count_page-3))){ %>
+								    <li id="t<%=Integer.parseInt(index_page)+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=<%=Integer.parseInt(index_page)%>"><%=Integer.parseInt(index_page)+1%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+2%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=<%=Integer.parseInt(index_page)+1%>"><%=Integer.parseInt(index_page)+2%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+3%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=<%=Integer.parseInt(index_page)+2%>"><%=Integer.parseInt(index_page)+3%></a></li>
+								    <%}else{ %>
+								    <li id="t<%=count_page-3%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=<%=count_page-4%>"><%=count_page-3%></a></li>
+								    <li id="t<%=count_page-2%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=<%=count_page-3%>"><%=count_page-2%></a></li>
+								    <li id="t<%=count_page-1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=<%=count_page-2%>"><%=count_page-1%></a></li>
+								    <%} %>
 								    <li><a>...</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=<%=count_page-1%>"><%=count_page%></a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=<%=count_page%>"><%=count_page+1%></a></li>
+								    <li id="t<%=count_page%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=<%=count_page-1%>"><%=count_page%></a></li>
+								    <li id="t<%=count_page+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=<%=count_page%>"><%=count_page+1%></a></li>
 								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=<%=plus%>">&raquo;</a></li>
 								  </ul>
+								  <%}else{ %>
+								  <ul class="pagination">
+								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=<%=minus%>">&laquo;</a></li>
+								    <%for(int i=0;i<=count_page;i++){ %>
+								    <li id="t<%=i+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=<%=i%>"><%=i+1%></a></li>
+								    <%} %>
+								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=1&page=<%=plus%>">&raquo;</a></li>
+								  </ul>
+								  <%} %>
 								</div>
+<script type="text/javascript">
+<%for(int j=0;j<=count_page;j++){ %>
+	if((<%=cailei%>==1)&&(<%=Integer.parseInt(index_page)%>==<%=j%>)){
+		$("#t<%=j+1%>").addClass("on"); 
+	}
+	<%} %>
+</script>
 						<!--分页内容标签结束-->
 			    	</div>
 					<%}%>
@@ -326,17 +353,44 @@ if(<%=cailei%>==6){
 			    		<%if(total>9){ %>
 			    		<!--分页内容标签开始-->
 								<div class="nav-page">
+								<%if(count_page>4){ %>
 								  <ul class="pagination">
 								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=<%=minus%>">&laquo;</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=0">1</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=1">2</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=2">3</a></li>
+								    <%if(Integer.parseInt(index_page)<3) {%>
+								    <li id="t1"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=0">1</a></li>
+								    <li id="t2"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=1">2</a></li>
+								    <li id="t3"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=2">3</a></li>
+								    <%}else if((Integer.parseInt(index_page)>=3)&&(Integer.parseInt(index_page)<(count_page-3))){ %>
+								    <li id="t<%=Integer.parseInt(index_page)+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=<%=Integer.parseInt(index_page)%>"><%=Integer.parseInt(index_page)+1%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+2%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=<%=Integer.parseInt(index_page)+1%>"><%=Integer.parseInt(index_page)+2%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+3%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=<%=Integer.parseInt(index_page)+2%>"><%=Integer.parseInt(index_page)+3%></a></li>
+								    <%}else{ %>
+								    <li id="t<%=count_page-3%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=<%=count_page-4%>"><%=count_page-3%></a></li>
+								    <li id="t<%=count_page-2%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=<%=count_page-3%>"><%=count_page-2%></a></li>
+								    <li id="t<%=count_page-1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=<%=count_page-2%>"><%=count_page-1%></a></li>
+								    <%} %>
 								    <li><a>...</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=<%=count_page-1%>"><%=count_page%></a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=<%=count_page%>"><%=count_page+1%></a></li>
+								    <li id="t<%=count_page%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=<%=count_page-1%>"><%=count_page%></a></li>
+								    <li id="t<%=count_page+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=<%=count_page%>"><%=count_page+1%></a></li>
 								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=<%=plus%>">&raquo;</a></li>
 								  </ul>
+								  <%}else{ %>
+								  <ul class="pagination">
+								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=<%=minus%>">&laquo;</a></li>
+								    <%for(int i=0;i<=count_page;i++){ %>
+								    <li id="t<%=i+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=<%=i%>"><%=i+1%></a></li>
+								    <%} %>
+								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=2&page=<%=plus%>">&raquo;</a></li>
+								  </ul>
+								  <%} %>
 								</div>
+<script type="text/javascript">
+<%for(int j=0;j<=count_page;j++){ %>
+	if((<%=cailei%>==2)&&(<%=Integer.parseInt(index_page)%>==<%=j%>)){
+		$("#t<%=j+1%>").addClass("on"); 
+	}
+	<%} %>
+</script>
 						<!--分页内容标签结束-->
 			    	</div>
 			    	<%} %>
@@ -375,17 +429,44 @@ if(<%=cailei%>==6){
 			    		<%if(total>9){ %>
 			    		<!--分页内容标签开始-->
 								<div class="nav-page">
+								<%if(count_page>4){ %>
 								  <ul class="pagination">
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=<%=minus%>">&laquo;</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=0">1</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=1">2</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=2">3</a></li>
+								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=<%=minus%>">&laquo;</a></li>
+								    <%if(Integer.parseInt(index_page)<3) {%>
+								    <li id="t1"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=0">1</a></li>
+								    <li id="t2"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=1">2</a></li>
+								    <li id="t3"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=2">3</a></li>
+								    <%}else if((Integer.parseInt(index_page)>=3)&&(Integer.parseInt(index_page)<(count_page-3))){ %>
+								    <li id="t<%=Integer.parseInt(index_page)+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=<%=Integer.parseInt(index_page)%>"><%=Integer.parseInt(index_page)+1%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+2%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=<%=Integer.parseInt(index_page)+1%>"><%=Integer.parseInt(index_page)+2%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+3%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=<%=Integer.parseInt(index_page)+2%>"><%=Integer.parseInt(index_page)+3%></a></li>
+								    <%}else{ %>
+								    <li id="t<%=count_page-3%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=<%=count_page-4%>"><%=count_page-3%></a></li>
+								    <li id="t<%=count_page-2%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=<%=count_page-3%>"><%=count_page-2%></a></li>
+								    <li id="t<%=count_page-1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=<%=count_page-2%>"><%=count_page-1%></a></li>
+								    <%} %>
 								    <li><a>...</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=<%=count_page-1%>"><%=count_page%></a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=<%=count_page%>"><%=count_page+1%></a></li>
+								    <li id="t<%=count_page%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=<%=count_page-1%>"><%=count_page%></a></li>
+								    <li id="t<%=count_page+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=<%=count_page%>"><%=count_page+1%></a></li>
 								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=<%=plus%>">&raquo;</a></li>
 								  </ul>
+								  <%}else{ %>
+								  <ul class="pagination">
+								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=<%=minus%>">&laquo;</a></li>
+								    <%for(int i=0;i<=count_page;i++){ %>
+								    <li id="t<%=i+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=<%=i%>"><%=i+1%></a></li>
+								    <%} %>
+								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=3&page=<%=plus%>">&raquo;</a></li>
+								  </ul>
+								  <%} %>
 								</div>
+<script type="text/javascript">
+<%for(int j=0;j<=count_page;j++){ %>
+	if((<%=cailei%>==3)&&(<%=Integer.parseInt(index_page)%>==<%=j%>)){
+		$("#t<%=j+1%>").addClass("on"); 
+	}
+	<%} %>
+</script>
 						<!--分页内容标签结束-->
 			    	</div>
 			    	<%} %>
@@ -424,17 +505,44 @@ if(<%=cailei%>==6){
 			    		<%if(total>9){ %>
 			    		<!--分页内容标签开始-->
 								<div class="nav-page">
+								<%if(count_page>4){ %>
 								  <ul class="pagination">
 								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=<%=minus%>">&laquo;</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=0">1</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=1">2</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=2">3</a></li>
+								    <%if(Integer.parseInt(index_page)<3) {%>
+								    <li id="t1"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=0">1</a></li>
+								    <li id="t2"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=1">2</a></li>
+								    <li id="t3"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=2">3</a></li>
+								    <%}else if((Integer.parseInt(index_page)>=3)&&(Integer.parseInt(index_page)<(count_page-3))){ %>
+								    <li id="t<%=Integer.parseInt(index_page)+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=<%=Integer.parseInt(index_page)%>"><%=Integer.parseInt(index_page)+1%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+2%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=<%=Integer.parseInt(index_page)+1%>"><%=Integer.parseInt(index_page)+2%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+3%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=<%=Integer.parseInt(index_page)+2%>"><%=Integer.parseInt(index_page)+3%></a></li>
+								    <%}else{ %>
+								    <li id="t<%=count_page-3%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=<%=count_page-4%>"><%=count_page-3%></a></li>
+								    <li id="t<%=count_page-2%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=<%=count_page-3%>"><%=count_page-2%></a></li>
+								    <li id="t<%=count_page-1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=<%=count_page-2%>"><%=count_page-1%></a></li>
+								    <%} %>
 								    <li><a>...</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=<%=count_page-1%>"><%=count_page%></a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=<%=count_page%>"><%=count_page+1%></a></li>
+								    <li id="t<%=count_page%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=<%=count_page-1%>"><%=count_page%></a></li>
+								    <li id="t<%=count_page+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=<%=count_page%>"><%=count_page+1%></a></li>
 								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=<%=plus%>">&raquo;</a></li>
 								  </ul>
+								  <%}else{ %>
+								  <ul class="pagination">
+								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=<%=minus%>">&laquo;</a></li>
+								    <%for(int i=0;i<=count_page;i++){ %>
+								    <li id="t<%=i+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=<%=i%>"><%=i+1%></a></li>
+								    <%} %>
+								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=4&page=<%=plus%>">&raquo;</a></li>
+								  </ul>
+								  <%} %>
 								</div>
+<script type="text/javascript">
+<%for(int j=0;j<=count_page;j++){ %>
+	if((<%=cailei%>==4)&&(<%=Integer.parseInt(index_page)%>==<%=j%>)){
+		$("#t<%=j+1%>").addClass("on"); 
+	}
+	<%} %>
+</script>
 						<!--分页内容标签结束-->
 			    	</div>
 			    	<%} %>
@@ -473,17 +581,44 @@ if(<%=cailei%>==6){
 			    		<%if(total>9){ %>
 			    		<!--分页内容标签开始-->
 								<div class="nav-page">
+								<%if(count_page>4){ %>
 								  <ul class="pagination">
 								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=<%=minus%>">&laquo;</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=0">1</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=1">2</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=2">3</a></li>
+								    <%if(Integer.parseInt(index_page)<3) {%>
+								    <li id="t1"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=0">1</a></li>
+								    <li id="t2"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=1">2</a></li>
+								    <li id="t3"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=2">3</a></li>
+								    <%}else if((Integer.parseInt(index_page)>=3)&&(Integer.parseInt(index_page)<(count_page-3))){ %>
+								    <li id="t<%=Integer.parseInt(index_page)+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=<%=Integer.parseInt(index_page)%>"><%=Integer.parseInt(index_page)+1%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+2%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=<%=Integer.parseInt(index_page)+1%>"><%=Integer.parseInt(index_page)+2%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+3%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=<%=Integer.parseInt(index_page)+2%>"><%=Integer.parseInt(index_page)+3%></a></li>
+								    <%}else{ %>
+								    <li id="t<%=count_page-3%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=<%=count_page-4%>"><%=count_page-3%></a></li>
+								    <li id="t<%=count_page-2%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=<%=count_page-3%>"><%=count_page-2%></a></li>
+								    <li id="t<%=count_page-1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=<%=count_page-2%>"><%=count_page-1%></a></li>
+								    <%} %>
 								    <li><a>...</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=<%=count_page-1%>"><%=count_page%></a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=<%=count_page%>"><%=count_page+1%></a></li>
+								    <li id="t<%=count_page%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=<%=count_page-1%>"><%=count_page%></a></li>
+								    <li id="t<%=count_page+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=<%=count_page%>"><%=count_page+1%></a></li>
 								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=<%=plus%>">&raquo;</a></li>
 								  </ul>
+								  <%}else{ %>
+								  <ul class="pagination">
+								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=<%=minus%>">&laquo;</a></li>
+								    <%for(int i=0;i<=count_page;i++){ %>
+								    <li id="t<%=i+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=<%=i%>"><%=i+1%></a></li>
+								    <%} %>
+								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=5&page=<%=plus%>">&raquo;</a></li>
+								  </ul>
+								  <%} %>
 								</div>
+<script type="text/javascript">
+<%for(int j=0;j<=count_page;j++){ %>
+	if((<%=cailei%>==5)&&(<%=Integer.parseInt(index_page)%>==<%=j%>)){
+		$("#t<%=j+1%>").addClass("on"); 
+	}
+	<%} %>
+</script>
 						<!--分页内容标签结束-->
 			    	</div>
 			    	<%} %>
@@ -521,17 +656,44 @@ if(<%=cailei%>==6){
 			    		</ul>
 			    		<!--分页内容标签开始-->
 								<div class="nav-page">
+								<%if(count_page>4){ %>
 								  <ul class="pagination">
 								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=<%=minus%>">&laquo;</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=0">1</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=1">2</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=2">3</a></li>
+								    <%if(Integer.parseInt(index_page)<3) {%>
+								    <li id="t1"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=0">1</a></li>
+								    <li id="t2"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=1">2</a></li>
+								    <li id="t3"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=2">3</a></li>
+								    <%}else if((Integer.parseInt(index_page)>=3)&&(Integer.parseInt(index_page)<(count_page-3))){ %>
+								    <li id="t<%=Integer.parseInt(index_page)+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=<%=Integer.parseInt(index_page)%>"><%=Integer.parseInt(index_page)+1%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+2%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=<%=Integer.parseInt(index_page)+1%>"><%=Integer.parseInt(index_page)+2%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+3%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=<%=Integer.parseInt(index_page)+2%>"><%=Integer.parseInt(index_page)+3%></a></li>
+								    <%}else{ %>
+								    <li id="t<%=count_page-3%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=<%=count_page-4%>"><%=count_page-3%></a></li>
+								    <li id="t<%=count_page-2%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=<%=count_page-3%>"><%=count_page-2%></a></li>
+								    <li id="t<%=count_page-1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=<%=count_page-2%>"><%=count_page-1%></a></li>
+								    <%} %>
 								    <li><a>...</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=<%=count_page-1%>"><%=count_page%></a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=<%=count_page%>"><%=count_page+1%></a></li>
+								    <li id="t<%=count_page%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=<%=count_page-1%>"><%=count_page%></a></li>
+								    <li id="t<%=count_page+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=<%=count_page%>"><%=count_page+1%></a></li>
 								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=<%=plus%>">&raquo;</a></li>
 								  </ul>
+								  <%}else{ %>
+								  <ul class="pagination">
+								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=<%=minus%>">&laquo;</a></li>
+								    <%for(int i=0;i<=count_page;i++){ %>
+								    <li id="t<%=i+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=<%=i%>"><%=i+1%></a></li>
+								    <%} %>
+								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=6&page=<%=plus%>">&raquo;</a></li>
+								  </ul>
+								  <%} %>
 								</div>
+<script type="text/javascript">
+<%for(int j=0;j<=count_page;j++){ %>
+	if((<%=cailei%>==6)&&(<%=Integer.parseInt(index_page)%>==<%=j%>)){
+		$("#t<%=j+1%>").addClass("on"); 
+	}
+	<%} %>
+</script>
 						<!--分页内容标签结束-->
 			    	</div>
 			    	<%} %>

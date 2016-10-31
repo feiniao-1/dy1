@@ -131,7 +131,7 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 	productname=new String(request.getParameter("productname").getBytes("iso-8859-1"),"utf-8");
 	productEname=new String(request.getParameter("productEname").getBytes("iso-8859-1"),"utf-8");
 	yprice=new String(request.getParameter("yprice").getBytes("iso-8859-1"),"utf-8");
-	content1=new String(request.getParameter("content1").getBytes("iso-8859-1"),"utf-8");
+	content1=param.get("content1");
 	content2=param.get("content2");
 	createtime=df.format(new Date());
 	count=new String("1");
@@ -317,7 +317,7 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 					<div class="form-group">
 						<h5>菜品类别<span style="color:red;">*</span></h5> 
 							<select name="productlei">
-								<option>特色水饺</option>
+								<option>特色锅底</option>
 								<option>开胃凉菜</option>
 								<option>精美热菜</option>		
 								<option>酒水饮料</option>

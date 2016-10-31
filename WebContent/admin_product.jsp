@@ -17,6 +17,8 @@
 <link rel="stylesheet" href="css/bootstrap.css"/>
 <link rel="stylesheet" href="css/backstage.css"/>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="layer/layer.js"></script>
 <%
 //获取当前url
 String path = request.getContextPath();
@@ -238,21 +240,46 @@ if((param.get("Action")!=null)&&(param.get("Action").equals("删除"))){
 				<!-- 表格 end -->
 				<!-- 分页start -->
 				<%if((searchnr==null)||(searchnr=="")){ %>
-				<div class="nav-page">
-								    <ul class="pagination">
-								    <li><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=<%=minus%>">«</a></li>
-								    <li><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=0">1</a></li>
-								    <li><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=1">2</a></li>
-								    <%if(pagetotal>=3){ %>
-								    <li><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=2">3</a></li>
+								<div class="nav-page">
+								<%if(pagetotal>4){ %>
+								  <ul class="pagination">
+								    <li><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=<%=minus%>">&laquo;</a></li>
+								    <%if(intdhpage<3) {%>
+								    <li id="t1"><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=0">1</a></li>
+								    <li id="t2"><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=1">2</a></li>
+								    <li id="t3"><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=2">3</a></li>
+								    <%}else if((intdhpage>=3)&&(intdhpage<(pagetotal-3))){ %>
+								    <li id="t<%=intdhpage+1%>"><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=<%=intdhpage%>"><%=intdhpage+1%></a></li>
+								    <li id="t<%=intdhpage+2%>"><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=<%=intdhpage+1%>"><%=intdhpage+2%></a></li>
+								    <li id="t<%=intdhpage+3%>"><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=<%=intdhpage+2%>"><%=intdhpage+3%></a></li>
+								    <%}else{ %>
+								    <li id="t<%=pagetotal-3%>"><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=<%=pagetotal-4%>"><%=pagetotal-3%></a></li>
+								    <li id="t<%=pagetotal-2%>"><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=<%=pagetotal-3%>"><%=pagetotal-2%></a></li>
+								    <li id="t<%=pagetotal-1%>"><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=<%=pagetotal-2%>"><%=pagetotal-1%></a></li>
 								    <%} %>
 								    <li><a>...</a></li>
-								    <li><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=<%=pagetotal-1%>"><%=pagetotal%></a></li>
-								    <li><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=<%=pagetotal%>"><%=pagetotal+1%></a></li>
-								    <li><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=<%=plus%>">»</a></li>
+								    <li id="t<%=pagetotal%>"><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=<%=pagetotal-1%>"><%=pagetotal%></a></li>
+								    <li id="t<%=pagetotal+1%>"><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=<%=pagetotal%>"><%=pagetotal+1%></a></li>
+								    <li><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=<%=plus%>">&raquo;</a></li>
 								  </ul>
-				</div>
-				<%} %>
+								  <%}else{ %>
+								  <ul class="pagination">
+								    <li><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=<%=minus%>">&laquo;</a></li>
+								    <%for(int i=0;i<=pagetotal;i++){ %>
+								    <li id="t<%=i+1%>"><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=<%=i%>"><%=i+1%></a></li>
+								    <%} %>
+								    <li><a href="${pageContext.request.contextPath}/admin_product.jsp?paixu=<%=param.get("paixu") %>&page=<%=plus%>">&raquo;</a></li>
+								  </ul>
+								  <%} %>
+								</div>
+<script type="text/javascript">
+<%for(int j=0;j<=pagetotal;j++){ %>
+	if(<%=intdhpage%>==<%=j%>){
+		$("#t<%=j+1%>").addClass("on"); 
+	}
+	<%} %>
+</script>
+<%} %>
 				<!-- 分页end -->
   </div>
 </div>

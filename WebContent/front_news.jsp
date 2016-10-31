@@ -292,18 +292,48 @@ if(<%=xwlei%>==5){
 									</div>
 							<%} }%>
 								<!--分页内容标签开始-->
+								 <%if(total>5){ %>
 								<div class="nav-page">
+								<%if(count_page>4){ %>
 								  <ul class="pagination">
 								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?page=<%=minus%>">&laquo;</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?page=0">1</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?page=1">2</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?page=2">3</a></li>
+								    <%if(Integer.parseInt(index_page)<3) {%>
+								    <li id="t1"><a href="${pageContext.request.contextPath}/front_news.jsp?page=0">1</a></li>
+								    <li id="t2"><a href="${pageContext.request.contextPath}/front_news.jsp?page=1">2</a></li>
+								    <li id="t3"><a href="${pageContext.request.contextPath}/front_news.jsp?page=2">3</a></li>
+								    <%}else if((Integer.parseInt(index_page)>=3)&&(Integer.parseInt(index_page)<(count_page-3))){ %>
+								    <li id="t<%=Integer.parseInt(index_page)+1%>"><a href="${pageContext.request.contextPath}/front_news.jsp?page=<%=Integer.parseInt(index_page)%>"><%=Integer.parseInt(index_page)+1%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+2%>"><a href="${pageContext.request.contextPath}/front_news.jsp?page=<%=Integer.parseInt(index_page)+1%>"><%=Integer.parseInt(index_page)+2%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+3%>"><a href="${pageContext.request.contextPath}/front_news.jsp?page=<%=Integer.parseInt(index_page)+2%>"><%=Integer.parseInt(index_page)+3%></a></li>
+								    <%}else{ %>
+								    <li id="t<%=count_page-3%>"><a href="${pageContext.request.contextPath}/front_news.jsp?page=<%=count_page-4%>"><%=count_page-3%></a></li>
+								    <li id="t<%=count_page-2%>"><a href="${pageContext.request.contextPath}/front_news.jsp?page=<%=count_page-3%>"><%=count_page-2%></a></li>
+								    <li id="t<%=count_page-1%>"><a href="${pageContext.request.contextPath}/front_news.jsp?page=<%=count_page-2%>"><%=count_page-1%></a></li>
+								    <%} %>
 								    <li><a>...</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?page=<%=count_page-1%>"><%=count_page%></a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?page=<%=count_page%>"><%=count_page+1%></a></li>
+								    <li id="t<%=count_page%>"><a href="${pageContext.request.contextPath}/front_news.jsp?page=<%=count_page-1%>"><%=count_page%></a></li>
+								    <li id="t<%=count_page+1%>"><a href="${pageContext.request.contextPath}/front_news.jsp?page=<%=count_page%>"><%=count_page+1%></a></li>
 								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?page=<%=plus%>">&raquo;</a></li>
 								  </ul>
+								  <%}else{ %>
+								  <ul class="pagination">
+								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?page=<%=minus%>">&laquo;</a></li>
+								    <%for(int i=0;i<=count_page;i++){ %>
+								    <li id="t<%=i+1%>"><a href="${pageContext.request.contextPath}/front_news.jsp?page=<%=i%>"><%=i+1%></a></li>
+								    <%} %>
+								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?page=<%=plus%>">&raquo;</a></li>
+								  </ul>
+								  <%} %>
 								</div>
+<script type="text/javascript">
+<%for(int j=0;j<=count_page;j++){ %>
+	if((<%=xwlei%>==1)&&(<%=Integer.parseInt(index_page)%>==<%=j%>)){
+		$("#t<%=j+1%>").addClass("on"); 
+	}
+	<%} %>
+</script>
+<%} %>
+						<!--分页内容标签结束-->
 							</div>
 							<%}else if(xwlei==2){ %>
 							<!--板块二内容开始  热门-->
@@ -341,20 +371,48 @@ if(<%=xwlei%>==5){
 								</div>
 						<%} %>
 								<!--分页内容标签开始-->
+								 <%if(total>5){ %>
 								<div class="nav-page">
+								<%if(count_page>4){ %>
 								  <ul class="pagination">
-								  <%if(total>5){ %>
 								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=<%=minus%>">&laquo;</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=0">1</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=1">2</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=2">3</a></li>
-								    <li><a>...</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=<%=count_page-1%>"><%=count_page%></a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=<%=count_page%>"><%=count_page+1%></a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=<%=plus%>">&raquo;</a></li>
+								    <%if(Integer.parseInt(index_page)<3) {%>
+								    <li id="t1"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=0">1</a></li>
+								    <li id="t2"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=1">2</a></li>
+								    <li id="t3"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=2">3</a></li>
+								    <%}else if((Integer.parseInt(index_page)>=3)&&(Integer.parseInt(index_page)<(count_page-3))){ %>
+								    <li id="t<%=Integer.parseInt(index_page)+1%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=<%=Integer.parseInt(index_page)%>"><%=Integer.parseInt(index_page)+1%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+2%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=<%=Integer.parseInt(index_page)+1%>"><%=Integer.parseInt(index_page)+2%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+3%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=<%=Integer.parseInt(index_page)+2%>"><%=Integer.parseInt(index_page)+3%></a></li>
+								    <%}else{ %>
+								    <li id="t<%=count_page-3%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=<%=count_page-4%>"><%=count_page-3%></a></li>
+								    <li id="t<%=count_page-2%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=<%=count_page-3%>"><%=count_page-2%></a></li>
+								    <li id="t<%=count_page-1%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=<%=count_page-2%>"><%=count_page-1%></a></li>
 								    <%} %>
+								    <li><a>...</a></li>
+								    <li id="t<%=count_page%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=<%=count_page-1%>"><%=count_page%></a></li>
+								    <li id="t<%=count_page+1%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=<%=count_page%>"><%=count_page+1%></a></li>
+								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=<%=plus%>">&raquo;</a></li>
 								  </ul>
+								  <%}else{ %>
+								  <ul class="pagination">
+								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=<%=minus%>">&laquo;</a></li>
+								    <%for(int i=0;i<=count_page;i++){ %>
+								    <li id="t<%=i+1%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=<%=i%>"><%=i+1%></a></li>
+								    <%} %>
+								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=2&page=<%=plus%>">&raquo;</a></li>
+								  </ul>
+								  <%} %>
 								</div>
+<script type="text/javascript">
+<%for(int j=0;j<=count_page;j++){ %>
+	if((<%=xwlei%>==2)&&(<%=Integer.parseInt(index_page)%>==<%=j%>)){
+		$("#t<%=j+1%>").addClass("on"); 
+	}
+	<%} %>
+</script>
+<%} %>
+						<!--分页内容标签结束-->
 							</div>
 							<%}else if(xwlei==3){ %>
 							<!--板块三内容开始  美食-->
@@ -392,20 +450,48 @@ if(<%=xwlei%>==5){
 								</div>
 						<%} %>
 								<!--分页内容标签开始-->
+								 <%if(total>5){ %>
 								<div class="nav-page">
+								<%if(count_page>4){ %>
 								  <ul class="pagination">
-								  <%if(total>5){ %>
 								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=<%=minus%>">&laquo;</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=0">1</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=1">2</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=2">3</a></li>
-								    <li><a>...</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=<%=count_page-1%>"><%=count_page%></a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=<%=count_page%>"><%=count_page+1%></a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=<%=plus%>">&raquo;</a></li>
+								    <%if(Integer.parseInt(index_page)<3) {%>
+								    <li id="t1"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=0">1</a></li>
+								    <li id="t2"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=1">2</a></li>
+								    <li id="t3"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=2">3</a></li>
+								    <%}else if((Integer.parseInt(index_page)>=3)&&(Integer.parseInt(index_page)<(count_page-3))){ %>
+								    <li id="t<%=Integer.parseInt(index_page)+1%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=<%=Integer.parseInt(index_page)%>"><%=Integer.parseInt(index_page)+1%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+2%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=<%=Integer.parseInt(index_page)+1%>"><%=Integer.parseInt(index_page)+2%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+3%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=<%=Integer.parseInt(index_page)+2%>"><%=Integer.parseInt(index_page)+3%></a></li>
+								    <%}else{ %>
+								    <li id="t<%=count_page-3%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=<%=count_page-4%>"><%=count_page-3%></a></li>
+								    <li id="t<%=count_page-2%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=<%=count_page-3%>"><%=count_page-2%></a></li>
+								    <li id="t<%=count_page-1%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=<%=count_page-2%>"><%=count_page-1%></a></li>
 								    <%} %>
+								    <li><a>...</a></li>
+								    <li id="t<%=count_page%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=<%=count_page-1%>"><%=count_page%></a></li>
+								    <li id="t<%=count_page+1%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=<%=count_page%>"><%=count_page+1%></a></li>
+								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=<%=plus%>">&raquo;</a></li>
 								  </ul>
+								  <%}else{ %>
+								  <ul class="pagination">
+								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=<%=minus%>">&laquo;</a></li>
+								    <%for(int i=0;i<=count_page;i++){ %>
+								    <li id="t<%=i+1%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=<%=i%>"><%=i+1%></a></li>
+								    <%} %>
+								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=3&page=<%=plus%>">&raquo;</a></li>
+								  </ul>
+								  <%} %>
 								</div>
+<script type="text/javascript">
+<%for(int j=0;j<=count_page;j++){ %>
+	if((<%=xwlei%>==3)&&(<%=Integer.parseInt(index_page)%>==<%=j%>)){
+		$("#t<%=j+1%>").addClass("on"); 
+	}
+	<%} %>
+</script>
+<%} %>
+						<!--分页内容标签结束-->
 							</div>
 							<%} else if(xwlei==4){ %>
 							<!--板块四内容开始  科技-->
@@ -443,20 +529,48 @@ if(<%=xwlei%>==5){
 								</div>
 						<%} %>
 								<!--分页内容标签开始-->
+								 <%if(total>5){ %>
 								<div class="nav-page">
+								<%if(count_page>4){ %>
 								  <ul class="pagination">
-								  <%if(total>5){ %>
 								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=<%=minus%>">&laquo;</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=0">1</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=1">2</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=2">3</a></li>
-								    <li><a>...</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=<%=count_page-1%>"><%=count_page%></a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=<%=count_page%>"><%=count_page+1%></a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=<%=plus%>">&raquo;</a></li>
+								    <%if(Integer.parseInt(index_page)<3) {%>
+								    <li id="t1"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=0">1</a></li>
+								    <li id="t2"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=1">2</a></li>
+								    <li id="t3"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=2">3</a></li>
+								    <%}else if((Integer.parseInt(index_page)>=3)&&(Integer.parseInt(index_page)<(count_page-3))){ %>
+								    <li id="t<%=Integer.parseInt(index_page)+1%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=<%=Integer.parseInt(index_page)%>"><%=Integer.parseInt(index_page)+1%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+2%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=<%=Integer.parseInt(index_page)+1%>"><%=Integer.parseInt(index_page)+2%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+3%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=<%=Integer.parseInt(index_page)+2%>"><%=Integer.parseInt(index_page)+3%></a></li>
+								    <%}else{ %>
+								    <li id="t<%=count_page-3%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=<%=count_page-4%>"><%=count_page-3%></a></li>
+								    <li id="t<%=count_page-2%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=<%=count_page-3%>"><%=count_page-2%></a></li>
+								    <li id="t<%=count_page-1%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=<%=count_page-2%>"><%=count_page-1%></a></li>
 								    <%} %>
+								    <li><a>...</a></li>
+								    <li id="t<%=count_page%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=<%=count_page-1%>"><%=count_page%></a></li>
+								    <li id="t<%=count_page+1%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=<%=count_page%>"><%=count_page+1%></a></li>
+								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=<%=plus%>">&raquo;</a></li>
 								  </ul>
+								  <%}else{ %>
+								  <ul class="pagination">
+								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=<%=minus%>">&laquo;</a></li>
+								    <%for(int i=0;i<=count_page;i++){ %>
+								    <li id="t<%=i+1%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=<%=i%>"><%=i+1%></a></li>
+								    <%} %>
+								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=4&page=<%=plus%>">&raquo;</a></li>
+								  </ul>
+								  <%} %>
 								</div>
+<script type="text/javascript">
+<%for(int j=0;j<=count_page;j++){ %>
+	if((<%=xwlei%>==4)&&(<%=Integer.parseInt(index_page)%>==<%=j%>)){
+		$("#t<%=j+1%>").addClass("on"); 
+	}
+	<%} %>
+</script>
+<%} %>
+						<!--分页内容标签结束-->
 							</div>
 							<%}else if(xwlei==5){ %>
 							<!--板块五内容开始  娱乐-->
@@ -494,20 +608,48 @@ if(<%=xwlei%>==5){
 								</div>
 						<%} %>
 								<!--分页内容标签开始-->
+								 <%if(total>5){ %>
 								<div class="nav-page">
+								<%if(count_page>4){ %>
 								  <ul class="pagination">
-								  <%if(total>5){ %>
 								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=<%=minus%>">&laquo;</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=0">1</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=1">2</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=2">3</a></li>
-								    <li><a>...</a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=<%=count_page-1%>"><%=count_page%></a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=<%=count_page%>"><%=count_page+1%></a></li>
-								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=<%=plus%>">&raquo;</a></li>
+								    <%if(Integer.parseInt(index_page)<3) {%>
+								    <li id="t1"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=0">1</a></li>
+								    <li id="t2"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=1">2</a></li>
+								    <li id="t3"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=2">3</a></li>
+								    <%}else if((Integer.parseInt(index_page)>=3)&&(Integer.parseInt(index_page)<(count_page-3))){ %>
+								    <li id="t<%=Integer.parseInt(index_page)+1%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=<%=Integer.parseInt(index_page)%>"><%=Integer.parseInt(index_page)+1%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+2%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=<%=Integer.parseInt(index_page)+1%>"><%=Integer.parseInt(index_page)+2%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+3%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=<%=Integer.parseInt(index_page)+2%>"><%=Integer.parseInt(index_page)+3%></a></li>
+								    <%}else{ %>
+								    <li id="t<%=count_page-3%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=<%=count_page-4%>"><%=count_page-3%></a></li>
+								    <li id="t<%=count_page-2%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=<%=count_page-3%>"><%=count_page-2%></a></li>
+								    <li id="t<%=count_page-1%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=<%=count_page-2%>"><%=count_page-1%></a></li>
 								    <%} %>
+								    <li><a>...</a></li>
+								    <li id="t<%=count_page%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=<%=count_page-1%>"><%=count_page%></a></li>
+								    <li id="t<%=count_page+1%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=<%=count_page%>"><%=count_page+1%></a></li>
+								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=<%=plus%>">&raquo;</a></li>
 								  </ul>
+								  <%}else{ %>
+								  <ul class="pagination">
+								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=<%=minus%>">&laquo;</a></li>
+								    <%for(int i=0;i<=count_page;i++){ %>
+								    <li id="t<%=i+1%>"><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=<%=i%>"><%=i+1%></a></li>
+								    <%} %>
+								    <li><a href="${pageContext.request.contextPath}/front_news.jsp?xwlei=5&page=<%=plus%>">&raquo;</a></li>
+								  </ul>
+								  <%} %>
 								</div>
+<script type="text/javascript">
+<%for(int j=0;j<=count_page;j++){ %>
+	if((<%=xwlei%>==5)&&(<%=Integer.parseInt(index_page)%>==<%=j%>)){
+		$("#t<%=j+1%>").addClass("on"); 
+	}
+	<%} %>
+</script>
+<%} %>
+						<!--分页内容标签结束-->
 							</div>
 							<%} %>
 						</div>
