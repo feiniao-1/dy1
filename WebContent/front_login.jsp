@@ -45,7 +45,7 @@ if(param.get("opt")!=null && param.get("opt").equals("login")){
 		  <meta name="description" content="">
 		  <meta name="keywords" content="饺耳、美食">
 		<title>登陆页面</title>
-		<link href="img/toubiao.png" rel="SHORTCUT ICON">
+		<link href="img/duoyeLOGO.png" rel="SHORTCUT ICON">
 		<link href="css/_main.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 		<script src="js/jquery-1.11.1.min.js"></script>
@@ -67,8 +67,8 @@ if(param.get("opt")!=null && param.get("opt").equals("login")){
 			<div class="container" style="padding: 70px 0;">
 				<div class="col-md-4  col-md-offset-4">
 					<div class="center mb30">
-						<img src="img/logo_03.jpg"  style="display: inline-block; margin-bottom: 20px;"/>
-						<p style="font-size: 18px;">饺耳世家账号登陆</p>
+						<img src="img/duoyeLOGO.png"  style="display: inline-block; margin-bottom: 20px;width:123px;height:91px;"/>
+						<p style="font-size: 18px;">饺耳舵爷账号登陆</p>
 					</div>
 					<form action="front_login.jsp" method="POST">
 					<input type="hidden" name="referer"	value="<%=request.getHeader("referer") %>">

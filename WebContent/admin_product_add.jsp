@@ -114,6 +114,7 @@ String productlei;
 String productname;
 String productEname;
 String yprice;
+String xprice;
 String content1;
 String content2;
 String createtime;
@@ -131,6 +132,11 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 	productname=new String(request.getParameter("productname").getBytes("iso-8859-1"),"utf-8");
 	productEname=new String(request.getParameter("productEname").getBytes("iso-8859-1"),"utf-8");
 	yprice=new String(request.getParameter("yprice").getBytes("iso-8859-1"),"utf-8");
+	if(param.get("xprice").equals("")){
+		xprice="0";
+	}else{
+		xprice=param.get("xprice");
+	}
 	content1=param.get("content1");
 	content2=param.get("content2");
 	createtime=df.format(new Date());
@@ -148,7 +154,7 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 			</script>
 		<%
 	}else{
-		DB.getRunner().update("insert into productmenu(author,productlei,productname,productEname,content1,content2,img1,img2,ydimg1,ydimg2,createtime,del,count,canshu_url,yprice,shoucang) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",10196,productlei,productname,productEname,content1,content2,img1,img2,ydimg1,ydimg2,df.format(new Date()),"0",count,url_canshu,yprice,shoucang);
+		DB.getRunner().update("insert into productmenu(author,productlei,productname,productEname,content1,content2,img1,img2,ydimg1,ydimg2,createtime,del,count,canshu_url,yprice,xprice,shoucang) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",10196,productlei,productname,productEname,content1,content2,img1,img2,ydimg1,ydimg2,df.format(new Date()),"0",count,url_canshu,yprice,xprice,shoucang);
 		session.removeAttribute("fullName1");
 		session.removeAttribute("fullName2");
 		session.removeAttribute("fullName3");
@@ -317,11 +323,12 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 					<div class="form-group">
 						<h5>菜品类别<span style="color:red;">*</span></h5> 
 							<select name="productlei">
-								<option>特色锅底</option>
-								<option>开胃凉菜</option>
-								<option>精美热菜</option>		
+								<option>秘制锅底</option>
+								<option>牛羊肉类</option>
+								<option>海鲜鱼丸</option>		
+								<option>菌菇时蔬</option>
+								<option>京川小吃</option>
 								<option>酒水饮料</option>
-								<option>主食</option>
 							</select>
 					</div>
 					<div class="form-group">
@@ -340,6 +347,11 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 						<h5>价格<span style="color:red;">*</span></h5> <input type="text" class="form-control" style="width:220px;"
 							name="yprice"
 							placeholder="请填写菜品价格">
+					</div>
+					<div class="form-group">
+						<h5>会员价<span style="color:red;">*</span></h5> <input type="text" class="form-control" style="width:220px;"
+							name="xprice"
+							placeholder="请填写会员价格">
 					</div>
 					<div class="form-group">
 						<h5>菜品简介<span style="color:red;">*(字数为1行或最多65字)</span></h5> 

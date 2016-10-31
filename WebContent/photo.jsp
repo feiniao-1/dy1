@@ -45,16 +45,16 @@ String userType = null;
 String username = (String)session.getAttribute("username");
 List<Mapx<String, Object>> useridc= DB.getRunner().query("SELECT userid FROM user where username=?", new MapxListHandler(),username);
 int flag=0;
-if(username==null){
+//if(username==null){
 	%>
 	<script type="text/javascript" language="javascript">
-			alert("请登录");                                            // 弹出错误信息
-			window.location='front_login.jsp' ;                            // 跳转到登录界面
+			//alert("请登录");                                            // 弹出错误信息
+			//window.location='front_login.jsp' ;                            // 跳转到登录界面
 	</script>
 <%
-}else{
-	flag=1;
-}
+//}else{
+	//flag=1;
+//}
 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式  
 System.out.println(df.format(new Date()));// new Date()为获取当前系统时间  
 //设置随机数

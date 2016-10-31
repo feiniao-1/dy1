@@ -74,7 +74,7 @@ String searchtj;
 List<Mapx<String,Object>> caipinshow;
 caipinshow=DB.getRunner().query("select productmenuid, productname,productEname,content1,img1,createtime,updatetime,count,yprice,shoucang from productmenu where del=? and productmenuid=? order by productmenuid desc limit 9", new MapxListHandler(), "0",caiid);
 List<Mapx<String,Object>> tuijian;
-tuijian=DB.getRunner().query("select productmenuid,img1 from productmenu where del=? order by count desc limit 2", new MapxListHandler(), "0");
+tuijian=DB.getRunner().query("select productmenuid,img1 from productmenu where del=? order by shoucang desc limit 2", new MapxListHandler(), "0");
 //增加收藏
 String xxid;
 if(param.get("Action")!=null && param.get("Action").equals("喜欢")){
@@ -136,7 +136,7 @@ if(param.get("Action")!=null && param.get("Action").equals("喜欢")){
 				</div>
 				<div class="plate">
 					<h3 class="panel__hd mb10">菜品介绍</h3>
-					<p class="color-999999 panel__hd mb10 pt10"><%=caipinshow.get(0).getStringView("content1") %></p>
+					<div class=" panel__hd mb10 pt10"><%=caipinshow.get(0).getStringView("content1") %></div>
 					<a href="">
 					<div class="cell">
 						<div class="cell_primary"><h3>菜品评价</h3></div>

@@ -262,7 +262,7 @@ a {
 .news-inner-title{ margin-bottom: 10px;}
 .news-inner-title p span{ margin: 0 5px;}
 .news-inner-warp img{ width: 100%; margin-bottom: 10px;}
-.news-inner-warp p{ margin-bottom: 10px; color: #999999;}
+.news-inner-warp p{ margin-bottom: 10px;}
 .share dl {
     margin: 15px 8px 5px;
     text-align: right;
@@ -302,9 +302,10 @@ a {
 .our-list{ background: #FFFFFF; padding:10px 15px; box-sizing: border-box; margin-bottom: 10px;}
 .our-list:last-child{margin: 0;}
 .our-list img,.our-list h3,.our-list h4,.our-list h5{ margin-bottom: 10px;}
+.our-list h3{color:#dd2727;}
 .our-list .double-pic li{ width: calc((100% - 15px) / 2); float: left;}
 .our-list .double-pic li:nth-child(odd){ margin-right: 15px;}
-.our-list p,.our-list ul{ color: #999999; margin-bottom: 5px;}
+.our-list p,.our-list ul{ margin-bottom: 5px;}
 /*鍗氬椤甸潰*/
 /*.blog-list{ padding-top: 10px;}*/
 .blog-plate{background: #FFFFFF; padding: 10px 15px; box-sizing: border-box; margin-bottom: 10px;}

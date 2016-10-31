@@ -64,18 +64,21 @@ String searchtj;
 //) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 String leibie="";
 if(cailei==1){
-	leibie="特色锅底";
+	leibie="秘制锅底";
 }
 if(cailei==2){
-	leibie="开胃凉菜";
+	leibie="牛羊肉类";
 	}
 if(cailei==3){
-	leibie="精美热菜"; 
+	leibie="海鲜鱼丸"; 
 	}
 if(cailei==4){
-	leibie="主食";
+	leibie="菌菇时蔬";
 	}
 if(cailei==5){
+	leibie="京川小吃";
+	}
+if(cailei==7){
 	leibie="酒水饮料";
 	}
 System.out.println(leibie);
@@ -126,7 +129,7 @@ System.out.println("caipinshow"+caipinshow);
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		  <meta name="viewport" content="width=device-width, initial-scale=1">
 		  <meta name="description" content="">
-		  <meta name="keywords" content="饺耳、美食">
+		  <meta name="keywords" content="舵爷、美食">
 		<title>舵爷产品页面</title>
 		<link href="img/duoyeLOGO.png" rel="SHORTCUT ICON">
 		<!--<link href="css/bootstrap.css" rel="stylesheet">-->
@@ -163,31 +166,33 @@ System.out.println("caipinshow"+caipinshow);
 								<h3><a href="front_product.jsp?cailei=1" >舵爷菜品</a></h3>
 								<ul class="sub">
 									<li><a href="front_product.jsp?cailei=6">店长推荐</a></li>
-									<li><a href="front_product.jsp?cailei=1">特色锅底</a></li>
-									<li><a href="front_product.jsp?cailei=2">开胃凉菜</a></li>
-									<li><a href="front_product.jsp?cailei=3">精品热菜</a></li>
-									<li><a href="front_product.jsp?cailei=5">酒水饮料</a></li>
-									<li><a href="front_product.jsp?cailei=4">美味主食</a></li>
+									<li><a href="front_product.jsp?cailei=1">秘制锅底</a></li>
+									<li><a href="front_product.jsp?cailei=2">牛羊肉类</a></li>
+									<li><a href="front_product.jsp?cailei=3">海鲜鱼丸</a></li>
+									<li><a href="front_product.jsp?cailei=4">菌菇时蔬</a></li>
+									<li><a href="front_product.jsp?cailei=5">京川小吃</a></li>
+									<li><a href="front_product.jsp?cailei=7">酒水饮料</a></li>
 								</ul>
 						</li>
 						<li class="nLi">
 								<h3><a href="about-us.jsp" >关于舵爷</a></h3>
 								<ul class="sub">
-									<li><a href="about-us.jsp">公司介绍</a></li>
-									<li><a href="about-us.jsp">公司文化</a></li>
-									<li><a href="about-us.jsp">店铺活动</a></li>
-									<li><a href="about-us.jsp">人才招聘</a></li>
-									<li><a href="about-us.jsp">联系我们</a></li>
+									<li><a href="about-us.jsp?cailei=1">公司介绍</a></li>
+									<li><a href="about-us.jsp?cailei=2">公司文化</a></li>
+									<li><a href="about-us.jsp?cailei=3">线下活动</a></li>
+									<li><a href="about-us.jsp?cailei=6">电子杂志</a></li>
+									<li><a href="about-us.jsp?cailei=4">人才招聘</a></li>
+									<li><a href="about-us.jsp?cailei=5">联系我们</a></li>
 								</ul>
 						</li>
 						<li class="nLi">
-								<h3><a href="about-us.jsp">线下活动</a></h3>
+								<h3><a href="about-us.jsp?cailei=3">线下活动</a></h3>
 						</li>
 						<li class="nLi">
-								<h3><a href="about-us.jsp">人才招聘</a></h3>
+								<h3><a href="about-us.jsp?cailei=4">人才招聘</a></h3>
 						</li>
 						<li class="nLi">
-								<h3><a href="about-us.jsp">联系我们</a></h3>
+								<h3><a href="about-us.jsp?cailei=5">联系我们</a></h3>
 						</li>
 						
 					</ul>
@@ -214,11 +219,12 @@ System.out.println("caipinshow"+caipinshow);
          		<div class="product-title"></div>
          		<div class="title-nav clearfix">
          					<a href="front_product.jsp?cailei=6"><div id="d6" class="title-nav-item">店长推荐</div></a>
-							<a href="front_product.jsp?cailei=1"><div id="d1" class="title-nav-item">特色锅底</div></a>
-							<a href="front_product.jsp?cailei=2"><div id="d2" class="title-nav-item">开胃凉菜</div></a>
-							<a href="front_product.jsp?cailei=3"><div id="d3" class="title-nav-item">精品热菜</div></a>
-							<a href="front_product.jsp?cailei=4"><div id="d4" class="title-nav-item">美味主食</div></a>
-							<a href="front_product.jsp?cailei=5"><div id="d5" class="title-nav-item">酒水饮料</div></a>
+							<a href="front_product.jsp?cailei=1"><div id="d1" class="title-nav-item">秘制锅底</div></a>
+							<a href="front_product.jsp?cailei=2"><div id="d2" class="title-nav-item">牛羊肉类</div></a>
+							<a href="front_product.jsp?cailei=3"><div id="d3" class="title-nav-item">海鲜鱼丸</div></a>
+							<a href="front_product.jsp?cailei=4"><div id="d4" class="title-nav-item">菌菇时蔬</div></a>
+							<a href="front_product.jsp?cailei=5"><div id="d5" class="title-nav-item">京川小吃</div></a>
+							<a href="front_product.jsp?cailei=7"><div id="d7" class="title-nav-item">酒水饮料</div></a>
 			    </div>
 			    <script type="text/javascript">
 if(<%=cailei%>==1){
@@ -239,9 +245,12 @@ if(<%=cailei%>==5){
 if(<%=cailei%>==6){
 	$("#d6").addClass("active"); 
 	}
+if(<%=cailei%>==7){
+	$("#d7").addClass("active"); 
+	}
  </script>
 			    <div class="course-slide">
-			    	<!--板块一部分开始 特色锅底-->
+			    	<!--板块一部分开始 秘制锅底-->
 			    <%if(cailei==1){ %>
 
 			    	<div class="product-list">
@@ -320,7 +329,7 @@ if(<%=cailei%>==6){
 					<%}%>
 			    	<%} else if(cailei==2){ %>
 			    	<!--板块一部分结束-->
-			    	<!--板块二部分开始 开胃凉菜-->
+			    	<!--板块二部分开始 牛羊肉类-->
 			    	<div class="product-list" >
 			    		<ul class="clearfix fmpage" >
 			    		<%int q;for(q=0;q<caipinshow.size();q++){ %>
@@ -396,7 +405,7 @@ if(<%=cailei%>==6){
 			    	<%} %>
 			    	<%} else if(cailei==3){ %>
 			    	<!--板块二部分结束-->
-			    	<!--板块三部分开始 精美热菜-->
+			    	<!--板块三部分开始 海鲜鱼丸-->
 			    	<div class="product-list" >
 			    		<ul class="clearfix fmpage">
 			    		<%int q;for(q=0;q<caipinshow.size();q++){ %>
@@ -472,7 +481,7 @@ if(<%=cailei%>==6){
 			    	<%} %>
 			    	<%} else if(cailei==4){ %>
 			    	<!--板块三部分结束-->
-			    	<!--板块四部分开始 美味主食-->
+			    	<!--板块四部分开始 菌菇时蔬-->
 			    	<div class="product-list" >
 			    		<ul class="clearfix fmpage">
 			    		<%int q;for(q=0;q<caipinshow.size();q++){ %>
@@ -548,7 +557,7 @@ if(<%=cailei%>==6){
 			    	<%} %>
 			    	<%} else if(cailei==5){ %>
 			    	<!--板块四部分结束-->
-			    	<!--板块五部分开始 酒水饮料-->
+			    	<!--板块五部分开始 京川小吃-->
 			    	<div class="product-list" >
 			    		<ul class="clearfix fmpage">
 			    		<%int q;for(q=0;q<caipinshow.size();q++){ %>
@@ -615,6 +624,82 @@ if(<%=cailei%>==6){
 <script type="text/javascript">
 <%for(int j=0;j<=count_page;j++){ %>
 	if((<%=cailei%>==5)&&(<%=Integer.parseInt(index_page)%>==<%=j%>)){
+		$("#t<%=j+1%>").addClass("on"); 
+	}
+	<%} %>
+</script>
+						<!--分页内容标签结束-->
+			    	</div>
+			    	<%} %>
+			    	<%} else if(cailei==7){ %>
+			    	<!--板块四部分结束-->
+			    	<!--板块五部分开始 酒水饮料-->
+			    	<div class="product-list" >
+			    		<ul class="clearfix fmpage">
+			    		<%int q;for(q=0;q<caipinshow.size();q++){ %>
+			    			<%if((q!=2)&&(q!=5)&&(q!=8)){ %>
+			    			<li>
+			    				<a href="front_product-inner.jsp?caiid=<%=caipinshow.get(q).getIntView("productmenuid")%>" target="_blank">
+				    				<img src="<%=caipinshow.get(q).getStringView("img1") %>" class="img-responsive">
+				    				<div class="txt">
+				    					<h4><%=caipinshow.get(q).getStringView("productname") %></h4>
+				    					<p><%=caipinshow.get(q).getStringView("productEname") %></p>
+				    					<p class="txt-indent"><%=caipinshow.get(q).getStringView("content1") %></p>
+				    					<p class="size18"><strong>￥<%=caipinshow.get(q).getIntView("yprice") %>/份</strong></p>
+				    				</div>
+			    				</a>
+			    			</li>
+			    			<%}else{ %>
+			    			<li class="mr0">
+			    				<a href="front_product-inner.jsp?caiid=<%=caipinshow.get(q).getIntView("productmenuid")%>" target="_blank">
+				    				<img src="<%=caipinshow.get(q).getStringView("img1") %>" class="img-responsive">
+				    				<div class="txt">
+				    					<h4><%=caipinshow.get(q).getStringView("productname") %></h4>
+				    					<p><%=caipinshow.get(q).getStringView("productEname") %></p>
+				    					<p class="txt-indent"><%=caipinshow.get(q).getStringView("content1") %></p>
+				    					<p class="size18"><strong>￥<%=caipinshow.get(q).getIntView("yprice") %>/份</strong></p>
+				    				</div>
+			    				</a>
+			    			</li>
+			    		<%}} %>
+			    		</ul>
+			    		<%if(total>9){ %>
+			    		<!--分页内容标签开始-->
+								<div class="nav-page">
+								<%if(count_page>4){ %>
+								  <ul class="pagination">
+								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=7&page=<%=minus%>">&laquo;</a></li>
+								    <%if(Integer.parseInt(index_page)<3) {%>
+								    <li id="t1"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=7&page=0">1</a></li>
+								    <li id="t2"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=7&page=1">2</a></li>
+								    <li id="t3"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=7&page=2">3</a></li>
+								    <%}else if((Integer.parseInt(index_page)>=3)&&(Integer.parseInt(index_page)<(count_page-3))){ %>
+								    <li id="t<%=Integer.parseInt(index_page)+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=7&page=<%=Integer.parseInt(index_page)%>"><%=Integer.parseInt(index_page)+1%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+2%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=7&page=<%=Integer.parseInt(index_page)+1%>"><%=Integer.parseInt(index_page)+2%></a></li>
+								    <li id="t<%=Integer.parseInt(index_page)+3%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=7&page=<%=Integer.parseInt(index_page)+2%>"><%=Integer.parseInt(index_page)+3%></a></li>
+								    <%}else{ %>
+								    <li id="t<%=count_page-3%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=7&page=<%=count_page-4%>"><%=count_page-3%></a></li>
+								    <li id="t<%=count_page-2%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=7&page=<%=count_page-3%>"><%=count_page-2%></a></li>
+								    <li id="t<%=count_page-1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=7&page=<%=count_page-2%>"><%=count_page-1%></a></li>
+								    <%} %>
+								    <li><a>...</a></li>
+								    <li id="t<%=count_page%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=7&page=<%=count_page-1%>"><%=count_page%></a></li>
+								    <li id="t<%=count_page+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=7&page=<%=count_page%>"><%=count_page+1%></a></li>
+								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=7&page=<%=plus%>">&raquo;</a></li>
+								  </ul>
+								  <%}else{ %>
+								  <ul class="pagination">
+								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=7&page=<%=minus%>">&laquo;</a></li>
+								    <%for(int i=0;i<=count_page;i++){ %>
+								    <li id="t<%=i+1%>"><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=7&page=<%=i%>"><%=i+1%></a></li>
+								    <%} %>
+								    <li><a href="${pageContext.request.contextPath}/front_product.jsp?cailei=7&page=<%=plus%>">&raquo;</a></li>
+								  </ul>
+								  <%} %>
+								</div>
+<script type="text/javascript">
+<%for(int j=0;j<=count_page;j++){ %>
+	if((<%=cailei%>==7)&&(<%=Integer.parseInt(index_page)%>==<%=j%>)){
 		$("#t<%=j+1%>").addClass("on"); 
 	}
 	<%} %>

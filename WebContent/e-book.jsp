@@ -91,7 +91,7 @@ if(Integer.parseInt(index_page)==1){
 		  <meta name="description" content="">
 		  <meta name="keywords" content="饺耳、美食">
 		<title>电子杂志</title>
-		<link href="img/m-icon.png" type="image/x-icon" rel="shortcut icon" />	
+		<link href="img/duoyeLOGO.png" type="image/x-icon" rel="shortcut icon" />	
 		<link href="css/_main.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 		<script src="js/jquery-1.11.1.min.js"></script>
@@ -119,21 +119,22 @@ if(Integer.parseInt(index_page)==1){
 								<h3><a href="front_index.jsp" >首页</a></h3>
 						</li>
 						<li class="nLi ">
-								<h3><a href="front_news.jsp" >饺耳资讯</a></h3>
+								<h3><a href="front_news.jsp" >舵爷资讯</a></h3>
 						</li>
 						<li class="nLi ">
-								<h3><a href="front_product.jsp?cailei=1" >饺耳菜品</a></h3>
+								<h3><a href="front_product.jsp?cailei=1" >舵爷菜品</a></h3>
 								<ul class="sub">
 									<li><a href="front_product.jsp?cailei=6">店长推荐</a></li>
-									<li><a href="front_product.jsp?cailei=1">特色水饺</a></li>
-									<li><a href="front_product.jsp?cailei=2">开胃凉菜</a></li>
-									<li><a href="front_product.jsp?cailei=3">精品热菜</a></li>
-									<li><a href="front_product.jsp?cailei=5">酒水饮料</a></li>
-									<li><a href="front_product.jsp?cailei=4">美味主食</a></li>
+									<li><a href="front_product.jsp?cailei=1">秘制锅底</a></li>
+									<li><a href="front_product.jsp?cailei=2">牛羊肉类</a></li>
+									<li><a href="front_product.jsp?cailei=3">海鲜鱼丸</a></li>
+									<li><a href="front_product.jsp?cailei=4">菌菇时蔬</a></li>
+									<li><a href="front_product.jsp?cailei=5">京川小吃</a></li>
+									<li><a href="front_product.jsp?cailei=7">酒水饮料</a></li>
 								</ul>
 						</li>
 						<li class="nLi on">
-								<h3><a href="about-us.jsp" >关于饺耳</a></h3>
+								<h3><a href="about-us.jsp" >关于舵爷</a></h3>
 								<ul class="sub">
 									<li><a href="about-us.jsp?cailei=1">公司介绍</a></li>
 									<li><a href="about-us.jsp?cailei=2">公司文化</a></li>

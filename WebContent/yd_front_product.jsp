@@ -169,7 +169,7 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 		            			</div>
 		            			<div class="cell_primary">
 		            				<h4><%=caipinshowlc.get(i).getStringView("productname")%></h4>
-		            				<p class="color-999999"><%=caipinshowlc.get(i).getStringView("productname")%></p>
+		            				<p class="color-999999"><%=caipinshowlc.get(i).getStringView("productEname")%></p>
 		            				<p class="color-666666 mb5">月售:<%=caipinshowlc.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
 		            				<p><span class="color-dd2727 size16">￥<%=caipinshowlc.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
 		            			</div>
@@ -193,7 +193,7 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 			            			</div>
 			            			<div class="cell_primary">
 			            				<h4><%=caipinshowlc.get(i).getStringView("productname")%></h4>
-			            				<p class="color-999999"><%=caipinshowlc.get(i).getStringView("productname")%></p>
+			            				<p class="color-999999"><%=caipinshowlc.get(i).getStringView("productEname")%></p>
 			            				<p class="color-666666 mb5">月售:<%=caipinshowlc.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
 			            				<p><span class="color-dd2727 size16">￥<%=caipinshowlc.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
 			            			</div>
@@ -217,7 +217,7 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 			            			</div>
 			            			<div class="cell_primary">
 			            				<h4><%=caipinshowlc.get(i).getStringView("productname")%></h4>
-			            				<p class="color-999999"><%=caipinshowlc.get(i).getStringView("productname")%></p>
+			            				<p class="color-999999"><%=caipinshowlc.get(i).getStringView("productEname")%></p>
 			            				<p class="color-666666 mb5">月售:<%=caipinshowlc.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
 			            				<p><span class="color-dd2727 size16">￥<%=caipinshowlc.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
 			            			</div>
@@ -256,7 +256,7 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 		            			</div>
 		            			<div class="cell_primary">
 		            				<h4><%=caipinshowrc.get(i).getStringView("productname")%></h4>
-		            				<p class="color-999999"><%=caipinshowrc.get(i).getStringView("productname")%></p>
+		            				<p class="color-999999"><%=caipinshowrc.get(i).getStringView("productEname")%></p>
 		            				<p class="color-666666 mb5">月售<%=caipinshowrc.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
 		            				<p><span class="color-dd2727 size16">￥<%=caipinshowrc.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 38 --></del></p>
 		            			</div>
@@ -280,7 +280,7 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 			            			</div>
 			            			<div class="cell_primary">
 			            				<h4><%=caipinshowrc.get(i).getStringView("productname")%></h4>
-			            				<p class="color-999999"><%=caipinshowrc.get(i).getStringView("productname")%></p>
+			            				<p class="color-999999"><%=caipinshowrc.get(i).getStringView("productEname")%></p>
 			            				<p class="color-666666 mb5">月售:<%=caipinshowrc.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
 			            				<p><span class="color-dd2727 size16">￥<%=caipinshowrc.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
 			            			</div>
@@ -304,7 +304,7 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 			            			</div>
 			            			<div class="cell_primary">
 			            				<h4><%=caipinshowrc.get(i).getStringView("productname")%></h4>
-			            				<p class="color-999999"><%=caipinshowrc.get(i).getStringView("productname")%></p>
+			            				<p class="color-999999"><%=caipinshowrc.get(i).getStringView("productEname")%></p>
 			            				<p class="color-666666 mb5">月售:<%=caipinshowrc.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
 			            				<p><span class="color-dd2727 size16">￥<%=caipinshowrc.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
 			            			</div>
@@ -343,7 +343,7 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 		            			</div>
 		            			<div class="cell_primary">
 		            				<h4><%=caipinshowsj.get(i).getStringView("productname")%></h4>
-		            				<p class="color-999999"><%=caipinshowsj.get(i).getStringView("productname")%></p>
+		            				<p class="color-999999"><%=caipinshowsj.get(i).getStringView("productEname")%></p>
 		            				<p class="color-666666 mb5">月售<%=caipinshowsj.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
 		            				<p><span class="color-dd2727 size16">￥<%=caipinshowsj.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 38 --></del></p>
 		            			</div>
@@ -367,7 +367,7 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 			            			</div>
 			            			<div class="cell_primary">
 			            				<h4><%=caipinshowsj.get(i).getStringView("productname")%></h4>
-			            				<p class="color-999999"><%=caipinshowsj.get(i).getStringView("productname")%></p>
+			            				<p class="color-999999"><%=caipinshowsj.get(i).getStringView("productEname")%></p>
 			            				<p class="color-666666 mb5">月售:<%=caipinshowsj.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
 			            				<p><span class="color-dd2727 size16">￥<%=caipinshowsj.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
 			            			</div>
@@ -391,7 +391,7 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 			            			</div>
 			            			<div class="cell_primary">
 			            				<h4><%=caipinshowsj.get(i).getStringView("productname")%></h4>
-			            				<p class="color-999999"><%=caipinshowsj.get(i).getStringView("productname")%></p>
+			            				<p class="color-999999"><%=caipinshowsj.get(i).getStringView("productEname")%></p>
 			            				<p class="color-666666 mb5">月售:<%=caipinshowsj.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
 			            				<p><span class="color-dd2727 size16">￥<%=caipinshowsj.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
 			            			</div>
@@ -430,7 +430,7 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 		            			</div>
 		            			<div class="cell_primary">
 		            				<h4><%=caipinshowzs.get(i).getStringView("productname")%></h4>
-		            				<p class="color-999999"><%=caipinshowzs.get(i).getStringView("productname")%></p>
+		            				<p class="color-999999"><%=caipinshowzs.get(i).getStringView("productEname")%></p>
 		            				<p class="color-666666 mb5">月售<%=caipinshowzs.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
 		            				<p><span class="color-dd2727 size16">￥<%=caipinshowzs.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 38 --></del></p>
 		            			</div>
@@ -454,7 +454,7 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 			            			</div>
 			            			<div class="cell_primary">
 			            				<h4><%=caipinshowzs.get(i).getStringView("productname")%></h4>
-			            				<p class="color-999999"><%=caipinshowzs.get(i).getStringView("productname")%></p>
+			            				<p class="color-999999"><%=caipinshowzs.get(i).getStringView("productEname")%></p>
 			            				<p class="color-666666 mb5">月售:<%=caipinshowzs.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
 			            				<p><span class="color-dd2727 size16">￥<%=caipinshowzs.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
 			            			</div>
@@ -478,7 +478,7 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 			            			</div>
 			            			<div class="cell_primary">
 			            				<h4><%=caipinshowzs.get(i).getStringView("productname")%></h4>
-			            				<p class="color-999999"><%=caipinshowzs.get(i).getStringView("productname")%></p>
+			            				<p class="color-999999"><%=caipinshowzs.get(i).getStringView("productEname")%></p>
 			            				<p class="color-666666 mb5">月售:<%=caipinshowzs.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
 			            				<p><span class="color-dd2727 size16">￥<%=caipinshowzs.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
 			            			</div>
@@ -517,7 +517,7 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 		            			</div>
 		            			<div class="cell_primary">
 		            				<h4><%=caipinshowjs.get(i).getStringView("productname")%></h4>
-		            				<p class="color-999999"><%=caipinshowjs.get(i).getStringView("productname")%></p>
+		            				<p class="color-999999"><%=caipinshowjs.get(i).getStringView("productEname")%></p>
 		            				<p class="color-666666 mb5">月售<%=caipinshowjs.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
 		            				<p><span class="color-dd2727 size16">￥<%=caipinshowjs.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 38 --></del></p>
 		            			</div>
@@ -541,7 +541,7 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 			            			</div>
 			            			<div class="cell_primary">
 			            				<h4><%=caipinshowjs.get(i).getStringView("productname")%></h4>
-			            				<p class="color-999999"><%=caipinshowjs.get(i).getStringView("productname")%></p>
+			            				<p class="color-999999"><%=caipinshowjs.get(i).getStringView("productEname")%></p>
 			            				<p class="color-666666 mb5">月售:<%=caipinshowjs.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
 			            				<p><span class="color-dd2727 size16">￥<%=caipinshowjs.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
 			            			</div>
@@ -565,7 +565,7 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 			            			</div>
 			            			<div class="cell_primary">
 			            				<h4><%=caipinshowjs.get(i).getStringView("productname")%></h4>
-			            				<p class="color-999999"><%=caipinshowjs.get(i).getStringView("productname")%></p>
+			            				<p class="color-999999"><%=caipinshowjs.get(i).getStringView("productEname")%></p>
 			            				<p class="color-666666 mb5">月售:<%=caipinshowjs.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
 			            				<p><span class="color-dd2727 size16">￥<%=caipinshowjs.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
 			            			</div>

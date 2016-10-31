@@ -119,7 +119,7 @@ if(request.getParameter("inpaixu")==null){
 //  PRIMARY KEY (`productmenuid`)
 //) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 //菜品列表信息
-List<Mapx<String,Object>> menu=DB.getRunner().query("select productmenuid,productname,productEname,productlei,content1,content2,img1,img2,ydimg1,ydimg2,substring(createtime,1,19) as createtime,substring(updatetime,1,19) as updatetime,count,yprice,shoucang,author from productmenu where del=? and productmenuid=?", new MapxListHandler(),"0",caiid);
+List<Mapx<String,Object>> menu=DB.getRunner().query("select productmenuid,productname,productEname,productlei,content1,content2,img1,img2,ydimg1,ydimg2,substring(createtime,1,19) as createtime,substring(updatetime,1,19) as updatetime,count,yprice,xprice,shoucang,author from productmenu where del=? and productmenuid=?", new MapxListHandler(),"0",caiid);
 System.out.println("menu"+menu);
 //显示该菜品的随机数信息
 List<Mapx<String,Object>> showdiscuss1 = DB.getRunner().query("select canshu_url as canshu_url from productmenu where  author=? order by productmenuid desc limit 1",new MapxListHandler(),menu.get(0).getIntView("author"));
@@ -130,6 +130,7 @@ String productlei;
 String productname;
 String productEname;
 String yprice;
+String xprice;
 String content1;
 String content2;
 String count;
@@ -145,6 +146,11 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 	productname=param.get("productname");
 	productEname=param.get("productEname");
 	yprice=param.get("yprice");
+	if(param.get("xprice").equals("")){
+		xprice="0";
+	}else{
+		xprice=param.get("xprice");
+	}
 	content1=param.get("content1");
 	content2=param.get("content2");
 	count=param.get("count");
@@ -170,7 +176,7 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 		ydimg2="upload/"+(String)session.getAttribute("fullName4");
 	}
 	System.out.println(productlei+productname+productEname+yprice+content1+count+shoucang+img1);
-		DB.getRunner().update("update productmenu set productlei=?,productname=?,productEname=?,content1=?,content2=?,img1=?,img2=?,ydimg1=?,ydimg2=?,updatetime=?,count=?,canshu_url=?,yprice=?,shoucang=? where productmenuid=?",productlei,productname,productEname,content1,content2,img1,img2,ydimg1,ydimg2,df.format(new Date()),count,url_canshu,yprice,shoucang,param.get("id"));
+		DB.getRunner().update("update productmenu set productlei=?,productname=?,productEname=?,content1=?,content2=?,img1=?,img2=?,ydimg1=?,ydimg2=?,updatetime=?,count=?,canshu_url=?,yprice=?,xprice=?,shoucang=? where productmenuid=?",productlei,productname,productEname,content1,content2,img1,img2,ydimg1,ydimg2,df.format(new Date()),count,url_canshu,yprice,xprice,shoucang,param.get("id"));
 		session.removeAttribute("fullName1");
 		session.removeAttribute("fullName2");
 		session.removeAttribute("fullName3");
@@ -352,11 +358,12 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 						<h5>菜品类别<span style="color:red;">*</span></h5>
 							<select name="productlei">
 								<option><%= menu.get(0).getStringView("productlei") %></option>
-								<option>特色锅底</option>
-								<option>开胃凉菜</option>
-								<option>精美热菜</option>
+								<option>秘制锅底</option>
+								<option>牛羊肉类</option>
+								<option>海鲜鱼丸</option>		
+								<option>菌菇时蔬</option>
+								<option>京川小吃</option>
 								<option>酒水饮料</option>
-								<option>主食</option>
 							</select>
 					</div>
 					<div class="form-group">
@@ -375,6 +382,11 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 						<h5>价格 ￥：<span style="color:red;">*</span></h5><input type="text" class="form-control" style="width:200px;"
 							name="yprice"
 							value="<%=menu.get(0).getIntView("yprice") %>">
+					</div>
+					<div class="form-group">
+						<h5>会员价￥：<span style="color:red;">*</span></h5><input type="text" class="form-control" style="width:200px;"
+							name="xprice"
+							value="<%=menu.get(0).getIntView("xprice") %>">
 					</div>
 					<div class="form-group">
 						<h5>菜品简介<span style="color:red;">(字数为1行或最多65字)*</span></h5> 

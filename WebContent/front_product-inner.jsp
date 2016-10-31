@@ -140,31 +140,33 @@ System.out.println("caipinshow"+caipinshow);
 								<h3><a href="front_product.jsp?cailei=1" >舵爷菜品</a></h3>
 								<ul class="sub">
 									<li><a href="front_product.jsp?cailei=6">店长推荐</a></li>
-									<li><a href="front_product.jsp?cailei=1">特色锅底</a></li>
-									<li><a href="front_product.jsp?cailei=2">开胃凉菜</a></li>
-									<li><a href="front_product.jsp?cailei=3">精品热菜</a></li>
-									<li><a href="front_product.jsp?cailei=5">酒水饮料</a></li>
-									<li><a href="front_product.jsp?cailei=4">美味主食</a></li>
+									<li><a href="front_product.jsp?cailei=1">秘制锅底</a></li>
+									<li><a href="front_product.jsp?cailei=2">牛羊肉类</a></li>
+									<li><a href="front_product.jsp?cailei=3">海鲜鱼丸</a></li>
+									<li><a href="front_product.jsp?cailei=4">菌菇时蔬</a></li>
+									<li><a href="front_product.jsp?cailei=5">京川小吃</a></li>
+									<li><a href="front_product.jsp?cailei=7">酒水饮料</a></li>
 								</ul>
 						</li>
 						<li class="nLi">
 								<h3><a href="about-us.jsp" >关于舵爷</a></h3>
 								<ul class="sub">
-									<li><a href="about-us.jsp">公司介绍</a></li>
-									<li><a href="about-us.jsp">公司文化</a></li>
-									<li><a href="about-us.jsp">店铺活动</a></li>
-									<li><a href="about-us.jsp">人才招聘</a></li>
-									<li><a href="about-us.jsp">联系我们</a></li>
+									<li><a href="about-us.jsp?cailei=1">公司介绍</a></li>
+									<li><a href="about-us.jsp?cailei=2">公司文化</a></li>
+									<li><a href="about-us.jsp?cailei=3">线下活动</a></li>
+									<li><a href="about-us.jsp?cailei=6">电子杂志</a></li>
+									<li><a href="about-us.jsp?cailei=4">人才招聘</a></li>
+									<li><a href="about-us.jsp?cailei=5">联系我们</a></li>
 								</ul>
 						</li>
 						<li class="nLi">
-								<h3><a href="about-us.jsp">线下活动</a></h3>
+								<h3><a href="about-us.jsp?cailei=3">线下活动</a></h3>
 						</li>
 						<li class="nLi">
-								<h3><a href="about-us.jsp">人才招聘</a></h3>
+								<h3><a href="about-us.jsp?cailei=4">人才招聘</a></h3>
 						</li>
 						<li class="nLi">
-								<h3><a href="about-us.jsp">联系我们</a></h3>
+								<h3><a href="about-us.jsp?cailei=5">联系我们</a></h3>
 						</li>
 						
 					</ul>

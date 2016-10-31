@@ -14,21 +14,12 @@ if(param==null){//临时，未正式交付，无法创建新用户
 }
 HashMap<String,Object> myparam = new HashMap<String,Object>();//存储自用的一些变量
 String opt = param.get("opt");
-if(opt==null){
-	opt="add";
-	param.put("opt",opt);
-}
-if(opt.equals("add")){//创建用户
-	int id = Ukey.getKey("user");
-	param.put("id", ""+id);
-}
 System.out.println(param.get("id"));
 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
 System.out.println(df.format(new Date()));// new Date()为获取当前系统时间
 ///保存用户注册信息 -start  下面定义的变量 仅在此处使用     
 if(param.get("Action")!=null && param.get("Action").equals("立即注册")){
 	List<String> errors = new ArrayList<String>();
-			int id = Integer.parseInt(param.get("id"));
 			String name = (String)G.commonCheckx(errors,param.get("username"),"用户名","must","string","between,2,50");
 			String phone = (String)G.commonCheckx(errors,param.get("phone"),"电话","phone","string","between,11,20");
 			String mail = (String)G.commonCheckx(errors,param.get("mail"),"邮箱","mail","string","between,5,50");
@@ -46,7 +37,7 @@ if(param.get("Action")!=null && param.get("Action").equals("立即注册")){
 					myparam.put("errorStr", G.toErrorStr(errors));
 				}else{//验证通过，存库
 					password = DesUtils.encrypt(password);
-					DB.getRunner().update("insert into user(userid,username,password,shenhe,status,createtime,phone,mail) values(?,?,?,?,?,?,?,?)", id,name,password,"审核通过","有效",df.format(new Date()),phone,mail);
+					DB.getRunner().update("insert into user(username,password,shenhe,status,createtime,phone,mail) values(?,?,?,?,?,?,?)", name,password,"审核通过","有效",df.format(new Date()),phone,mail);
 					myparam.put("addResult", "1");
 					out.print("<script>alert('注册成功'); window.location='front_index.jsp' </script>");
 					//response.sendRedirect("front_boke.jsp");
@@ -64,7 +55,7 @@ if(param.get("Action")!=null && param.get("Action").equals("立即注册")){
 		  <meta name="description" content="">
 		  <meta name="keywords" content="饺耳、美食">
 		<title>注册页面</title>
-		<link href="img/toubiao.png" rel="SHORTCUT ICON">
+		<link href="img/duoyeLOGO.png" rel="SHORTCUT ICON">
 		<link href="css/_main.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 		<script src="js/jquery-1.11.1.min.js"></script>
@@ -86,8 +77,8 @@ if(param.get("Action")!=null && param.get("Action").equals("立即注册")){
 			<div class="container" style="padding: 70px 0;">
 				<div class="col-md-4  col-md-offset-4">
 					<div class="center ">
-						<img src="img/logo_03.jpg"  style="display: inline-block; margin-bottom: 20px;"/>
-						<p style="font-size: 18px;">饺耳世家账号注册</p>
+						<img src="img/duoyeLOGO.png"  style="display: inline-block; margin-bottom: 20px;width:123px;height:91px;"/>
+						<p style="font-size: 18px;">饺耳舵爷账号注册</p>
 					</div>
 				<form class="form" action="front_reg.jsp" method="POST">
 					<input type="hidden" name="opt" value="addsave">
