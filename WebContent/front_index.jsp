@@ -90,7 +90,7 @@ if(Integer.parseInt(index_page)==1){
 		  <meta name="keywords" content="饺耳、美食">
 		<title>舵爷首页</title>
 		<!--<link href="css/bootstrap.css" rel="stylesheet">-->
-		<link href="img/duoyeLOGO.png" rel="SHORTCUT ICON">
+		<link href="img/dy-icon.png" rel="SHORTCUT ICON">
 		<link href="css/_main.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 		<script src="js/jquery-1.11.1.min.js"></script>
@@ -131,7 +131,7 @@ if(Integer.parseInt(index_page)==1){
  
 if (browser.versions.mobile){
 	window.location.href = 'yd_front_index.jsp';
-} 
+}
 </script>
 		<!--[if it iE8]>
 			<p class="tixin">为了达到最佳观看效果，请升级到最新浏览器</p>
@@ -180,7 +180,6 @@ if (browser.versions.mobile){
 									<li><a href="about-us.jsp?cailei=1">公司介绍</a></li>
 									<li><a href="about-us.jsp?cailei=2">公司文化</a></li>
 									<li><a href="about-us.jsp?cailei=3">线下活动</a></li>
-									<li><a href="about-us.jsp?cailei=6">电子杂志</a></li>
 									<li><a href="about-us.jsp?cailei=4">人才招聘</a></li>
 									<li><a href="about-us.jsp?cailei=5">联系我们</a></li>
 								</ul>
@@ -216,10 +215,10 @@ if (browser.versions.mobile){
 								<img src="duoyeimage/2.jpg" alt="图片1"/>
 							</div>
 							<div class="item">
-								<img src="duoyeimage/3.jpg" alt="图片2"/>
+								<img src="duoyeimage/dy-banner02.jpg" alt="图片2"/>
 							</div>
 							<div class="item">
-								<img src="duoyeimage/4.jpg" alt="图片3"/>
+								<img src="duoyeimage/dy-banner03.jpg" alt="图片3"/>
 							</div>
 							<div class="item">
 								<img src="duoyeimage/zhou.jpg" alt="图片4"/>
@@ -319,22 +318,22 @@ if (browser.versions.mobile){
          				<div class="picFocus">
 							<div class="bd">
 								<ul>
-									<li><a target="_blank" href=""><img src="duoyeimage/index.png"/></a></li>
-									<li><a target="_blank" href=""><img src="duoyeimage/index1.png" /></a></li>
-									<li><a target="_blank" href=""><img src="duoyeimage/index2.png" /></a></li>
-									<li><a target="_blank" href=""><img src="duoyeimage/index3.png" /></a></li>
-									<li><a target="_blank" href=""><img src="duoyeimage/index4.png" /></a></li>
-									<li><a target="_blank" href=""><img src="duoyeimage/index5.png" /></a></li>
+									<li><a target="_blank" href=""><img src="duoyeimage/index.jpg"/></a></li>
+									<li><a target="_blank" href=""><img src="duoyeimage/index1.jpg" /></a></li>
+									<li><a target="_blank" href=""><img src="duoyeimage/index2.jpg" /></a></li>
+									<li><a target="_blank" href=""><img src="duoyeimage/index3.jpg" /></a></li>
+									<li><a target="_blank" href=""><img src="duoyeimage/index4.jpg" /></a></li>
+									<li><a target="_blank" href=""><img src="duoyeimage/index5.jpg" /></a></li>
 								</ul>
 							</div>
 							<div class="hd">
 								<ul>
-									<li><img src="duoyeimage/index.png" /></li>
-									<li><img src="duoyeimage/index1.png" /></li>
-									<li><img src="duoyeimage/index2.png" /></li>
-									<li><img src="duoyeimage/index3.png" /></li>
-									<li><img src="duoyeimage/index4.png" /></li>
-									<li class="mr0"><img src="duoyeimage/index5.png" /></li>
+									<li><img src="duoyeimage/index.jpg" /></li>
+									<li><img src="duoyeimage/index1.jpg" /></li>
+									<li><img src="duoyeimage/index2.jpg" /></li>
+									<li><img src="duoyeimage/index3.jpg" /></li>
+									<li><img src="duoyeimage/index4.jpg" /></li>
+									<li class="mr0"><img src="duoyeimage/index5.jpg" /></li>
 								</ul>
 							</div>
 						</div>

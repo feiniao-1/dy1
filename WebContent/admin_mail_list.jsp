@@ -13,7 +13,7 @@
 <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> 
 <META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
 <title>邮件列表</title>
-<link href="img/toubiao.png" rel="SHORTCUT ICON">
+<link href="img/dy-icon.png" rel="SHORTCUT ICON">
 <link rel="stylesheet" href="css/bootstrap.css"/>
 <link rel="stylesheet" href="css/backstage.css"/>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>

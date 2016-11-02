@@ -42,10 +42,10 @@ if(param.get("opt")!=null && param.get("opt").equals("login")){
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-		<meta name="description" content="饺耳世家">
-		<meta name="keywords" content="饺耳世家、美食">
-		<title>登陆饺耳</title>
-		<link href="images/top-icon.png" type="image/x-icon" rel="shortcut icon" />
+		<meta name="description" content="舵爷火锅">
+		<meta name="keywords" content="舵爷火锅、美食">
+		<title>舵爷火锅</title>
+		<link href="images/dy-icon.png" type="image/x-icon" rel="shortcut icon" />
 		<link href="css/weui.css" rel="stylesheet">
 		<link href="css/m-style.css" rel="stylesheet">
 		<script src="js/jquery-1.11.1.min.js"></script>

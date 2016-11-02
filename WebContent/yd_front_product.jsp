@@ -87,41 +87,47 @@ if(Integer.parseInt(index_page)==1){
 //获取菜品信息
 String leibie="";
 if(cailei==1){
-	leibie="特色水饺";
+	leibie="秘制锅底";
 }
 if(cailei==2){
-	leibie="开胃凉菜";
+	leibie="牛羊肉类";
 	}
 if(cailei==3){
-	leibie="精美热菜"; 
+	leibie="海鲜鱼丸"; 
 	}
 if(cailei==4){
-	leibie="主食";
+	leibie="京川小吃";
 	}
 if(cailei==5){
 	leibie="酒水饮料";
 	}
-System.out.println(leibie);
-List<Mapx<String,Object>> caipinshowlc;
-	caipinshowlc=DB.getRunner().query("select productmenuid,productname,productEname,substring(content1,1,64) as content1,count,yprice,img1 from productmenu where del=? and productlei=? order by productmenuid desc limit 30", new MapxListHandler(), "0","开胃凉菜");
+if(cailei==7){
+	leibie="菌菇时蔬";
+	}
+List<Mapx<String,Object>> caipinshowny;
+	caipinshowny=DB.getRunner().query("select productmenuid,productname,productEname,substring(content1,1,64) as content1,count,yprice,img1 from productmenu where del=? and productlei=? order by productmenuid desc limit 30", new MapxListHandler(), "0","牛羊肉类");
 	//总数
-List<Mapx<String,Object>> zonglc=DB.getRunner().query("select count(1) as count from productmenu where del=? and productlei=? order by productmenuid ", new MapxListHandler(), "0","开胃凉菜");
-List<Mapx<String,Object>> caipinshowrc;
-	caipinshowrc=DB.getRunner().query("select productmenuid,productname,productEname,substring(content1,1,64) as content1,count,yprice,img1 from productmenu where del=? and productlei=? order by productmenuid desc limit 30", new MapxListHandler(), "0","精美热菜");
+List<Mapx<String,Object>> zongny=DB.getRunner().query("select count(1) as count from productmenu where del=? and productlei=? order by productmenuid ", new MapxListHandler(), "0","牛羊肉类");
+List<Mapx<String,Object>> caipinshowhx;
+	caipinshowhx=DB.getRunner().query("select productmenuid,productname,productEname,substring(content1,1,64) as content1,count,yprice,img1 from productmenu where del=? and productlei=? order by productmenuid desc limit 30", new MapxListHandler(), "0","海鲜鱼丸");
 	//总数
-List<Mapx<String,Object>> zongrc=DB.getRunner().query("select count(1) as count from productmenu where del=? and productlei=? order by productmenuid ", new MapxListHandler(), "0","精美热菜");
-List<Mapx<String,Object>> caipinshowsj;
-	caipinshowsj=DB.getRunner().query("select productmenuid,productname,productEname,substring(content1,1,64) as content1,count,yprice,img1 from productmenu where del=? and productlei=? order by productmenuid desc limit 30", new MapxListHandler(), "0","特色水饺");
+List<Mapx<String,Object>> zonghx=DB.getRunner().query("select count(1) as count from productmenu where del=? and productlei=? order by productmenuid ", new MapxListHandler(), "0","海鲜鱼丸");
+List<Mapx<String,Object>> caipinshowgd;
+	caipinshowgd=DB.getRunner().query("select productmenuid,productname,productEname,substring(content1,1,64) as content1,count,yprice,img1 from productmenu where del=? and productlei=? order by productmenuid desc limit 30", new MapxListHandler(), "0","秘制锅底");
 	//总数
-List<Mapx<String,Object>> zongsj=DB.getRunner().query("select count(1) as count from productmenu where del=? and productlei=? order by productmenuid ", new MapxListHandler(), "0","特色水饺");
+List<Mapx<String,Object>> zonggd=DB.getRunner().query("select count(1) as count from productmenu where del=? and productlei=? order by productmenuid ", new MapxListHandler(), "0","秘制锅底");
 List<Mapx<String,Object>> caipinshowzs;
-	caipinshowzs=DB.getRunner().query("select productmenuid,productname,productEname,substring(content1,1,64) as content1,count,yprice,img1 from productmenu where del=? and productlei=? order by productmenuid desc limit 30", new MapxListHandler(), "0","主食");
+	caipinshowzs=DB.getRunner().query("select productmenuid,productname,productEname,substring(content1,1,64) as content1,count,yprice,img1 from productmenu where del=? and productlei=? order by productmenuid desc limit 30", new MapxListHandler(), "0","京川小吃");
 	//总数
-List<Mapx<String,Object>> zongzs=DB.getRunner().query("select count(1) as count from productmenu where del=? and productlei=? order by productmenuid ", new MapxListHandler(), "0","主食");
+List<Mapx<String,Object>> zongzs=DB.getRunner().query("select count(1) as count from productmenu where del=? and productlei=? order by productmenuid ", new MapxListHandler(), "0","京川小吃");
 List<Mapx<String,Object>> caipinshowjs;
 	caipinshowjs=DB.getRunner().query("select productmenuid,productname,productEname,substring(content1,1,64) as content1,count,yprice,img1 from productmenu where del=? and productlei=? order by productmenuid desc limit 30", new MapxListHandler(), "0","酒水饮料");
 	//总数
 List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count from productmenu where del=? and productlei=? order by productmenuid ", new MapxListHandler(), "0","酒水饮料");
+List<Mapx<String,Object>> caipinshowjg;
+caipinshowjg=DB.getRunner().query("select productmenuid,productname,productEname,substring(content1,1,64) as content1,count,yprice,img1 from productmenu where del=? and productlei=? order by productmenuid desc limit 30", new MapxListHandler(), "0","菌菇时蔬");
+//总数
+List<Mapx<String,Object>> zongjg=DB.getRunner().query("select count(1) as count from productmenu where del=? and productlei=? order by productmenuid ", new MapxListHandler(), "0","菌菇时蔬");
 %>
 <!DOCTYPE html>
 <html>
@@ -129,102 +135,104 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-		<meta name="description" content="饺耳世家">
-		<meta name="keywords" content="饺耳世家、美食">
-		<title>饺耳菜品</title>
-		<link href="images/top-icon.png" type="image/x-icon" rel="shortcut icon" />
+		<meta name="description" content="舵爷火锅">
+		<meta name="keywords" content="舵爷火锅、美食">
+		<title>舵爷火锅</title>
+		<link href="images/dy-icon.png" type="image/x-icon" rel="shortcut icon" />
 		<link href="css/m-style.css" rel="stylesheet">
 		<script src="js/jquery-1.11.1.min.js"></script>
 	</head>
 	<body>
 		<div class="container">
 			<div class="head head-rel">
-				<p>饺耳菜谱</p>
+				<p>舵爷菜谱</p>
 				<a href="yd_front_index.jsp" class="back02"><img src="images/back.png"></a>
 			</div>
 			<!--产品列表部分开始-->
 			<div class="product product-list">
 				<!--标题部分-->
-				<div class="title-nav clearfix">
-							<div class="title-nav-item">凉菜</div>
-							<div class="title-nav-item">热菜</div>
-							<div class="title-nav-item active">水饺</div>
-							<div class="title-nav-item">主食</div>
+				<div class="title-nav1 clearfix">
+							<div class="title-nav-item">荤菜</div>
+							<div class="title-nav-item">素菜</div>
+							<div class="title-nav-item">海鲜</div>
+							<div class="title-nav-item active">锅底</div>
+							<div class="title-nav-item">小吃</div>
 							<div class="title-nav-item">酒水</div>
 			    </div>
 			    <!--内容部分开始-->
+			    <!-- 牛羊肉类 -->
 			    <div class="course-slide">
 			    	<div class="product-type" style="display: none;">
 			    		<%int shu1;
-			    		if(Integer.parseInt(zonglc.get(0).getStringView("count"))>10){
+			    		if(Integer.parseInt(zongny.get(0).getStringView("count"))>10){
 			    			shu1=10;
 			    		}else{
-			    			shu1=Integer.parseInt(zonglc.get(0).getStringView("count"));
+			    			shu1=Integer.parseInt(zongny.get(0).getStringView("count"));
 			    		}
 			    		for(int i=0;i<shu1;i++){ %>
-	            		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowlc.get(i).getIntView("productmenuid")%>">
+	            		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowny.get(i).getIntView("productmenuid")%>">
 	            		<div class="cell bg-white">
 		            			<div class="menu-pic">
-		            				<img src="<%=caipinshowlc.get(i).getStringView("img1")%>">
+		            				<img src="<%=caipinshowny.get(i).getStringView("img1")%>">
 		            			</div>
 		            			<div class="cell_primary">
-		            				<h4><%=caipinshowlc.get(i).getStringView("productname")%></h4>
-		            				<p class="color-999999"><%=caipinshowlc.get(i).getStringView("productEname")%></p>
-		            				<p class="color-666666 mb5">月售:<%=caipinshowlc.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
-		            				<p><span class="color-dd2727 size16">￥<%=caipinshowlc.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
+		            				<h4><%=caipinshowny.get(i).getStringView("productname")%></h4>
+		            				<p class="color-999999"><%=caipinshowny.get(i).getStringView("productEname")%></p>
+		            				<p class="color-666666 mb5">月售:<%=caipinshowny.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
+		            				<p><span class="color-dd2727 size16">￥<%=caipinshowny.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
 		            			</div>
 	            		</div>
 	            		</a>
 	            		<%} %>
 	            		<!-- 加载更多1 -->
-	            		<%if(Integer.parseInt(zonglc.get(0).getStringView("count"))>10){ %>
+	            		<%if(Integer.parseInt(zongny.get(0).getStringView("count"))>10){ %>
 	            		<div id="box11" style="DISPLAY: none" style="behavior:url(#default#savehistory)">
 	            			<%int shu11;
-				    		if(Integer.parseInt(zonglc.get(0).getStringView("count"))>20){
+				    		if(Integer.parseInt(zongny.get(0).getStringView("count"))>20){
 				    			shu11=20;
 				    		}else{
-				    			shu11=Integer.parseInt(zonglc.get(0).getStringView("count"));
+				    			shu11=Integer.parseInt(zongny.get(0).getStringView("count"));
 				    		}
 				    		for(int i=10;i<shu11;i++){ %>
-		            		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowlc.get(i).getIntView("productmenuid")%>">
+		            		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowny.get(i).getIntView("productmenuid")%>">
 		            		<div class="cell bg-white">
 			            			<div class="menu-pic">
-			            				<img src="<%=caipinshowlc.get(i).getStringView("img1")%>">
+			            				<img src="<%=caipinshowny.get(i).getStringView("img1")%>">
 			            			</div>
 			            			<div class="cell_primary">
-			            				<h4><%=caipinshowlc.get(i).getStringView("productname")%></h4>
-			            				<p class="color-999999"><%=caipinshowlc.get(i).getStringView("productEname")%></p>
-			            				<p class="color-666666 mb5">月售:<%=caipinshowlc.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
-			            				<p><span class="color-dd2727 size16">￥<%=caipinshowlc.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
+			            				<h4><%=caipinshowny.get(i).getStringView("productname")%></h4>
+			            				<p class="color-999999"><%=caipinshowny.get(i).getStringView("productEname")%></p>
+			            				<p class="color-666666 mb5">月售:<%=caipinshowny.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
+			            				<p><span class="color-dd2727 size16">￥<%=caipinshowny.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
 			            			</div>
 		            		</div>
 		            		</a>
 		            		<%} %>
-		            		<%if(Integer.parseInt(zonglc.get(0).getIntView("count"))>20){ %>
+		            		<%if(Integer.parseInt(zongny.get(0).getIntView("count"))>20){ %>
 	            				<!--加载更多 模块二 start  -->
 			            		<div id="box12" style="DISPLAY: none" style="behavior:url(#default#savehistory)">
 								<%int shu12;
-				    		if(Integer.parseInt(zonglc.get(0).getStringView("count"))>20){
+				    		if(Integer.parseInt(zongny.get(0).getStringView("count"))>20){
 				    			shu12=20;
 				    		}else{
-				    			shu12=Integer.parseInt(zonglc.get(0).getStringView("count"));
+				    			shu12=Integer.parseInt(zongny.get(0).getStringView("count"));
 				    		}
 				    		for(int i=20;i<shu12;i++){ %>
-		            		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowlc.get(i).getIntView("productmenuid")%>">
+		            		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowny.get(i).getIntView("productmenuid")%>">
 		            		<div class="cell bg-white">
 			            			<div class="menu-pic">
-			            				<img src="<%=caipinshowlc.get(i).getStringView("img1")%>">
+			            				<img src="<%=caipinshowny.get(i).getStringView("img1")%>">
 			            			</div>
 			            			<div class="cell_primary">
-			            				<h4><%=caipinshowlc.get(i).getStringView("productname")%></h4>
-			            				<p class="color-999999"><%=caipinshowlc.get(i).getStringView("productEname")%></p>
-			            				<p class="color-666666 mb5">月售:<%=caipinshowlc.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
-			            				<p><span class="color-dd2727 size16">￥<%=caipinshowlc.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
+			            				<h4><%=caipinshowny.get(i).getStringView("productname")%></h4>
+			            				<p class="color-999999"><%=caipinshowny.get(i).getStringView("productEname")%></p>
+			            				<p class="color-666666 mb5">月售:<%=caipinshowny.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
+			            				<p><span class="color-dd2727 size16">￥<%=caipinshowny.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
 			            			</div>
 		            		</div>
 		            		</a>
 		            		<%} %>
-				            		<a href="javascript:void(0)" onclick="yincang1()"><div class="load-more" style="background:#F0F0F0"><span style="color:white;font-size:18px;">已经到底了</span></div></a>
+				            		<a href="javascript:void(0)" onclick="yincang1()"><div class="load-more" style="background:#F0F0F0"><span style="color:#b27301;font-size:18px;">已经到底了</span></div></a>
 				            		 <script type="text/javascript">
 				            		 //将更多加载出的数据隐藏
 				            		 function yincang1(){
@@ -241,77 +249,166 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 	            		<%} %>
 	            		<!-- 加载更多1 -->
 			    	</div>
+			    	<!-- 菌菇时蔬 -->
 			    	<div class="product-type" style="display: none;">
-			    		<%int shu2;
-			    		if(Integer.parseInt(zongrc.get(0).getStringView("count"))>10){
-			    			shu2=10;
+			    		<%int shu7;
+			    		if(Integer.parseInt(zongjg.get(0).getStringView("count"))>10){
+			    			shu7=10;
 			    		}else{
-			    			shu2=Integer.parseInt(zongrc.get(0).getStringView("count"));
+			    			shu7=Integer.parseInt(zongjg.get(0).getStringView("count"));
 			    		}
-			    		for(int i=0;i<shu2;i++){ %>
-	            		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowrc.get(i).getIntView("productmenuid")%>">
+			    		for(int i=0;i<shu7;i++){ %>
+			    		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowjg.get(i).getIntView("productmenuid")%>">
 	            		<div class="cell bg-white">
 		            			<div class="menu-pic">
-		            				<img src="<%=caipinshowrc.get(i).getStringView("img1")%>">
+		            				<img src="<%=caipinshowjg.get(i).getStringView("img1")%>">
 		            			</div>
 		            			<div class="cell_primary">
-		            				<h4><%=caipinshowrc.get(i).getStringView("productname")%></h4>
-		            				<p class="color-999999"><%=caipinshowrc.get(i).getStringView("productEname")%></p>
-		            				<p class="color-666666 mb5">月售<%=caipinshowrc.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
-		            				<p><span class="color-dd2727 size16">￥<%=caipinshowrc.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 38 --></del></p>
+		            				<h4><%=caipinshowjg.get(i).getStringView("productname")%></h4>
+		            				<p class="color-999999"><%=caipinshowjg.get(i).getStringView("productEname")%></p>
+		            				<p class="color-666666 mb5">月售<%=caipinshowjg.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
+		            				<p><span class="color-dd2727 size16">￥<%=caipinshowjg.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 38 --></del></p>
 		            			</div>
 	            		</div>
 	            		</a>
 	            		<%} %>
 	            		<!-- 加载更多1 -->
-	            		<%if(Integer.parseInt(zongrc.get(0).getStringView("count"))>10){ %>
-	            		<div id="box21" style="DISPLAY: none" style="behavior:url(#default#savehistory)">
-	            			<%int shu21;
-				    		if(Integer.parseInt(zongrc.get(0).getStringView("count"))>20){
-				    			shu21=20;
+	            		<%if(Integer.parseInt(zongjg.get(0).getStringView("count"))>10){ %>
+	            		<div id="box51" style="DISPLAY: none" style="behavior:url(#default#savehistory)">
+	            			<%int shu71;
+				    		if(Integer.parseInt(zongjg.get(0).getStringView("count"))>20){
+				    			shu71=20;
 				    		}else{
-				    			shu21=Integer.parseInt(zongrc.get(0).getStringView("count"));
+				    			shu71=Integer.parseInt(zongjg.get(0).getStringView("count"));
 				    		}
-				    		for(int i=10;i<shu21;i++){ %>
-		            		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowrc.get(i).getIntView("productmenuid")%>">
+				    		for(int i=10;i<shu71;i++){ %>
+		            		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowjg.get(i).getIntView("productmenuid")%>">
 		            		<div class="cell bg-white">
 			            			<div class="menu-pic">
-			            				<img src="<%=caipinshowrc.get(i).getStringView("img1")%>">
+			            				<img src="<%=caipinshowjg.get(i).getStringView("img1")%>">
 			            			</div>
 			            			<div class="cell_primary">
-			            				<h4><%=caipinshowrc.get(i).getStringView("productname")%></h4>
-			            				<p class="color-999999"><%=caipinshowrc.get(i).getStringView("productEname")%></p>
-			            				<p class="color-666666 mb5">月售:<%=caipinshowrc.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
-			            				<p><span class="color-dd2727 size16">￥<%=caipinshowrc.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
+			            				<h4><%=caipinshowjg.get(i).getStringView("productname")%></h4>
+			            				<p class="color-999999"><%=caipinshowjg.get(i).getStringView("productEname")%></p>
+			            				<p class="color-666666 mb5">月售:<%=caipinshowjg.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
+			            				<p><span class="color-dd2727 size16">￥<%=caipinshowjg.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
 			            			</div>
 		            		</div>
 		            		</a>
 		            		<%} %>
-		            		<%if(Integer.parseInt(zongrc.get(0).getIntView("count"))>20){ %>
+		            		<%if(Integer.parseInt(zongjg.get(0).getIntView("count"))>20){ %>
+	            				<!--加载更多 模块二 start  -->
+			            		<div id="box52" style="DISPLAY: none" style="behavior:url(#default#savehistory)">
+								<%int shu72;
+				    		if(Integer.parseInt(zongjg.get(0).getStringView("count"))>20){
+				    			shu72=20;
+				    		}else{
+				    			shu72=Integer.parseInt(zongjg.get(0).getStringView("count"));
+				    		}
+				    		for(int i=20;i<shu72;i++){ %>
+		            		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowjg.get(i).getIntView("productmenuid")%>">
+		            		<div class="cell bg-white">
+			            			<div class="menu-pic">
+			            				<img src="<%=caipinshowjg.get(i).getStringView("img1")%>">
+			            			</div>
+			            			<div class="cell_primary">
+			            				<h4><%=caipinshowjg.get(i).getStringView("productname")%></h4>
+			            				<p class="color-999999"><%=caipinshowjg.get(i).getStringView("productEname")%></p>
+			            				<p class="color-666666 mb5">月售:<%=caipinshowjg.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
+			            				<p><span class="color-dd2727 size16">￥<%=caipinshowjg.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
+			            			</div>
+		            		</div>
+		            		</a>
+		            		<%} %>
+				            		<a href="javascript:void(0)" onclick="yincang5()"><div class="load-more" style="background:#F0F0F0"><span style="color:#b27301;font-size:18px;">已经到底了</span></div></a>
+				            		 <script type="text/javascript">
+				            		 //将更多加载出的数据隐藏
+				            		 function yincang5(){
+				            		 $("#box51").css('display','none'); 
+				            		 $("#box52").css('display','none'); 
+				            		 }
+				            		 </script>
+				    			</div>
+				   			    <div class="load-more" ><a  style="behavior:url(#default#savehistory);" onclick="openShutManager(this,'box52',false,' ','点击加载更多...')" href="###"><span style="color:white;font-size:18px;">加载更多+</span></a></div>
+				   			    <!--加载更多 模块二 end  -->
+				   			    <%} %>
+		            		</div>
+		            		<div class="load-more" ><a  style="behavior:url(#default#savehistory);" onclick="openShutManager(this,'box51',false,' ','点击加载更多...')" href="###"><span style="color:white;font-size:18px;">加载更多+</span></a></div>
+	            		<%} %>
+	            		<!-- 加载更多1 -->
+			    	</div>
+			    	<!-- 海鲜鱼丸 -->
+			    	<div class="product-type" style="display: none;">
+			    		<%int shu2;
+			    		if(Integer.parseInt(zonghx.get(0).getStringView("count"))>10){
+			    			shu2=10;
+			    		}else{
+			    			shu2=Integer.parseInt(zonghx.get(0).getStringView("count"));
+			    		}
+			    		for(int i=0;i<shu2;i++){ %>
+	            		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowhx.get(i).getIntView("productmenuid")%>">
+	            		<div class="cell bg-white">
+		            			<div class="menu-pic">
+		            				<img src="<%=caipinshowhx.get(i).getStringView("img1")%>">
+		            			</div>
+		            			<div class="cell_primary">
+		            				<h4><%=caipinshowhx.get(i).getStringView("productname")%></h4>
+		            				<p class="color-999999"><%=caipinshowhx.get(i).getStringView("productEname")%></p>
+		            				<p class="color-666666 mb5">月售<%=caipinshowhx.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
+		            				<p><span class="color-dd2727 size16">￥<%=caipinshowhx.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 38 --></del></p>
+		            			</div>
+	            		</div>
+	            		</a>
+	            		<%} %>
+	            		<!-- 加载更多1 -->
+	            		<%if(Integer.parseInt(zonghx.get(0).getStringView("count"))>10){ %>
+	            		<div id="box21" style="DISPLAY: none" style="behavior:url(#default#savehistory)">
+	            			<%int shu21;
+				    		if(Integer.parseInt(zonghx.get(0).getStringView("count"))>20){
+				    			shu21=20;
+				    		}else{
+				    			shu21=Integer.parseInt(zonghx.get(0).getStringView("count"));
+				    		}
+				    		for(int i=10;i<shu21;i++){ %>
+		            		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowhx.get(i).getIntView("productmenuid")%>">
+		            		<div class="cell bg-white">
+			            			<div class="menu-pic">
+			            				<img src="<%=caipinshowhx.get(i).getStringView("img1")%>">
+			            			</div>
+			            			<div class="cell_primary">
+			            				<h4><%=caipinshowhx.get(i).getStringView("productname")%></h4>
+			            				<p class="color-999999"><%=caipinshowhx.get(i).getStringView("productEname")%></p>
+			            				<p class="color-666666 mb5">月售:<%=caipinshowhx.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
+			            				<p><span class="color-dd2727 size16">￥<%=caipinshowhx.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
+			            			</div>
+		            		</div>
+		            		</a>
+		            		<%} %>
+		            		<%if(Integer.parseInt(zonghx.get(0).getIntView("count"))>20){ %>
 	            				<!--加载更多 模块二 start  -->
 			            		<div id="box22" style="DISPLAY: none" style="behavior:url(#default#savehistory)">
 								<%int shu22;
-				    		if(Integer.parseInt(zongrc.get(0).getStringView("count"))>20){
+				    		if(Integer.parseInt(zonghx.get(0).getStringView("count"))>20){
 				    			shu22=20;
 				    		}else{
-				    			shu22=Integer.parseInt(zongrc.get(0).getStringView("count"));
+				    			shu22=Integer.parseInt(zonghx.get(0).getStringView("count"));
 				    		}
 				    		for(int i=20;i<shu22;i++){ %>
-		            		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowrc.get(i).getIntView("productmenuid")%>">
+		            		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowhx.get(i).getIntView("productmenuid")%>">
 		            		<div class="cell bg-white">
 			            			<div class="menu-pic">
-			            				<img src="<%=caipinshowrc.get(i).getStringView("img1")%>">
+			            				<img src="<%=caipinshowhx.get(i).getStringView("img1")%>">
 			            			</div>
 			            			<div class="cell_primary">
-			            				<h4><%=caipinshowrc.get(i).getStringView("productname")%></h4>
-			            				<p class="color-999999"><%=caipinshowrc.get(i).getStringView("productEname")%></p>
-			            				<p class="color-666666 mb5">月售:<%=caipinshowrc.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
-			            				<p><span class="color-dd2727 size16">￥<%=caipinshowrc.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
+			            				<h4><%=caipinshowhx.get(i).getStringView("productname")%></h4>
+			            				<p class="color-999999"><%=caipinshowhx.get(i).getStringView("productEname")%></p>
+			            				<p class="color-666666 mb5">月售:<%=caipinshowhx.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
+			            				<p><span class="color-dd2727 size16">￥<%=caipinshowhx.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
 			            			</div>
 		            		</div>
 		            		</a>
 		            		<%} %>
-				            		<a href="javascript:void(0)" onclick="yincang2()"><div class="load-more" style="background:#F0F0F0"><span style="color:white;font-size:18px;">已经到底了</span></div></a>
+				            		<a href="javascript:void(0)" onclick="yincang2()"><div class="load-more" style="background:#F0F0F0"><span style="color:#b27301;font-size:18px;">已经到底了</span></div></a>
 				            		 <script type="text/javascript">
 				            		 //将更多加载出的数据隐藏
 				            		 function yincang2(){
@@ -328,77 +425,80 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 	            		<%} %>
 	            		<!-- 加载更多1 -->
 			    	</div>
+			    	<!-- 秘制锅底 -->
 			    	<div class="product-type">
 			    		<%int shu3;
-			    		if(Integer.parseInt(zongsj.get(0).getStringView("count"))>10){
+			    		if(Integer.parseInt(zonggd.get(0).getStringView("count"))>10){
 			    			shu3=10;
 			    		}else{
-			    			shu3=Integer.parseInt(zongsj.get(0).getStringView("count"));
+			    			shu3=Integer.parseInt(zonggd.get(0).getStringView("count"));
 			    		}
 			    		for(int i=0;i<shu3;i++){ %>
-			    		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowsj.get(i).getIntView("productmenuid")%>">
+			    		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowgd.get(i).getIntView("productmenuid")%>">
 	            		<div class="cell bg-white">
 		            			<div class="menu-pic">
-		            				<img src="<%=caipinshowsj.get(i).getStringView("img1")%>">
+		            				<img src="<%=caipinshowgd.get(i).getStringView("img1")%>">
 		            			</div>
 		            			<div class="cell_primary">
-		            				<h4><%=caipinshowsj.get(i).getStringView("productname")%></h4>
-		            				<p class="color-999999"><%=caipinshowsj.get(i).getStringView("productEname")%></p>
-		            				<p class="color-666666 mb5">月售<%=caipinshowsj.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
-		            				<p><span class="color-dd2727 size16">￥<%=caipinshowsj.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 38 --></del></p>
+		            				<h4><%=caipinshowgd.get(i).getStringView("productname")%></h4>
+		            				<p class="color-999999"><%=caipinshowgd.get(i).getStringView("productEname")%></p>
+		            				<p class="color-666666 mb5">月售<%=caipinshowgd.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
+		            				<p><span class="color-dd2727 size16">￥<%=caipinshowgd.get(i).getIntView("yprice")%></span>
+		            				<del class="color-666666 ml10"><!-- 38 --></del>
+		            				</p>
 		            			</div>
 	            		</div>
 	            		</a>
 	            		<%} %>
 	            		<!-- 加载更多1 -->
-	            		<%if(Integer.parseInt(zongsj.get(0).getStringView("count"))>10){ %>
+	            		<%if(Integer.parseInt(zonggd.get(0).getStringView("count"))>10){ %>
 	            		<div id="box31" style="DISPLAY: none" style="behavior:url(#default#savehistory)">
 	            			<%int shu31;
-				    		if(Integer.parseInt(zongsj.get(0).getStringView("count"))>20){
+				    		if(Integer.parseInt(zonggd.get(0).getStringView("count"))>20){
 				    			shu31=20;
 				    		}else{
-				    			shu31=Integer.parseInt(zongsj.get(0).getStringView("count"));
+				    			shu31=Integer.parseInt(zonggd.get(0).getStringView("count"));
 				    		}
 				    		for(int i=10;i<shu31;i++){ %>
-		            		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowsj.get(i).getIntView("productmenuid")%>">
+		            		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowgd.get(i).getIntView("productmenuid")%>">
 		            		<div class="cell bg-white">
 			            			<div class="menu-pic">
-			            				<img src="<%=caipinshowsj.get(i).getStringView("img1")%>">
+			            				<img src="<%=caipinshowgd.get(i).getStringView("img1")%>">
 			            			</div>
 			            			<div class="cell_primary">
-			            				<h4><%=caipinshowsj.get(i).getStringView("productname")%></h4>
-			            				<p class="color-999999"><%=caipinshowsj.get(i).getStringView("productEname")%></p>
-			            				<p class="color-666666 mb5">月售:<%=caipinshowsj.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
-			            				<p><span class="color-dd2727 size16">￥<%=caipinshowsj.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
+			            				<h4><%=caipinshowgd.get(i).getStringView("productname")%></h4>
+			            				<p class="color-999999"><%=caipinshowgd.get(i).getStringView("productEname")%></p>
+			            				<p class="color-666666 mb5">月售:<%=caipinshowgd.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
+			            				<p><span class="color-dd2727 size16">￥<%=caipinshowgd.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
 			            			</div>
 		            		</div>
 		            		</a>
 		            		<%} %>
-		            		<%if(Integer.parseInt(zongsj.get(0).getIntView("count"))>20){ %>
+		            		<%if(Integer.parseInt(zonggd.get(0).getIntView("count"))>20){ %>
 	            				<!--加载更多 模块二 start  -->
 			            		<div id="box32" style="DISPLAY: none" style="behavior:url(#default#savehistory)">
 								<%int shu32;
-				    		if(Integer.parseInt(zongsj.get(0).getStringView("count"))>20){
+				    		if(Integer.parseInt(zonggd.get(0).getStringView("count"))>20){
 				    			shu32=20;
 				    		}else{
-				    			shu32=Integer.parseInt(zongsj.get(0).getStringView("count"));
+				    			shu32=Integer.parseInt(zonggd.get(0).getStringView("count"));
 				    		}
 				    		for(int i=20;i<shu32;i++){ %>
-		            		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowsj.get(i).getIntView("productmenuid")%>">
+		            		<a href="yd_front_product_inner.jsp?caiid=<%=caipinshowgd.get(i).getIntView("productmenuid")%>">
 		            		<div class="cell bg-white">
 			            			<div class="menu-pic">
-			            				<img src="<%=caipinshowsj.get(i).getStringView("img1")%>">
+			            				<img src="<%=caipinshowgd.get(i).getStringView("img1")%>">
 			            			</div>
 			            			<div class="cell_primary">
-			            				<h4><%=caipinshowsj.get(i).getStringView("productname")%></h4>
-			            				<p class="color-999999"><%=caipinshowsj.get(i).getStringView("productEname")%></p>
-			            				<p class="color-666666 mb5">月售:<%=caipinshowsj.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
-			            				<p><span class="color-dd2727 size16">￥<%=caipinshowsj.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
+			            				<h4><%=caipinshowgd.get(i).getStringView("productname")%></h4>
+			            				<p class="color-999999"><%=caipinshowgd.get(i).getStringView("productEname")%></p>
+			            				<p class="color-666666 mb5">月售:<%=caipinshowgd.get(i).getIntView("count")%><span class="ml10">好评率100%</span></p>
+			            				<p><span class="color-dd2727 size16">￥<%=caipinshowgd.get(i).getIntView("yprice")%></span><del class="color-666666 ml10"><!-- 42 --></del></p>
 			            			</div>
 		            		</div>
 		            		</a>
 		            		<%} %>
-				            		<a href="javascript:void(0)" onclick="yincang3()"><div class="load-more" style="background:#F0F0F0"><span style="color:white;font-size:18px;">已经到底了</span></div></a>
+				            		<a href="javascript:void(0)" onclick="yincang3()"><div class="load-more" style="background:#F0F0F0"><span style="color:#b27301;font-size:18px;">已经到底了</span></div></a>
 				            		 <script type="text/javascript">
 				            		 //将更多加载出的数据隐藏
 				            		 function yincang3(){
@@ -415,6 +515,7 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 	            		<%} %>
 	            		<!-- 加载更多1 -->
 			    	</div>
+			    	<!-- 主食 -->
 			    	<div class="product-type" style="display: none;">
 	            		<%int shu4;
 			    		if(Integer.parseInt(zongzs.get(0).getStringView("count"))>10){
@@ -485,7 +586,7 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 		            		</div>
 		            		</a>
 		            		<%} %>
-				            		<a href="javascript:void(0)" onclick="yincang4()"><div class="load-more" style="background:#F0F0F0"><span style="color:white;font-size:18px;">已经到底了</span></div></a>
+				            		<a href="javascript:void(0)" onclick="yincang4()"><div class="load-more" style="background:#F0F0F0"><span style="color:#b27301;font-size:18px;">已经到底了</span></div></a>
 				            		 <script type="text/javascript">
 				            		 //将更多加载出的数据隐藏
 				            		 function yincang4(){
@@ -502,6 +603,7 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 	            		<%} %>
 	            		<!-- 加载更多1 -->
 			    	</div>
+			    	<!-- 酒水饮料 -->
 			    	<div class="product-type" style="display: none;">
 			    		<%int shu5;
 			    		if(Integer.parseInt(zongjs.get(0).getStringView("count"))>10){
@@ -572,7 +674,7 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 		            		</div>
 		            		</a>
 		            		<%} %>
-				            		<a href="javascript:void(0)" onclick="yincang5()"><div class="load-more" style="background:#F0F0F0"><span style="color:white;font-size:18px;">已经到底了</span></div></a>
+				            		<a href="javascript:void(0)" onclick="yincang5()"><div class="load-more" style="background:#F0F0F0"><span style="color:#b27301;font-size:18px;">已经到底了</span></div></a>
 				            		 <script type="text/javascript">
 				            		 //将更多加载出的数据隐藏
 				            		 function yincang5(){
@@ -589,12 +691,13 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 	            		<%} %>
 	            		<!-- 加载更多1 -->
 			    	</div>
+			    	
 			    </div>
-			    <div style="height: 50px; width: 100%;"></div>
+			    <div style="height: 50px; width: 100%;background:white;"></div>
 			</div>
 			<!--产品列表部分结束-->
 			<div class="tellbox">
-				<h3>订餐电话:<a href="tel:010-80440188"> 010-<span>8044</span><span>0188</span></a></h3>
+				<h3>订餐电话:<a href="tel:010-80440188"> 010-<span>8994</span><span>2510</span></a></h3>
 			</div>
 			<!--返回顶部按钮-->
 			<div id="topcontrol" style="display:none; position: fixed; bottom: 180px; right: 0px; cursor: pointer; z-index: 119;" title="返回顶部">
@@ -604,7 +707,7 @@ List<Mapx<String,Object>> zongjs=DB.getRunner().query("select count(1) as count 
 		<!--菜品切换js-->
 		<script>
 			$(function(){
-			var $div_li=$('.title-nav .title-nav-item');
+			var $div_li=$('.title-nav1 .title-nav-item');
 			$div_li.click(function(){
 				$(this).addClass('active').siblings().removeClass('active');
 				var index =$div_li.index(this);

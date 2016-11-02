@@ -90,8 +90,8 @@ if(Integer.parseInt(index_page)==1){
 		  <meta name="viewport" content="width=device-width, initial-scale=1">
 		  <meta name="description" content="">
 		  <meta name="keywords" content="饺耳、美食">
-		<title>关于饺耳</title>
-		<link href="img/duoyeLOGO.png" type="image/x-icon" rel="shortcut icon" />	
+		<title>关于舵爷</title>
+		<link href="img/dy-icon.png" type="image/x-icon" rel="shortcut icon" />	
 		<!--<link href="css/bootstrap.css" rel="stylesheet">-->
 		<link href="css/_main.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
@@ -146,7 +146,6 @@ if(Integer.parseInt(index_page)==1){
 									<li><a href="about-us.jsp?cailei=1">公司介绍</a></li>
 									<li><a href="about-us.jsp?cailei=2">公司文化</a></li>
 									<li><a href="about-us.jsp?cailei=3">线下活动</a></li>
-									<li><a href="about-us.jsp?cailei=6">电子杂志</a></li>
 									<li><a href="about-us.jsp?cailei=4">人才招聘</a></li>
 									<li><a href="about-us.jsp?cailei=5">联系我们</a></li>
 								</ul>
@@ -178,7 +177,7 @@ if(Integer.parseInt(index_page)==1){
                         <a href="about-us.jsp?cailei=1"><li id="d1" class="js-tab">公司介绍 <i></i></li></a>
                         <a href="about-us.jsp?cailei=2"><li id="d2" class="js-tab">企业文化<i></i></li></a>
                         <a href="about-us.jsp?cailei=3"><li id="d3" class="js-tab">线下活动<i></i></li></a>
-                        <a href="about-us.jsp?cailei=6"><li id="d6" class="js-tab">电子杂志<i></i></li></a>
+                       <!--  <a href="about-us.jsp?cailei=6"><li id="d6" class="js-tab">电子杂志<i></i></li></a> -->
                         <a href="about-us.jsp?cailei=4"><li id="d4" class="js-tab">人才招聘<i></i></li></a>
                         <a href="about-us.jsp?cailei=5"><li id="d5" class="js-tab">联系我们 <i></i></li></a>
 
@@ -212,27 +211,24 @@ if(<%=cailei%>==6){
                      <div class="tab-content" style="display: block;">
                         <h3 class="mb20">公司介绍</h3>
                         <img src="img/us01_03.jpg" class="img-responsive mb20"/>
-                        <p class="txt-indent">饺耳世家，是全国首家致力于传承千年养生饮食文化的饺子店。
-                        	秉承“传以古法，注以新意，精于食材，通于传达。”品牌理念和“养生食疗”的经营宗旨，
-                        	让饺子的食疗养生文化在老北京宫廷御厨祖传配方接班人张芳女士的手上，继续发扬光大，
-                        	铸就饺耳金质品牌。让饺耳世家成为中国餐饮行业的价值典范。</p>
-                        <p class="txt-indent">我们不单纯注重于饺子的口感与味道，同时注重于饺子的营养与功效。
-                        	饺子的馅料制作均选用新鲜的原食材，进行合理的营养搭配。自第一道工序开始，通过29道工艺标准，49道工艺流程，
-                        	从皮到馅全部纯手工制作，为您奉上传统地道的纯手工水饺。饺子为东汉末年，“医圣”张仲景发明，原名娇耳。
-                        	第一个饺子的诞生并不是作为食物，而是作为药引“祛寒娇耳汤”，帮助穷人驱寒暖身，医治冻烂的耳朵。
-                        	饺耳世家将遵循1800年前张仲景发明饺子的初衷，让饺子作为美味食物的同时，继续完成它温补身体，养生食疗的使命。
-                        	让饺子延续其最初诞生的意义，让大家享受美味的同时养胃健脾，温补身体，吃的美味也吃得健康。
+                        <p class="txt-indent">舵爷，火锅的江湖。</p>
+                        <p class="txt-indent">舵爷江湖老火锅旗舰店创立于北京财满街。舵爷品牌名来自在“京城孟尝君”之美誉的黄珂黄舵爷，一群骨灰级美食家创造了这一文化老火锅的饕餮盛宴，主打重庆传统火锅情怀。 </p>
+                        <p class="txt-indent">现代意义上的火锅起源于重庆，位于长江嘉陵江两江交汇处，是近代中国的码头型城市。重庆居住有大量回民，不食牛羊内脏，弃于江边，船工们觉得可惜，便在洗净后放入豆瓣、花椒、辣椒等常用川菜调料，便成了一锅麻辣鲜香的美食而传播四方。清末民初，政府管理无力，受“反清复明”思想的长期影响，四川出现了以诗经“岂曰无衣，与子同袍”的哥佬会帮会组织，又称袍哥会，与洪门、青帮为当时中国最大的三大帮会，鼎胜时几乎四川地区所以成年男子都是袍哥会成员。袍哥会老大被称为舵爷或大爷，舵爷火锅品牌名正是来源于此。
+    别出心裁的装修，处处体现着舵爷火锅的文化内涵。如果你喜爱朝天门的闹、重庆人的爆、海椒的辣、茂汶花椒的麻、山城啤酒的爽，划挙的帅，那么，来吧！舵爷一生只做这一味。
                         </p>
-                        <p class="txt-indent">来到饺耳世家，除了美味健康的饺子外，还有其他精美养生菜品售卖。饺耳世家，纯正中国味，等您来尝鲜！</p>
                     </div>
 <%} %>
 <%if(cailei==2){ %>
                     <div class="tab-content">
                         <h3>企业文化</h3>
                         <h4>1.企业宗旨</h4>
-                        <p>秉承“传以古法，注以新意，精于食材，通于传达。”</p>
+                        <p>1、以传统重庆老火锅的味道为根本；<Br>
+2、以食材的生态化、菜品的创意化为向；<Br>
+3、以超一流的服务精神为基础；<Br>
+4、以彰显传统文化与现代结合的新中式风格打造就餐环境；<Br>
+5、以超前的运营战略为核心发展为大型连销餐饮集团。</p>
                         <h4>2.企业使命</h4>
-                        <p>传千年饮食文化，树餐饮价值典范</p>
+                        <p>舵爷江湖老火锅旗舰店将全情完善各个层面到完美，坚守初心，逐步有效推广加盟企业，以共同价值观和忠义精神打造餐饮业的航母。</p>
                         <h4>3.企业环境</h4>
                         <img src="img/dm01.jpg" class="img-responsive mb20" />
                         <!-- <h4>4.企业资质</h4>
@@ -258,7 +254,7 @@ if(<%=cailei%>==6){
                          <p class="color-dd2727">注释：具体活动详情请到店咨询，本活动最终解释权归饺耳世家所有。</p>
                     </div>
 <%} %>
-<%if(cailei==6){ %>
+<%if(cailei==9){ %>
                     <div class="tab-content">
                         <h3>电子杂志</h3>
                         <ul class="clearfix  e-zine">
@@ -289,44 +285,24 @@ if(<%=cailei%>==6){
 <%if(cailei==4){ %>
                     <div class="tab-content">
                         <h3>人才招聘</h3>
-                        <h4> 饺耳世家正在招聘以下岗位的小伙伴，加入“饺耳团队”来，</h4>
-                        <p><strong>1、内容编辑</strong><br>
-                                                                            招聘人数：1-2人
-                        </p>
-                        <p>
-                        	<strong>岗位职责：</strong><br />
-							1、完成相关约稿、采访和文章撰写工作；<br />
-							2、根据全球移动互联网行业热点，及时撰写文章；<br />
-							3、编译外文；<br />
-							4、完成交办的其他临时任务。
-                        </p>  
-                        <p><strong>1、内容编辑</strong><br>
-                                                                            招聘人数：1-2人
-                        </p>
-                        <p>
-                        	<strong>岗位职责：</strong><br />
-							1、完成相关约稿、采访和文章撰写工作；<br />
-							2、根据全球移动互联网行业热点，及时撰写文章；<br />
-							3、编译外文；<br />
-							4、完成交办的其他临时任务。
-                        </p> 
-                        <p><strong>1、内容编辑</strong><br>
-                                                                            招聘人数：1-2人
-                        </p>
-                        <p>
-                        	<strong>岗位职责：</strong><br />
-							1、完成相关约稿、采访和文章撰写工作；<br />
-							2、根据全球移动互联网行业热点，及时撰写文章；<br />
-							3、编译外文；<br />
-							4、完成交办的其他临时任务。
-                        </p> 
-                        <p>
-                        	地      址：北京市朝阳区朝阳路69号<br />
-					                      电       话：010-80850472   18910622378  王经理<br />
-							面试时间：周一到周日 上午10:00到 下午17:00<br />
-							有意者请携带简历，在上述时间直接参加面试，无需预约。<br />
-                                                                             错过招聘时间，有意加入公司者可与王经理电话联系，另行约定面试时间。                                         
-                        </p>
+          <p>饺耳世家餐饮(北京）有限公司因发展经营需要，现面向社会招聘优秀服务人员</p>
+          <h4>1、服务员:招聘20名，男女不限，薪资面议</h4>
+          <ul class="mb20">
+            <li>岗位要求：</li>
+            <li>1、年龄：18—35周岁</li>
+            <li>2、身高：女160cm以上，男170cm以上</li>
+            <li>3、有无工作经验不限。（酒店会为您提供一个发展学习的平台）</li>
+          </ul>
+          <h4>2、营销经理:招聘10名，限女性，底薪加提成；薪资面议（有客户资源者优先）</h4>
+          <ul class="mb20">
+            <li>岗位要求：</li>
+            <li>1、限女性</li>
+            <li>2、有客户资源者优先</li>
+            <li>3、有无工作经验不限。（酒店会为您提供一个发展学习的平台）</li>
+          </ul>
+          <p>福利待遇：包吃包住，每月给员工过生日每月带薪4天休班</p>
+          <p>联系电话：010-8994  2510 / 010-8994  2012 / 13256192666</p>
+          <p>酒店地址：北京市朝阳区财满街69号</p>
                     </div>
 <%} %>
 <%if(cailei==5){ %>
@@ -334,10 +310,10 @@ if(<%=cailei%>==6){
                         <h3>联系我们</h3>
                         <div class="cell mb30">
                         	<div class="cell_primary">
-                        		<p class="contact-information"><label>公司名称：</label>饺耳世家<br />
+                        		<p class="contact-information"><label>公司名称：</label>舵爷火锅<br />
 								<label>公司地址：</label>北京市朝阳区朝阳路福福满街69号<br />
-								<label>联系人：</label>张经理<br />
-								<label>联系电话：</label>010-80440188<br />
+								<label>联系人：</label>周经理<br />
+								<label>联系电话：</label>010-89442510<br />
 								<label>邮箱：</label>jiaoear@126.com<br /></p>
                         	</div>
                         	<div class="cell_primary">
@@ -468,7 +444,7 @@ if(<%=cailei%>==6){
     }
     function addMapOverlay(){
       var markers = [
-        {content:"北京市朝阳区朝阳路福福满街69号,电话：010-80440188",title:"饺耳世家",imageOffset: {width:-46,height:-21},position:{lat:39.923708,lng:116.538173}}
+        {content:"北京市朝阳区朝阳路福福满街69号,电话：010-80440188",title:"舵爷火锅",imageOffset: {width:-46,height:-21},position:{lat:39.923708,lng:116.538173}}
       ];
       for(var index = 0; index < markers.length; index++ ){
         var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);

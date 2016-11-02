@@ -28,7 +28,7 @@
         						<a href="#" target="_blank">XML</a>
         					</p>
         					<p>© Copyright 2008-2016. 京ICP备15008545号</p>
-        					<p>舵爷热线：010-80440188 / 010-80443266</p>
+        					<p>舵爷热线：010-8994  2510 / 010-8994  2012</p>
         					<p><a href="" target="_blank">技术支持：DESIGN BY IWISDOMS TEAM</a></p>
         					<div class="icon-link bdsharebuttonbox" data-tag="share_1">
 								<a style="background-image:url(img/wx-icon_03.png);" data-cmd="weixin"></a>
@@ -83,12 +83,28 @@
         				}
         				%>
         					<h4>邮箱订阅/Newsletter</h4>
-        					<form action="<%=urlfootor%>" class="input-group" method="POST">
+        					<form action="<%=urlfootor%>" class="input-group" method="POST" id="footsubform">
         						<input type="text" name="username" placeholder="姓名"/>
-        						<input type="text" name="mail" placeholder="邮箱"/>
+        						<input type="text" name="mail" placeholder="邮箱" id="idmail"/>
         						<span class="mr20">把最新鲜的东西呈现给您</span><input type="submit" name="Action" value="订阅" />
         					</form>
         				</div>
+        				<script type="text/javascript">    
+							//function checkformfoot(){ 
+								//电子邮箱正则表达式  
+							//	var idemail = document.getElementById("idmail");    
+								//获取email控件对象         
+							//	var reg = /[a-zA-Z0-9]{1,10}@[a-zA-Z0-9]{1,5}\.[a-zA-Z0-9]{1,5}/;
+							//	if(!reg.test(idemail.Value)){
+							//		alert("请正确填写邮箱！");
+							  //      obj.value="";
+							//	}else{
+								//	var test2form=document.getElementById("footsubform");
+								//	test2form.action="<%=urlfootor%>";
+								//	test2form.submit();
+								//}
+							//}
+							</script>
         				<div class="ewm-box">
         					<img src="img/ewm02_03.jpg">
         				</div>

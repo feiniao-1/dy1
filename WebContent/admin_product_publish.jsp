@@ -13,7 +13,7 @@
 <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> 
 <META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
 <title>菜品编辑</title>
-<link href="img/toubiao.png" rel="SHORTCUT ICON">
+<link href="img/dy-icon.png" rel="SHORTCUT ICON">
 <link rel="stylesheet" href="css/bootstrap.css"/>
 <link rel="stylesheet" href="css/backstage.css"/>
     <!-- 配置文件 -->
@@ -86,16 +86,16 @@ if(jishu==null){
 int dluserid=10196;	
 HashMap<String,String> param= G.getParamMap(request); 
 String searchnr;
-if(request.getParameter("insearch")==null){
+if(request.getParameter("searchnr")==null){
 	searchnr=null;
 }else{
-	searchnr=new String(request.getParameter("insearch").getBytes("iso-8859-1"),"utf-8");
+	searchnr=new String(request.getParameter("searchnr").getBytes("iso-8859-1"),"utf-8");
 }
 String paixu;
-if(request.getParameter("inpaixu")==null){
+if(request.getParameter("paixu")==null){
 	paixu=null;
 }else{
-	paixu=new String(request.getParameter("inpaixu").getBytes("iso-8859-1"),"utf-8");
+	paixu=new String(request.getParameter("paixu").getBytes("iso-8859-1"),"utf-8");
 }
 //菜品列表信息
 //CREATE TABLE `productmenu` (
@@ -184,7 +184,7 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 		%>
 		<script type="text/javascript" language="javascript">
 				alert("修改成功");                                            // 弹出提示信息
-				window.location='admin_product.jsp' ;                           
+				window.location='admin_product.jsp?page=<%=request.getParameter("page") %>&paixu=<%=paixu %>&searchnr=<%= param.get("searchnr")%>' ;                          
 		</script>
 	<%
 }else{
@@ -202,14 +202,15 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
          <a href="admin_news_list.jsp" class="btn btn-primary">发表新闻</a>
          <a href="admin_product.jsp" class="btn btn-warning">发表菜品</a>
          <a href="admin_mail_list.jsp" class="btn btn-primary">邮件列表</a>
+         <a href="photo.jsp" class="btn btn-primary" target="_blank">图片上传</a>
         </div>
         <div class="botton-group">
-        <a href="admin_product.jsp?page=<%=request.getParameter("inpage") %>&paixu=<%=paixu %>&searchnr=<%= searchnr%>" class="btn btn-danger">返回</a><span style="color:red;">操作说明：如需改动图片；先上传图片，再修改内容</span>
+        <a href="admin_product.jsp?page=<%=request.getParameter("page") %>&paixu=<%=paixu %>&searchnr=<%= searchnr%>" class="btn btn-danger">返回</a><span style="color:red;">操作说明：如需改动图片；先上传图片，再修改内容</span>
         </div>
         		<!-- 表格 start -->
         		<div class="form-group">
         		<h5>PC商品封面图片<span style="color:red;">*(370*247)</span></h5> 
-						<form action="${pageContext.request.contextPath }/uploadServlet?url=productpublish&caiid=<%= caiid%>&shuzi=1" method="post" enctype="multipart/form-data">
+						<form action="${pageContext.request.contextPath }/uploadServlet?url=productpublish&caiid=<%= caiid%>&shuzi=1&page=<%=request.getParameter("page") %>&paixu=<%=paixu %>&searchnr=<%= param.get("searchnr")%>" method="post" enctype="multipart/form-data">
 						<div class="mb10">
 						<input type="file" name="attr_file1" style="display:inline-block; width:220px;">
 						<input type="submit" value="上传">  
@@ -243,7 +244,7 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 							 	<img alt="" src="<%=menu.get(0).getStringView("img1") %>" style="width:220px!important;" height="150px">
 							 <%} %>
 							 <h5>PC商品详情图片<span style="color:red;">*(798*532)</span></h5> 
-						<form action="${pageContext.request.contextPath }/uploadServlet?url=productpublish&caiid=<%= caiid%>&shuzi=3" method="post" enctype="multipart/form-data">
+						<form action="${pageContext.request.contextPath }/uploadServlet?url=productpublish&caiid=<%= caiid%>&shuzi=3&page=<%=request.getParameter("page") %>&paixu=<%=paixu %>&searchnr=<%= param.get("searchnr")%>" method="post" enctype="multipart/form-data">
 						<div class="mb10">
 						<input type="file" name="attr_file3" style="display:inline-block; width:220px;">
 						<input type="submit" value="上传">  
@@ -277,7 +278,7 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 							 	<img alt="" src="<%=menu.get(0).getStringView("img2") %>" style="width:220px!important;" height="150px">
 							 <%} %>
 					    <h5>移动端商品封面图片<span style="color:red;">*</span></h5> 
-					    <form action="${pageContext.request.contextPath }/uploadServlet?url=productpublish&caiid=<%= caiid%>&shuzi=2" method="post" enctype="multipart/form-data">
+					    <form action="${pageContext.request.contextPath }/uploadServlet?url=productpublish&caiid=<%= caiid%>&shuzi=2&page=<%=request.getParameter("page") %>&paixu=<%=paixu %>&searchnr=<%= param.get("searchnr")%>" method="post" enctype="multipart/form-data">
 						<div class="mb10">
 						<input type="file" name="attr_file1" style="display:inline-block; width:220px">
 						<input type="submit" value="上传">
@@ -311,7 +312,7 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 							 	<img alt="" src="<%=menu.get(0).getStringView("ydimg1") %>" style="width:120px!important;" height="90px">
 							 <%} %>
 					<h5>移动端商品详情图片<span style="color:red;">*</span></h5> 
-					    <form action="${pageContext.request.contextPath }/uploadServlet?url=productpublish&caiid=<%= caiid%>&shuzi=4" method="post" enctype="multipart/form-data">
+					    <form action="${pageContext.request.contextPath }/uploadServlet?url=productpublish&caiid=<%= caiid%>&shuzi=4&page=<%=request.getParameter("page") %>&paixu=<%=paixu %>&searchnr=<%= param.get("searchnr")%>" method="post" enctype="multipart/form-data">
 						<div class="mb10">
 						<input type="file" name="attr_file4" style="display:inline-block; width:220px">
 						<input type="submit" value="上传">
@@ -346,7 +347,7 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 							 <%} %>
 				</div>
 				
-				<form role="form" action="admin_product_publish.jsp?jishu=<%=val%>&caiid=<%=caiid %>&fileName=tijiao" method="POST" name="form1"
+				<form role="form" action="admin_product_publish.jsp?jishu=<%=val%>&caiid=<%=caiid %>&fileName=tijiao&page=<%=request.getParameter("page") %>&paixu=<%=paixu %>&searchnr=<%= param.get("searchnr")%>" method="POST" name="form1"
 					novalidate>
 					<div class="form-group">
 						<h5>ID</h5> 

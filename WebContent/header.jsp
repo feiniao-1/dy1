@@ -41,9 +41,9 @@ List<Mapx<String, Object>> juese=DB.getRunner().query("select userrole from user
         		</div>
         		<div class="row">
 	        		<div class="head clearfix">
-	        			<div class="logo fl"><a href="front_index.jsp"><img src="img/duoyeLOGO.png" style="height:74px;weight:105px;"></a></div>
+	        			<div class="logo fl"><a href="front_index.jsp"><img src="img/duoyeLOGO.png"></a></div>
 	        			<div class="tell fl">
-	        				<p><span>010-8044<strong>0188</strong></span></p>
+	        				<p><span>010-8994<strong>2510</strong></span></p>
 	        			</div>
 	        			<%//获取url
         				HashMap<String,String> param2= G.getParamMap(request);

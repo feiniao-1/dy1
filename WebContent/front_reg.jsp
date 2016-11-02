@@ -55,7 +55,7 @@ if(param.get("Action")!=null && param.get("Action").equals("立即注册")){
 		  <meta name="description" content="">
 		  <meta name="keywords" content="饺耳、美食">
 		<title>注册页面</title>
-		<link href="img/duoyeLOGO.png" rel="SHORTCUT ICON">
+		<link href="img/dy-icon.png" rel="SHORTCUT ICON">
 		<link href="css/_main.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 		<script src="js/jquery-1.11.1.min.js"></script>
@@ -71,14 +71,13 @@ if(param.get("Action")!=null && param.get("Action").equals("立即注册")){
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-
 <body style="min-height: 1000px;">
 			<div class="login-box register-box">
 			<div class="container" style="padding: 70px 0;">
 				<div class="col-md-4  col-md-offset-4">
 					<div class="center ">
-						<img src="img/duoyeLOGO.png"  style="display: inline-block; margin-bottom: 20px;width:123px;height:91px;"/>
-						<p style="font-size: 18px;">饺耳舵爷账号注册</p>
+						<img src="img/duoyeLOGO.png"  style="display: inline-block; margin-bottom: 20px;"/>
+						<p style="font-size: 18px;">舵爷火锅账号注册</p>
 					</div>
 				<form class="form" action="front_reg.jsp" method="POST">
 					<input type="hidden" name="opt" value="addsave">

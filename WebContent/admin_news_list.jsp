@@ -13,7 +13,7 @@
 <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> 
 <META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
 <title>新闻列表</title>
-<link href="img/toubiao.png" rel="SHORTCUT ICON">
+<link href="img/dy-icon.png" rel="SHORTCUT ICON">
 <link rel="stylesheet" href="css/bootstrap.css"/>
 <link rel="stylesheet" href="css/backstage.css"/>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -218,7 +218,7 @@ if((param.get("Action")!=null)&&(param.get("Action").equals("删除"))){
 							<td><%=menu.get(j).getIntView("createtime") %></td>
 							<td><%=menu.get(j).getIntView("zcount") %></td>
 							<td>
-								<a href="admin_news_publish.jsp?caiid=<%=menu.get(j).getIntView("articleid")%>&inpage=<%=intdhpage%>&inpaixu=<%=paixu%>&insearch=<%=insearch%>">管理</a>|
+								<a href="admin_news_publish.jsp?caiid=<%=menu.get(j).getIntView("articleid")%>&page=<%=intdhpage%>&paixu=<%=paixu%>&searchnr=<%=insearch%>">管理</a>|
 								<form action="admin_news_list.jsp" id="subform<%=j%>" method="POST" style="float:right;">
 									<input type="hidden" value="<%=menu.get(j).getIntView("tagid") %>" name="tagid">
 									<input type="hidden" value="删除" name="Action">

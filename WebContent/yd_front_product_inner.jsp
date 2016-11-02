@@ -91,17 +91,17 @@ if(param.get("Action")!=null && param.get("Action").equals("喜欢")){
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-		<meta name="description" content="饺耳世家">
-		<meta name="keywords" content="饺耳世家、美食">
-		<title>饺耳菜品详情页</title>
-		<link href="images/top-icon.png" type="image/x-icon" rel="shortcut icon" />
+		<meta name="description" content="舵爷火锅">
+		<meta name="keywords" content="舵爷火锅、美食">
+		<title>舵爷菜品详情页</title>
+		<link href="images/dy-icon.png" type="image/x-icon" rel="shortcut icon" />
 		<link href="css/m-style.css" rel="stylesheet">
 		<script src="js/jquery-1.11.1.min.js"></script>
 	</head>
 	<body>
 		<div class="container">
 			<div class="head head-rel">
-				<p>饺耳菜谱</p>
+				<p>舵爷菜谱</p>
 				<a href="yd_front_product.jsp" class="back02"><img src="images/back.png"></a>
 			</div>
 			<!--产品内页开始-->

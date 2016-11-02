@@ -150,7 +150,7 @@ if(param.get("Action")!=null && param.get("Action").equals("zan")){
 		  <meta name="description" content="">
 		  <meta name="keywords" content="饺耳、美食">
 		<title>新闻咨询</title>
-		<link href="img/duoyeLOGO.png" type="image/x-icon" rel="shortcut icon" />	
+		<link href="img/dy-icon.png" type="image/x-icon" rel="shortcut icon" />	
 		<link href="css/_main.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 		<script src="js/jquery-1.11.1.min.js"></script>
@@ -203,7 +203,6 @@ if(param.get("Action")!=null && param.get("Action").equals("zan")){
 									<li><a href="about-us.jsp?cailei=1">公司介绍</a></li>
 									<li><a href="about-us.jsp?cailei=2">公司文化</a></li>
 									<li><a href="about-us.jsp?cailei=3">线下活动</a></li>
-									<li><a href="about-us.jsp?cailei=6">电子杂志</a></li>
 									<li><a href="about-us.jsp?cailei=4">人才招聘</a></li>
 									<li><a href="about-us.jsp?cailei=5">联系我们</a></li>
 								</ul>
@@ -491,5 +490,5 @@ if(param.get("Action")!=null && param.get("Action").equals("zan")){
       })
 	</script>
 <!--百度分享js-->
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"18"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 </html>

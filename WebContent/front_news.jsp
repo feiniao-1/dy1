@@ -92,7 +92,7 @@ if(Integer.parseInt(index_page)==1){
 		  <meta name="description" content="">
 		  <meta name="keywords" content="饺耳、美食">
 		<title>新闻咨询</title>
-		<link href="img/duoyeLOGO.png" type="image/x-icon" rel="shortcut icon" />	
+		<link href="img/dy-icon.png" type="image/x-icon" rel="shortcut icon" />	
 		<link href="css/_main.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 		<script src="js/jquery-1.11.1.min.js"></script>
@@ -145,7 +145,6 @@ if(Integer.parseInt(index_page)==1){
 									<li><a href="about-us.jsp?cailei=1">公司介绍</a></li>
 									<li><a href="about-us.jsp?cailei=2">公司文化</a></li>
 									<li><a href="about-us.jsp?cailei=3">线下活动</a></li>
-									<li><a href="about-us.jsp?cailei=6">电子杂志</a></li>
 									<li><a href="about-us.jsp?cailei=4">人才招聘</a></li>
 									<li><a href="about-us.jsp?cailei=5">联系我们</a></li>
 								</ul>

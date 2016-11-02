@@ -117,7 +117,7 @@ body{ min-width: 1170px;}
 .nav2 .nLi{ float:left;  position:relative; display:inline;  }
 .nav2 .nLi h3{ float:left;  }
 .nav2 .nLi h3 a{ display:block; text-align: center; width: 128px; line-height: 50px; font-size:18px; font-weight:600;  }
-.nav2 .sub{ display:none; width:112px; left:0; top:50px;  position:absolute; background:#ffba00;  line-height:36px; padding:5px 0; }
+.nav2 .sub{ display:none; width:112px; left:0; top:50px;  position:absolute; background:#b27301;  line-height:36px; padding:5px 0; }
 .nav2 .sub li{ zoom:1; text-align: center;}
 .nav2 .sub a{ display:block; padding:0 10px; }
 .nav2 .sub a:hover{ background:#FF6600; color:#fff;  }
@@ -197,14 +197,14 @@ h4.icon-heart{background: url(../img/icon-01.png) no-repeat 0 -977px; padding-le
 .celan5 img{ width: 100%;}
 /*下部合作伙伴*/
 .pataner{padding:10px 15px; }
-.pataner h4{line-height: 40px; padding-left: 50px; border-bottom: 1px solid #dd2727; background: url(../img/icon_01.png) no-repeat 0 -350px; font-weight: 700;}
+.pataner h4{line-height: 40px; padding-left: 50px; border-bottom: 1px solid #b27301; background: url(../img/icon_01.png) no-repeat 0 -346px; font-weight: 700;}
 .pataner ul{ padding: 30px 0;}
 .pataner ul li{ float: left; margin-right: 20px;}
 .pataner ul li img{ width: 120px; height: 60px; border: 1px solid #e5e5e5;}
 .pataner ul li img:hover{ opacity: 0.8; border: 1px solid #FF9900;}
 /*下部友情链接*/
 .link{padding:10px 15px;}
-.link h4{line-height: 40px; padding-left: 50px; border-bottom: 1px solid #dd2727; background: url(../img/icon_01.png) no-repeat 0 -418px; font-weight: 700;}
+.link h4{line-height: 40px; padding-left: 50px; border-bottom: 1px solid #b27301; background: url(../img/icon_01.png) no-repeat 0 -417px; font-weight: 700;}
 .link p{ padding: 30px 0;}
 .link p a{ margin-right: 20px;}
 .link p a:hover{ color: #FF9900;}
@@ -222,7 +222,7 @@ h4.icon-heart{background: url(../img/icon-01.png) no-repeat 0 -977px; padding-le
 .footer .cell .cell_primary .foot-link span{ margin: 0 5px;}
 .footer .cell .icon-link{ margin-top:10px;}
 .footer .cell .icon-link a{position: relative; display: inline-block; margin-right: 20px; width: 30px; height: 30px;  border: 1px solid #ffffff; border-radius: 4px;}
-.footer .cell .icon-link a:hover{ background: #dd2727; border-color:#dd2727;}
+.footer .cell .icon-link a:hover{ background: #b27301; border-color:#b27301;}
 .footer .cell .icon-link img{position: absolute; right: 0; left: 0; top: 0; bottom: 0; margin: auto;}
 .footer .cell .ewm-box{ width: 180px;}
 .footer .cell .ewm-box img{ width: 100%;}
@@ -288,7 +288,7 @@ table.recommend a{ color: #666666;}
 .a-hover a:hover{color: #FF6600;}
 /*登录页面结束*/
 /*产品列表页样式开始*/
-.product-banner{width: 100%; height: 200px; background: url(../img/product-banner_02.jpg) no-repeat center center;}
+.product-banner{width: 100%; height: 240px; background: url(../img/product-banner_02.jpg) no-repeat center center;background-size:cover;}
 .product-title{ height: 60px; background: url(../img/duoyemeishi.png) no-repeat center center;}
 .product .title-nav{ height:36px; margin:30px 0;}
 .product .title-nav-item{ float: left; padding: 0 20px; cursor: pointer; font-size: 16px; font-weight: 500; line-height:36px; color: #dd2727;}
@@ -305,7 +305,7 @@ h4.icon-cp{background: url(../img/icon-01.png) no-repeat 0 -1033px; padding-left
 /*产品详细页样式结束*/
 
 /*新闻页面样式开始*/
-.news-banner{width: 100%; height: 200px; background: url(../img/news-banner.jpg) no-repeat center center;}
+.news-banner{width: 100%; height: 240px; background: url(../img/news-banner.jpg) no-repeat center center;background-size:cover;}
 /*新闻页面样式结束*/
 /*新闻博客内页css开始*/
 .article{ padding: 10px 15px 20px; border-bottom: 1px dashed #ccc; margin-bottom: 40px;}
@@ -331,7 +331,7 @@ h4.icon-cp{background: url(../img/icon-01.png) no-repeat 0 -1033px; padding-left
 .evaluate-list .cell .pic-tx{ width: 40px; margin-right: 30px;}
 /*新闻博客内页css结束*/
 /*关于我们样式开始*/
-.us-banner{width: 100%; height: 200px; background: url(../img/us-banner-02.jpg) no-repeat center center;}
+.us-banner{width: 100%; height: 240px; background: url(../img/us-banner-02.jpg) no-repeat center center;background-size:cover;}
 .us-left {
     position: absolute;
     left: 0;

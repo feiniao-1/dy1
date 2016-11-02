@@ -113,10 +113,10 @@ System.out.println("caipinshow"+caipinshow);
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-		<meta name="description" content="饺耳世家">
-		<meta name="keywords" content="饺耳世家、美食">
-		<title>饺耳世家|饺耳美食|水饺|美食</title>
-		<link href="images/top-icon.png" type="image/x-icon" rel="shortcut icon" />	
+		<meta name="description" content="舵爷火锅">
+		<meta name="keywords" content="舵爷火锅、美食">
+		<title>舵爷火锅|舵爷美食|舵爷|美食</title>
+		<link href="images/dy-icon.png" type="image/x-icon" rel="shortcut icon" />	
 		<link href="css/m-style.css" rel="stylesheet">
 		<script src="js/jquery-1.11.1.min.js"></script>
 						<script type="text/javascript">
@@ -159,23 +159,23 @@ if (!browser.versions.mobile)
 	<body>
 		<div class="container" style="position: relative;">
 			<div class="head">
-				<p>饺耳世家</p>
+				<p>舵爷火锅</p>
 			</div>
 			<!--轮播图开始-->
             <div class="sliderout">
                 <div class="slider">
                   <ul>
                         <li style="float: left; display: inline;">
-                            <a href=""><img src="images/M-banner01_02.jpg" style="width: 100%; height: 100%;"/></a>
+                            <a href=""><img src="images/M-banner01.jpg" style="width: 100%; height: 100%;"/></a>
                         </li>
                         <li style="float: left; display: inline;"> 
-                            <a href=""><img src="images/M-banner01_02.jpg" style="width: 100%; height: 100%;"/></a>
+                            <a href=""><img src="images/M-banner02.jpg" style="width: 100%; height: 100%;"/></a>
                         </li>
                         <li style="float: left; display: inline;">
-                            <a href=""><img src="images/M-banner01_02.jpg" style="width: 100%; height: 100%;"/></a>
+                            <a href=""><img src="images/M-banner03.jpg" style="width: 100%; height: 100%;"/></a>
                         </li>
                         <li style="float: left; display: inline;">
-                            <a href=""><img src="images/M-banner01_02.jpg" style="width: 100%; height: 100%;"/></a>
+                            <a href=""><img src="images/M-banner04.jpg" style="width: 100%; height: 100%;"/></a>
                         </li>
                   </ul>
                 </div>
@@ -191,7 +191,7 @@ if (!browser.versions.mobile)
             		<div class="cell_primary">
             			<a href="yd_not_open.html">
             				<div class="nav-icon nav-cake"></div>
-            				<h4>饺耳外卖</h4>
+            				<h4>舵爷外卖</h4>
             			</a>
             		</div>
             		<div class="cell_primary">
@@ -203,7 +203,7 @@ if (!browser.versions.mobile)
             		<div class="cell_primary">
             			<a href="yd_front_news.jsp">
             				<div class="nav-icon nav-news"></div>
-            				<h4>饺耳资讯</h4>
+            				<h4>舵爷资讯</h4>
             			</a>
             		</div>
             		<div class="cell_primary">
@@ -258,7 +258,7 @@ if (!browser.versions.mobile)
             		<div class="cell_primary">
 	            		<a href="yd_about_us.html" class="footer-title">
 	            			<span class="footer-title-icon us"></span>
-	            			<span>饺耳</span>	
+	            			<span>舵爷</span>	
 	            		</a>
             		</div>
             		<div class="cell_primary">

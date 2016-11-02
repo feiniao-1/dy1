@@ -138,11 +138,11 @@ public class UploadServlet extends HttpServlet {
 			}else if(url.equals("product")){
 				response.sendRedirect(fhurl+"?fileName="+fileName+"&fullName"+request.getParameter("shuzi")+"="+fullName+"&shuzi="+request.getParameter("shuzi"));
 			}else if(url.equals("productpublish")){
-				response.sendRedirect(fhurl+"?fileName="+fileName+"&fullName"+request.getParameter("shuzi")+"="+fullName+"&shuzi="+request.getParameter("shuzi")+"&caiid="+request.getParameter("caiid"));
+				response.sendRedirect(fhurl+"?fileName="+fileName+"&fullName"+request.getParameter("shuzi")+"="+fullName+"&shuzi="+request.getParameter("shuzi")+"&caiid="+request.getParameter("caiid")+"&page="+request.getParameter("page")+"&paixu="+request.getParameter("paixu")+"&searchnr="+request.getParameter("searchnr"));
 			}else if(url.equals("bokepublish")){
 				response.sendRedirect(fhurl+"?fileName="+fileName+"&upimg"+request.getParameter("shuzi")+"="+fullName+"&shuzi="+request.getParameter("shuzi")+"&caiid="+request.getParameter("caiid"));
 			}else if(url.equals("newspublish")){
-				response.sendRedirect(fhurl+"?fileName="+fileName+"&upimg"+request.getParameter("shuzi")+"="+fullName+"&shuzi="+request.getParameter("shuzi")+"&caiid="+request.getParameter("caiid"));
+				response.sendRedirect(fhurl+"?fileName="+fileName+"&upimg"+request.getParameter("shuzi")+"="+fullName+"&shuzi="+request.getParameter("shuzi")+"&caiid="+request.getParameter("caiid")+"&page="+request.getParameter("page")+"&paixu="+request.getParameter("paixu")+"&searchnr="+request.getParameter("searchnr"));
 			}else if(url.equals("photo")){
 				response.sendRedirect(fhurl+"?fileName="+fileName+"&fullName="+fullName);
 			}

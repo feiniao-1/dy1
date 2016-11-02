@@ -13,7 +13,7 @@
 <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> 
 <META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
 <title>添加菜品</title>
-<link href="img/toubiao.png" rel="SHORTCUT ICON">
+<link href="img/dy-icon.png" rel="SHORTCUT ICON">
 <link rel="stylesheet" href="css/bootstrap.css"/>
 <link rel="stylesheet" href="css/backstage.css"/>
     <!-- 配置文件 -->
@@ -181,6 +181,7 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
          <a href="admin_news_list.jsp" class="btn btn-primary">发表新闻</a>
          <a href="admin_product.jsp" class="btn btn-warning">发表菜品</a>
          <a href="admin_mail_list.jsp" class="btn btn-primary">邮件列表</a>
+         <a href="photo.jsp" class="btn btn-primary" target="_blank">图片上传</a>
          </div>
          <div class="botton-group">
 	        <a href="admin_product.jsp" class="btn btn-danger">返回</a><span style="color:red;">操作说明：先上传图片，再填写内容</span>

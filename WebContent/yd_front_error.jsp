@@ -46,8 +46,8 @@ String searchtj;
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-		<meta name="description" content="饺耳世家">
-		<meta name="keywords" content="饺耳世家、美食">
+		<meta name="description" content="舵爷火锅">
+		<meta name="keywords" content="舵爷火锅、美食">
 		<title>未知错误</title>
 		<link href="images/top-icon.png" type="image/x-icon" rel="shortcut icon" />
 		<link href="css/m-style.css" rel="stylesheet">
@@ -59,7 +59,7 @@ String searchtj;
 	<body>
 		<div class="container">
 			<div class="head head-rel">
-				<p>饺耳世家</p>
+				<p>舵爷火锅</p>
 				<a href="yd_front_index.jsp" class="back02"><img src="images/back.png"></a>
 			</div>
 			<div class="pic_404">
