@@ -113,7 +113,7 @@ if(param.get("Action")!=null && param.get("Action").equals("喜欢")){
 		            				<h3><%=caipinshow.get(0).getStringView("productname") %></h3>
 		            				<p class="color-999999"><%=caipinshow.get(0).getStringView("productEname") %></p>
 		            				<p class="color-666666 mb5">月售<%=caipinshow.get(0).getIntView("count") %><span class="ml10">好评率100%</span></p>
-		            				<p><span class="color-dd2727 size18">￥<%=caipinshow.get(0).getIntView("yprice") %></span><del class="color-666666 ml10">58</del></p>
+		            				<p><span class="color-dd2727 size18">￥<%=caipinshow.get(0).getIntView("yprice") %></span></p>
 		            			</div>
             			<form  id="subform" method="POST" >
             				<input type="hidden" value="<%=caipinshow.get(0).getIntView("productmenuid")%>" name="xxid">
@@ -155,7 +155,7 @@ if(param.get("Action")!=null && param.get("Action").equals("喜欢")){
 			</div>
 			<!--产品内页结束-->
 			<div class="tellbox">
-				<h3>订餐电话:<a href="tel:01080440188"> 010-<span>8044</span><span>0188</span></a></h3>
+				<h3>订餐电话:<a href="tel:01080440188"> 010-<span>8994</span><span>2510</span></a></h3>
 			</div>
 			
 			<div id="topcontrol" style="display:none; position: fixed; bottom: 180px; right: 0px; cursor: pointer; z-index: 119;" title="返回顶部">
