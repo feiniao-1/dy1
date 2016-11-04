@@ -126,7 +126,7 @@ if((param.get("Action")!=null)&&(param.get("Action").equals("发送"))){
 <body>
 <div class="container mainbox">
     <div class="row">
-        <h3 class="title">新闻列表信息</h3>
+        <h3 class="title">邮件列表信息</h3>
         <div class="botton-group">
         <a href="front_index.jsp" class="btn btn-primary">首页</a>
         <a href="admin_news_list.jsp" class="btn btn-primary">发表新闻</a>

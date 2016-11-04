@@ -89,8 +89,8 @@ if(Integer.parseInt(index_page)==1){
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		  <meta name="viewport" content="width=device-width, initial-scale=1">
-		  <meta name="description" content="">
-		  <meta name="keywords" content="饺耳、美食">
+		  <meta name="description" content="舵爷，火锅的江湖。舵爷江湖老火锅旗舰店创立于北京财满街。舵爷品牌名来自在“京城孟尝君”之美誉的黄珂黄舵爷，一群骨灰级美食家创造了这一文化老火锅的饕餮盛宴，主打重庆传统火锅情怀。">
+		 <meta name="keywords" content="火锅，舵爷火锅，美味火锅，舵爷文化，江湖老火锅，麻辣鲜美，涮锅，四川火锅，重庆火锅，好吃的火锅">
 		<title>新闻咨询</title>
 		<link href="img/dy-icon.png" type="image/x-icon" rel="shortcut icon" />	
 		<link href="css/_main.css" rel="stylesheet">

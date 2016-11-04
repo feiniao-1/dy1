@@ -147,8 +147,8 @@ if(param.get("Action")!=null && param.get("Action").equals("zan")){
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		  <meta name="viewport" content="width=device-width, initial-scale=1">
-		  <meta name="description" content="">
-		  <meta name="keywords" content="饺耳、美食">
+		  <meta name="description" content="舵爷，火锅的江湖。舵爷江湖老火锅旗舰店创立于北京财满街。舵爷品牌名来自在“京城孟尝君”之美誉的黄珂黄舵爷，一群骨灰级美食家创造了这一文化老火锅的饕餮盛宴，主打重庆传统火锅情怀。">
+		 <meta name="keywords" content="火锅，舵爷火锅，美味火锅，舵爷文化，江湖老火锅，麻辣鲜美，涮锅，四川火锅，重庆火锅，好吃的火锅">
 		<title>新闻咨询</title>
 		<link href="img/dy-icon.png" type="image/x-icon" rel="shortcut icon" />	
 		<link href="css/_main.css" rel="stylesheet">
@@ -273,16 +273,16 @@ if(param.get("Action")!=null && param.get("Action").equals("zan")){
 	         					<%
 	         					if(!article.get(0).getStringView("tag1").equals("")){
 	         					%>
-	         					<a href="" target="_blank"><%=article.get(0).getStringView("tag1") %></a>
+	         					<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd=<%=article.get(0).getStringView("tag1") %>&rsv_pq=ef8ff8b2000107d3&rsv_t=539fv3OednOCU8H3mP%2BGn0qNTHMjZWGcq3sMUjvyv%2FioPrhdVEi%2Bx2jarQM&rqlang=cn&rsv_enter=1&rsv_sug3=8&rsv_sug1=6&rsv_sug7=100&rsv_sug2=0&inputT=2022&rsv_sug4=2880" target="_blank"><%=article.get(0).getStringView("tag1") %></a>
 	         					<%}%>
 	         					<%if(!article.get(0).getStringView("tag2").equals("")){%>
-	         					<a href="" target="_blank"><%=article.get(0).getStringView("tag2") %></a>
+	         					<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd=<%=article.get(0).getStringView("tag2") %>&rsv_pq=ef8ff8b2000107d3&rsv_t=539fv3OednOCU8H3mP%2BGn0qNTHMjZWGcq3sMUjvyv%2FioPrhdVEi%2Bx2jarQM&rqlang=cn&rsv_enter=1&rsv_sug3=8&rsv_sug1=6&rsv_sug7=100&rsv_sug2=0&inputT=2022&rsv_sug4=2880" target="_blank"><%=article.get(0).getStringView("tag2") %></a>
 	         					<%}%>
 	         					<%if(!article.get(0).getStringView("tag3").equals("")){%>
-	         					<a href="" target="_blank"><%=article.get(0).getStringView("tag3") %></a>
+	         					<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd=<%=article.get(0).getStringView("tag3") %>&rsv_pq=ef8ff8b2000107d3&rsv_t=539fv3OednOCU8H3mP%2BGn0qNTHMjZWGcq3sMUjvyv%2FioPrhdVEi%2Bx2jarQM&rqlang=cn&rsv_enter=1&rsv_sug3=8&rsv_sug1=6&rsv_sug7=100&rsv_sug2=0&inputT=2022&rsv_sug4=2880" target="_blank"><%=article.get(0).getStringView("tag3") %></a>
 	         					<%}%>
 	         					<%if(!article.get(0).getStringView("tag4").equals("")){%>
-	         					<a href="" target="_blank"><%=article.get(0).getStringView("tag4") %></a>
+	         					<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd=<%=article.get(0).getStringView("tag4") %>&rsv_pq=ef8ff8b2000107d3&rsv_t=539fv3OednOCU8H3mP%2BGn0qNTHMjZWGcq3sMUjvyv%2FioPrhdVEi%2Bx2jarQM&rqlang=cn&rsv_enter=1&rsv_sug3=8&rsv_sug1=6&rsv_sug7=100&rsv_sug2=0&inputT=2022&rsv_sug4=2880" target="_blank"><%=article.get(0).getStringView("tag4") %></a>
 	         					<%}%>
 	         					</p>
 	         					<h4 class="next-article-tilte"><a href="front_news-inner.jsp?page=0&tagid=<%=articlenext.get(0).getIntView("tagid")%>" target="_blank">下一篇：<%=articlenext.get(0).getStringView("title") %></a></h4>
