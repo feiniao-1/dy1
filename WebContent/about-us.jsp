@@ -126,9 +126,6 @@ if(Integer.parseInt(index_page)==1){
 								<h3><a href="front_index.jsp" >首页</a></h3>
 						</li>
 						<li class="nLi ">
-								<h3><a href="front_news.jsp" >舵爷资讯</a></h3>
-						</li>
-						<li class="nLi ">
 								<h3><a href="front_product.jsp?cailei=1" >舵爷菜品</a></h3>
 								<ul class="sub">
 									<li><a href="front_product.jsp?cailei=6">店长推荐</a></li>
@@ -139,6 +136,9 @@ if(Integer.parseInt(index_page)==1){
 									<li><a href="front_product.jsp?cailei=5">京川小吃</a></li>
 									<li><a href="front_product.jsp?cailei=7">酒水饮料</a></li>
 								</ul>
+						</li>
+						<li class="nLi ">
+								<h3><a href="front_news.jsp" >舵爷资讯</a></h3>
 						</li>
 						<li class="nLi on">
 								<h3><a href="about-us.jsp" >关于舵爷</a></h3>

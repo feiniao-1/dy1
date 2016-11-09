@@ -182,10 +182,7 @@ if(param.get("Action")!=null && param.get("Action").equals("zan")){
 						<li class="nLi">
 								<h3><a href="front_index.jsp" >首页</a></h3>
 						</li>
-						<li class="nLi on">
-								<h3><a href="front_news.jsp" >舵爷资讯</a></h3>
-						</li>
-						<li class="nLi">
+						<li class="nLi ">
 								<h3><a href="front_product.jsp?cailei=1" >舵爷菜品</a></h3>
 								<ul class="sub">
 									<li><a href="front_product.jsp?cailei=6">店长推荐</a></li>
@@ -196,6 +193,9 @@ if(param.get("Action")!=null && param.get("Action").equals("zan")){
 									<li><a href="front_product.jsp?cailei=5">京川小吃</a></li>
 									<li><a href="front_product.jsp?cailei=7">酒水饮料</a></li>
 								</ul>
+						</li>
+						<li class="nLi on">
+								<h3><a href="front_news.jsp" >舵爷资讯</a></h3>
 						</li>
 						<li class="nLi">
 								<h3><a href="about-us.jsp" >关于舵爷</a></h3>
@@ -381,9 +381,9 @@ if(param.get("Action")!=null && param.get("Action").equals("zan")){
 		         			<div class="celan celan2">
 		         				<h4>最新文章</h4>
 		         				<ul>
-		         				<%List<Mapx<String, Object>> wzm=DB.getRunner().query("select title,tagid from news where newstype=? and (del is NULL or del <>1)  order by newsid desc limit 6", new MapxListHandler(),"boke");
+		         				<%List<Mapx<String, Object>> wzm=DB.getRunner().query("select title,subString(createtime,1,10) as createtime,tagid from news where newstype=? and (del is NULL or del <>1) order by newsid desc limit 6", new MapxListHandler(),"boke");
 		         				for(int index_wz=0;index_wz<wzm.size();index_wz++){ %>
-		         					<li><a href="front_news-inner.jsp?page=0&tagid=<%=wzm.get(index_wz).getIntView("tagid") %>" target="_blank"><%=wzm.get(index_wz).getStringView("title") %></a></li>
+		         					<li><span class="date"><%=wzm.get(index_wz).getStringView("createtime")%></span><a href="front_news-inner.jsp?page=0&tagid=<%=wzm.get(index_wz).getIntView("tagid") %>" target="_blank"><%=wzm.get(index_wz).getStringView("title") %></a></li>
 		         				<%} %>
 		         				</ul>
 		         			</div>

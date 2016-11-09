@@ -61,7 +61,7 @@ List<Mapx<String, Object>> juese=DB.getRunner().query("select userrole from user
         					urlfootor2=requestURIb+"?"+request.getQueryString();
         				}%>
 	        			<div class="search fr">
-	        				<!-- <div class="resiter fr">
+	        				<div class="resiter fr">
 								<%if(flag==1){ 
 									if(juese.get(0).getStringView("userrole").equals("管理员")){
 									%>
@@ -71,7 +71,7 @@ List<Mapx<String, Object>> juese=DB.getRunner().query("select userrole from user
 								<%}}else{ %>
 								<span class="glyphicon glyphicon-user"></span><a href="front_login.jsp" target="_blank">登陆</a>/<a href="front_reg.jsp" target="_blank">注册</a>
 							<%} %>
-							</div> -->
+							</div>
 	        				<div class="input-group fr">
 							 <form  method="post" id="subform">
 							  <input placeholder="请输入搜索内容"  type="text" class="form-control" name="search" onfocus="javascript:this.value=''"  id="ipt1">

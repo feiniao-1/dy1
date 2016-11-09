@@ -185,6 +185,8 @@ h4.icon-heart{background: url(../img/icon-01.png) no-repeat 0 -977px; padding-le
 .celan2 h4{background: url(../img/icon_01.png) no-repeat 0 -115px;}
 .celan2 li{overflow: hidden; white-space: nowrap; text-overflow: ellipsis; line-height:30px;}
 .celan2 li a:hover{ color: #FF9900;}
+.celan2 li .date{ color: #999;}
+.celan2 li a{ margin-left:20px;}
 .celan3 h4{background: url(../img/icon_01.png) no-repeat 0 -170px;}
 .celan3 img{ width:100%;}
 .celan4 h4{background: url(../img/icon_01.png) no-repeat 0 -225px;}
