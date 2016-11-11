@@ -25,7 +25,7 @@ public class ImgUploadAction {
 	 * @throws IOException
 	 */
 	public String imgUpload() throws IOException {
-
+		System.out.println("==start==");
 		// 获得response,request
 		HttpServletResponse response = ServletActionContext.getResponse();
 		HttpServletRequest request = ServletActionContext.getRequest();
@@ -86,6 +86,8 @@ public class ImgUploadAction {
 		out.println("window.parent.CKEDITOR.tools.callFunction(" + callback
 				+ ",'" + request.getContextPath() + "/upload/uploadImg/" + fileName + "','')");
 		out.println("</script>");
+		System.out.println("fileName=="+fileName);
+		System.out.println("==end==");
 		return null;
 	}
 

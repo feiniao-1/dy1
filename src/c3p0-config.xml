@@ -17,7 +17,7 @@
 		<property name="password">mysql123</property>
 		<!-- <property name="password">root</property> -->
 		<property name="driverClass">com.mysql.jdbc.Driver</property>
-		<property name="jdbcUrl">jdbc:mysql://192.168.108.137:3306/dysite?useUnicode=true&amp;characterEncoding=UTF8</property><!-- 办公室服务器 -->
+		<property name="jdbcUrl">jdbc:mysql://139.129.27.119:3306/dysite?useUnicode=true&amp;characterEncoding=UTF8</property><!-- 办公室服务器 -->
 		<!-- <property name="jdbcUrl">jdbc:mysql://139.129.27.119:3306/blogtest?useUnicode=true&amp;characterEncoding=UTF8</property>   个人云服务器-->
 		<property name="preferredTestQuery">SELECT 1</property>
 		<property name="idleConnectionTestPeriod">18000</property>

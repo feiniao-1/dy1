@@ -16,10 +16,15 @@
 <link href="img/dy-icon.png" rel="SHORTCUT ICON">
 <link rel="stylesheet" href="css/bootstrap.css"/>
 <link rel="stylesheet" href="css/backstage.css"/>
-    <!-- 配置文件 -->
-    <script type="text/javascript" src="ueditor/ueditor.config.js"></script>
-    <!-- 编辑器源码文件 -->
-    <script type="text/javascript" src="ueditor/ueditor.all.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script> 
+	<script type="text/javascript" src="ckeditor/ckeditor.js"></script>  
+    <script type="text/javascript" src="ckeditor/config.js"></script>  
+    <script type="text/javascript">
+	    $(document).ready(function(){  
+	    	CKEDITOR.replace('content1'); 
+	    	CKEDITOR.replace('content2'); 
+	    });  
+    </script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <%
 //获取当前url
@@ -141,6 +146,7 @@ String ydimg1;
 String ydimg2;
 String leixing;
 String origin;
+String zcount;
 if(url_canshu!=canshu_url){
 if(param.get("Action")!=null && param.get("Action").equals("确定")){
 	title=param.get("title");
@@ -152,6 +158,7 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 	tag2=param.get("tag2");
 	tag3=param.get("tag3");
 	tag4=param.get("tag4");
+	zcount=param.get("zcount");
 	leixing=new String(request.getParameter("leixing").getBytes("iso-8859-1"),"utf-8");
 	if((String)session.getAttribute("upimg1")==null){
 		img1=menu.get(0).getStringView("img1");
@@ -173,8 +180,8 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 	}else{
 		ydimg2="upload/"+(String)session.getAttribute("upydimg2");
 	}
-		DB.getRunner().update("update article set title=?,titlejs=?,content1=?,content2=?,tag1=?,tag2=?,tag3=?,tag4=?,updatetime=?,canshu_url=?,img1=?,img2=?,ydimg1=?,ydimg2=? ,articletype=?,origin=? where articleid=?",title,titlejs,content1,content2,tag1,tag2,tag3,tag4,df.format(new Date()),url_canshu,img1,img2,ydimg1,ydimg2,leixing,origin,caiid);
-		DB.getRunner().update("update news set title=?,titlejs=?,content=?,newstype=?,img1=?,ydimg1=?,updatetime=?,type=?,origin=? where tagid=?",title,titlejs,content1,"boke",img1,ydimg1,df.format(new Date()),leixing,origin,menu.get(0).getIntView("tagid"));
+		DB.getRunner().update("update article set title=?,titlejs=?,content1=?,content2=?,tag1=?,tag2=?,tag3=?,tag4=?,updatetime=?,canshu_url=?,img1=?,img2=?,ydimg1=?,ydimg2=? ,articletype=?,origin=?,zcount=? where articleid=?",title,titlejs,content1,content2,tag1,tag2,tag3,tag4,df.format(new Date()),url_canshu,img1,img2,ydimg1,ydimg2,leixing,origin,zcount,caiid);
+		DB.getRunner().update("update news set title=?,titlejs=?,content=?,newstype=?,img1=?,ydimg1=?,updatetime=?,type=?,origin=?,count=? where tagid=?",title,titlejs,content1,"boke",img1,ydimg1,df.format(new Date()),leixing,origin,zcount,menu.get(0).getIntView("tagid"));
 		session.removeAttribute("upimg1");
 		session.removeAttribute("upimg2");
 		session.removeAttribute("upydimg1");
@@ -376,11 +383,11 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 					</div>
 					<div class="form-group">
 						<label>文章简介</label>
-							<script type="text/plain" id="myEditor" name="content1"><%=menu.get(0).getStringView("content1") %></script>
+							<textarea name="content1"><%=menu.get(0).getStringView("content1") %></textarea>  
 					</div>
 					<div class="form-group">
 						<label>文章内容</label>
-							<script type="text/plain" id="myEditor1" name="content2"><%=menu.get(0).getStringView("content2") %></script>
+							<textarea name="content2"><%=menu.get(0).getStringView("content2") %></textarea>  
 					</div>
 					<div class="form-group">
 						<label>创建时间</label> <input type="text" class="form-control" style="width:200px;"
@@ -394,7 +401,7 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 					</div>
 					<div class="form-group">
 						<label>浏览量</label> <input type="text" class="form-control" style="width:200px;"
-							name="zcount" readOnly="true"
+							name="zcount" 
 							value="<%=menu.get(0).getIntView("zcount") %>">
 					</div>
 					<p class="mb10">新闻出处(不填默认是饺耳世家)：</p>

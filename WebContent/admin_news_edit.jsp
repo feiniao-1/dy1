@@ -16,10 +16,15 @@
 <link href="img/dy-icon.png" rel="SHORTCUT ICON">
 <link rel="stylesheet" href="css/bootstrap.css"/>
 <link rel="stylesheet" href="css/backstage.css"/>
-    <!-- 配置文件 -->
-    <script type="text/javascript" src="ueditor/ueditor.config.js"></script>
-    <!-- 编辑器源码文件 -->
-    <script type="text/javascript" src="ueditor/ueditor.all.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script> 
+	<script type="text/javascript" src="ckeditor/ckeditor.js"></script>  
+    <script type="text/javascript" src="ckeditor/config.js"></script>  
+    <script type="text/javascript">
+	    $(document).ready(function(){  
+	    	CKEDITOR.replace('content1'); 
+	    	CKEDITOR.replace('content2'); 
+	    });  
+    </script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <%
 //获取当前url
@@ -312,11 +317,11 @@ if(param.get("Action")!=null && param.get("Action").equals("发表文章")){
 		</div>				
 		<p>描述<span style="color:red;">*(建议3-4行；最多200字)</span>：</p>
 		<div  class="mb10">
-		<script type="text/plain" id="myEditor" name="content1"></script>
+		<textarea name="content1"></textarea>  
 		</div>
 		<p  class="mb10">内容*：</p>
 		<div  class="mb15">
-		<script type="text/plain" id="myEditor1" name="content2"></script>
+		<textarea name="content2"></textarea>  
 		</div>
 		<p class="mb10">新闻出处(不填默认是饺耳世家)：</p>
 		<p class="mb15"><input type="text" Name="origin"  placeholder="新闻出处"></p>	
@@ -331,9 +336,5 @@ if(param.get("Action")!=null && param.get("Action").equals("发表文章")){
 	</form>
   </div>
 </div>
-    <script type="text/javascript">
-        var editor_a = UE.getEditor('myEditor',{initialFrameHeight:150});
-        var editor_a = UE.getEditor('myEditor1',{initialFrameHeight:250});
-    </script>
 </body>
 </html>

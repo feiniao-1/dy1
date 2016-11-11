@@ -16,10 +16,15 @@
 <link href="img/dy-icon.png" rel="SHORTCUT ICON">
 <link rel="stylesheet" href="css/bootstrap.css"/>
 <link rel="stylesheet" href="css/backstage.css"/>
-    <!-- 配置文件 -->
-    <script type="text/javascript" src="ueditor/ueditor.config.js"></script>
-    <!-- 编辑器源码文件 -->
-    <script type="text/javascript" src="ueditor/ueditor.all.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script> 
+	<script type="text/javascript" src="ckeditor/ckeditor.js"></script>  
+    <script type="text/javascript" src="ckeditor/config.js"></script>  
+    <script type="text/javascript">
+	    $(document).ready(function(){  
+	    	CKEDITOR.replace('content1'); 
+	    	CKEDITOR.replace('content2'); 
+	    });  
+    </script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <%
 //获取当前url
@@ -356,11 +361,11 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 					</div>
 					<div class="form-group">
 						<h5>菜品简介<span style="color:red;">*(字数为1行或最多65字)</span></h5> 
-							<script type="text/plain" id="myEditor" name="content1"></script>
+							<textarea name="content1"></textarea>  
 					</div>
 					<div class="form-group">
 						<h5>菜品介绍<span style="color:red;">*</span></h5>
-							<script type="text/plain" id="myEditor1" name="content2"></script>
+							<textarea name="content2"></textarea>  
 					</div>
 					<div class="form-group">
 						<h5>创建时间</h5> <input type="text" class="form-control" style="width:200px;"
@@ -372,9 +377,5 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 				<!-- 表格 end -->
   </div>
 </div>
-    <script type="text/javascript">
-        var editor_a = UE.getEditor('myEditor',{initialFrameHeight:150});
-        var editor_a = UE.getEditor('myEditor1',{initialFrameHeight:150});
-    </script>
 </body>
 </html>
