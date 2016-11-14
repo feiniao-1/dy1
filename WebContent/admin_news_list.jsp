@@ -34,7 +34,7 @@ fileName = request.getParameter("fileName");
 fullName = request.getParameter("fullName");
 dhpage = request.getParameter("page");
 searchnr = request.getParameter("searchnr");
-System.out.println("jishu"+jishu);
+System.out.println("jishu"+request.getParameter("paixu"));
 }catch(Exception e){
 	
 }
@@ -77,7 +77,7 @@ int pagetotal=Integer.parseInt(menupage.get(0).getIntView("count"))/10;
 System.out.println("总页数="+pagetotal);
 //排序类型
 String paixu;
-if(param.get("paixu")==null){
+if((param.get("paixu")==null)){
 	paixu="articleid";
 }else if(param.get("paixu").equals("默认")){
 	paixu="articleid";
@@ -88,16 +88,17 @@ if(param.get("paixu")==null){
 }else{
 	paixu="articleid";
 }
+System.out.println("paixu="+paixu);
 String insearch;
 if(request.getParameter("searchnr")!=null){
 	insearch=new String(request.getParameter("searchnr").getBytes("iso-8859-1"),"utf-8");
 }else{
 	insearch="";
 }
-
+System.out.println("search="+insearch);
 //如果urlpage为null
 int intdhpage;
-if(dhpage==null){
+if((request.getParameter("page")==null)||request.getParameter("page").equals("null")){
 	intdhpage=Integer.parseInt("0");
 }else{	
 	intdhpage=Integer.parseInt(dhpage);
@@ -147,7 +148,7 @@ String[] colNames={"新闻ID","标题","类型","作者","创建时间","浏览�
 //博客列表信息
 System.out.println("searchnr"+searchnr);
 List<Mapx<String,Object>> menu;
-if((searchnr==null)||(searchnr=="")){
+if((searchnr==null)||(searchnr=="")||searchnr.equals("null")){
 	menu=DB.getRunner().query("select articleid,articletype,title,author,substring(createtime,1,19) as createtime,zcount,tagid from article where del=? order by "+paixu+" desc limit "+intdhpage*10+",10  ", new MapxListHandler(),"0");
 }else{
 	menu=DB.getRunner().query("select articleid,articletype,title,author,substring(createtime,1,19) as createtime,zcount,tagid from article where del=? and title like '%"+param.get("searchnr")+"%'  ", new MapxListHandler(),"0");
@@ -162,7 +163,7 @@ if((param.get("Action")!=null)&&(param.get("Action").equals("删除"))){
 		%>
 		<script type="text/javascript" language="javascript">
 				alert("删除成功");                                            // 弹出错误信息
-				window.location='admin_news_list.jsp' ;                            // 跳转到登录界面
+				window.location='${pageContext.request.contextPath}/admin_news_list.jsp?page=<%=request.getParameter("page") %>&paixu=<%=param.get("paixu") %>&searchnr=<%= param.get("searchnr")%>' ;                            // 跳转到登录界面
 		</script>
 	<%
 	
@@ -228,9 +229,13 @@ if((param.get("Action")!=null)&&(param.get("Action").equals("删除"))){
 						</tr>
 <script type="text/javascript">
 function test_post<%=j%>() {
-var testform=document.getElementById("subform<%=j%>");
-testform.action="admin_news_list.jsp?aa=<%=j%>";
-testform.submit();
+if (window.confirm("确认删除  <%=menu.get(j).getStringView("title") %>?")) {
+	var testform=document.getElementById("subform<%=j%>");
+	testform.action="admin_news_list.jsp?aa=<%=j%>";
+	testform.submit();
+	} else {
+	alert("操作取消");window.location = "${pageContext.request.contextPath}/admin_news_list.jsp?page=<%=request.getParameter("page") %>&paixu=<%=param.get("paixu") %>&searchnr=<%= param.get("searchnr")%>" ;
+	}// 跳转到登录界面
 }
 </script>
 <%} %>
@@ -239,7 +244,7 @@ testform.submit();
 				</table>
 				<!-- 表格 end -->
 				<!-- 分页start -->
-				<%if((searchnr==null)||(searchnr=="")){ %>
+				<%if((searchnr==null)||(searchnr=="")||(searchnr.equals("null"))){ %>
 								<div class="nav-page">
 								<%if(pagetotal>4){ %>
 								  <ul class="pagination">

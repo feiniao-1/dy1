@@ -158,7 +158,11 @@ if(param.get("Action")!=null && param.get("Action").equals("确定")){
 	tag2=param.get("tag2");
 	tag3=param.get("tag3");
 	tag4=param.get("tag4");
-	zcount=param.get("zcount");
+	if((request.getParameter("zcount")==null)||(request.getParameter("zcount").equals(""))){
+		zcount="100";
+	}else{
+		zcount=param.get("zcount");
+	}
 	leixing=new String(request.getParameter("leixing").getBytes("iso-8859-1"),"utf-8");
 	if((String)session.getAttribute("upimg1")==null){
 		img1=menu.get(0).getStringView("img1");

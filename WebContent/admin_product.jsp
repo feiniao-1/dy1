@@ -75,7 +75,7 @@ int pagetotal=Integer.parseInt(menupage.get(0).getIntView("count"))/10;
 System.out.println("总页数="+pagetotal);
 //如果urlpage为null
 int intdhpage;
-if(dhpage==null){
+if((dhpage==null)||request.getParameter("page").equals("null")){
 	intdhpage=Integer.parseInt("0");
 }else{	
 	intdhpage=Integer.parseInt(dhpage);
@@ -142,7 +142,7 @@ if(request.getParameter("searchnr")!=null){
 String[] colNames={"菜品ID","菜名","英文名","菜品类别","创建时间","销售量","价格","收藏量","操作"};
 //菜品列表信息
 List<Mapx<String,Object>> menu;
-if((searchnr==null)||(searchnr=="")){
+if((searchnr==null)||(searchnr=="")||searchnr.equals("null")){
 	menu=DB.getRunner().query("select productmenuid,productname,productEname,productlei,substring(createtime,1,19) as createtime,count,yprice,shoucang from productmenu where del=? order by "+paixu+" desc limit "+intdhpage*10+",10 ", new MapxListHandler(),"0");
 }else{
 	menu=DB.getRunner().query("select productmenuid,productname,productEname,productlei,substring(createtime,1,19) as createtime,count,yprice,shoucang from productmenu where del=? and productname like '%"+param.get("searchnr")+"%' ", new MapxListHandler(),"0");
@@ -157,7 +157,7 @@ if((param.get("Action")!=null)&&(param.get("Action").equals("删除"))){
 		%>
 		<script type="text/javascript" language="javascript">
 				alert("删除成功");                                            // 弹出错误信息
-				window.location='admin_product.jsp' ;                            // 跳转到登录界面
+				window.location='admin_product.jsp?page=<%=request.getParameter("page") %>&paixu=<%=paixu %>&searchnr=<%= param.get("searchnr")%>' ;                            // 跳转到登录界面
 		</script>
 	<%
 	
@@ -224,9 +224,13 @@ if((param.get("Action")!=null)&&(param.get("Action").equals("删除"))){
 						</tr>
 					<script type="text/javascript">
 					function test_post<%=j%>() {
-					var testform=document.getElementById("subform<%=j%>");
-					testform.action="admin_product.jsp?aa=<%=j%>";
-					testform.submit();
+					if (window.confirm("确认删除  <%=menu.get(j).getStringView("productname") %>?")) {
+						var testform=document.getElementById("subform<%=j%>");
+						testform.action="admin_product.jsp?aa=<%=j%>";
+						testform.submit();
+						} else {
+						alert("操作取消");window.location = "${pageContext.request.contextPath}/admin_product.jsp?page=<%=request.getParameter("page") %>&paixu=<%=paixu %>&searchnr=<%= param.get("searchnr")%>" ;
+						}// 跳转到登录界面
 					}
 					</script>
 					<%} %>
@@ -235,7 +239,7 @@ if((param.get("Action")!=null)&&(param.get("Action").equals("删除"))){
 				</table>
 				<!-- 表格 end -->
 				<!-- 分页start -->
-				<%if((searchnr==null)||(searchnr=="")){ %>
+				<%if((searchnr==null)||(searchnr=="")||(searchnr.equals("null"))){ %>
 								<div class="nav-page">
 								<%if(pagetotal>4){ %>
 								  <ul class="pagination">

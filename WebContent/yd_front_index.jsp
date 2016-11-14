@@ -166,23 +166,23 @@ if (!browser.versions.mobile)
                 <div class="slider">
                   <ul>
                         <li style="float: left; display: inline;">
-                            <a href=""><img src="images/M-banner01.jpg" style="width: 100%; height: 100%;"/></a>
+                            <a href=""><img src="images/M-banner01.jpg"/></a>
                         </li>
                         <li style="float: left; display: inline;"> 
-                            <a href=""><img src="images/M-banner02.jpg" style="width: 100%; height: 100%;"/></a>
+                            <a href=""><img src="images/M-banner02.jpg"/></a>
                         </li>
                         <li style="float: left; display: inline;">
-                            <a href=""><img src="images/M-banner03.jpg" style="width: 100%; height: 100%;"/></a>
+                            <a href=""><img src="images/M-banner03.jpg"/></a>
                         </li>
                         <li style="float: left; display: inline;">
-                            <a href=""><img src="images/M-banner04.jpg" style="width: 100%; height: 100%;"/></a>
+                            <a href=""><img src="images/M-banner04.jpg"/></a>
                         </li>
                   </ul>
                 </div>
             </div>
 	       <script type="text/javascript" src="js/yxMobileSlider.js"></script>
 	       <script>
-	        $(".slider").yxMobileSlider({width: 640, height: 360, during: 3000})
+	        $(".slider").yxMobileSlider({width: 640, height: 280, during: 3000})  //banner格式
 	       </script>
             <!--轮播图end-->
             <!--导航部分开始-->

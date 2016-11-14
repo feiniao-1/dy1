@@ -111,14 +111,15 @@ System.out.println(menu);
 //删除
 String dhid; 
 if((param.get("Action")!=null)&&(param.get("Action").equals("发送"))){
-	dhid=new String(request.getParameter("tagid").getBytes("iso-8859-1"),"utf-8");
-		DB.getRunner().update("update mail set updatetime=?,status=? where mailid=?",df.format(new Date()),"已发送",dhid);
-		%>
-		<script type="text/javascript" language="javascript">
-				alert("状态修改成功");                                            // 弹出错误信息
-				window.location='admin_mail_list.jsp' ;                            // 跳转到登录界面
-		</script>
-	<%
+dhid=new String(request.getParameter("tagid").getBytes("iso-8859-1"),"utf-8");
+DB.getRunner().update("update mail set updatetime=?,status=? where mailid=?",df.format(new Date()),"已发送",dhid);	
+
+%>
+<script type="text/javascript" language="javascript">
+			alert("状态修改成功");
+			window.location = "admin_mail_list.jsp" ;
+</script>
+<%
 	
 }
 %> 
@@ -161,18 +162,22 @@ if((param.get("Action")!=null)&&(param.get("Action").equals("发送"))){
 									<input type="hidden" value="发送" name="Action">
 								</form>
 							<%if(menu.get(j).getStringView("status").equals("")){ %>
-							<a class="zhuce"  name="发送" onclick="test_post<%=j %>()">发送</a>
+							 <a class="zhuce"  name="发送" onclick="test_post<%=j %>()" >发送</a>
 							<%}else{ %>
 							<span>已操作</span>
 							<%} %>
-								
 							</td>
 						</tr>
 <script type="text/javascript">
 function test_post<%=j %>() {
-var testform=document.getElementById("subform<%=j %>");
-testform.action="admin_mail_list.jsp?aa=<%=j %>";
-testform.submit();
+	if (window.confirm("确认发送  <%=menu.get(j).getStringView("username") %>?")) {
+		var testform=document.getElementById("subform<%=j %>");
+		testform.action="admin_mail_list.jsp?aa=<%=j %>";
+		testform.submit();
+		} else {
+		alert("操作取消");window.location = "admin_mail_list.jsp" ;
+		}// 跳转到登录界面
+
 }
 </script>
 <%} %>
