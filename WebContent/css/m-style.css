@@ -182,6 +182,9 @@ a {
 .footer .footer-title .menu{background: url(../images/icon06.png) no-repeat; background-size: 24px;}
 .footer .footer-title .us{background: url(../images/icon07.png) no-repeat; background-size: 24px;}
 .footer .footer-title .personal{background: url(../images/icon08.png) no-repeat; background-size: 24px;}
+.copyright{background: #f0f0f0; padding:10px; box-sizing: border-box; text-align: center;}
+.copyright .terminal{ margin-bottom: 5px;}
+.copyright .terminal span{ margin: 0 10px;}
 /*妫ｆ牠銆夊锟芥慨濯弉d*/
 /*閻у妾板▔銊ュ斀妞ょ敻娼板锟芥慨锟�*/
 .wrapbox{ width: 100%; height:100%!important; background:url(../images/M-bg.jpg) no-repeat center; background-size: cover; position: relative;}

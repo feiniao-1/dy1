@@ -112,7 +112,7 @@ if(Integer.parseInt(index_page)==1){
     }; 
  
 if (browser.versions.mobile){
-	window.location.href = 'yd_front_index.jsp';
+	//window.location.href = 'yd_front_index.jsp';
 }
 </script>
 		<!--[if it iE8]>

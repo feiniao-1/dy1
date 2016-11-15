@@ -239,6 +239,12 @@ if (!browser.versions.mobile)
             	</div>
             </div>
             <!--主内容区结束-->
+             <!--版权信息开始-->
+            <div class="copyright">
+            	<p class="terminal"><a href="yd_front_index.jsp">手机版</a><span>|</span><a href="front_index1.jsp">电脑版</a><span>|</span><a href="javascript:;" id="topcontrol">返回顶部</a></p>
+            	<p>© Copyright 2016. 京ICP备15008545号</p>
+            </div>
+            <!--版权信息结束-->
             <div style="height: 50px; width: 100%;"></div>
             <!--底部内容开始-->
             <div class="footer">
@@ -272,5 +278,13 @@ if (!browser.versions.mobile)
             <!--底部内容结束-->
 		</div>
 	</body>
+		<!--返回顶部js-->
+		<script>
+		$(function(e) {
+		    $("#topcontrol").click(function(event) {
+		        $("body,html").stop().animate({"scrollTop":0},1000);//一秒钟时间回到顶部
+		    });
+        })
+	 </script>
 </html>
 
