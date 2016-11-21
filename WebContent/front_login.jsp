@@ -25,7 +25,7 @@ if(param.get("opt")!=null && param.get("opt").equals("login")){
 		}else if(listAll.get(0).getStringView("password").equals(password2)){//登陆成功
 			System.out.println(" password YES");
 			G.setCookie("token", G.getToken(listAll.get(0).getInt("userid"),param.get("password")), response);
-			response.sendRedirect("admin_news_list.jsp");
+			response.sendRedirect("admin/admin_index.jsp");
 			session.setAttribute("username", param.get("str"));
 			return;
 		}else{

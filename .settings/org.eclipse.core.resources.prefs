@@ -1,4 +1,8 @@
 eclipse.preferences.version=1
+encoding//WebContent/admin_add.jsp=UTF-8
+encoding//WebContent/admin_index.jsp=UTF-8
+encoding//WebContent/admin_info.jsp=UTF-8
+encoding//WebContent/admin_list.jsp=UTF-8
 encoding//WebContent/b.jsp=UTF-8
 encoding//WebContent/css/m-style.css=UTF-8
 encoding//WebContent/css/style.css=UTF-8

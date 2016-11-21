@@ -243,9 +243,11 @@ if(<%=xwlei%>==5){
 										</div>
 										<div class="cell_primary">
 											<a href="front_news-inner.jsp?page=0&tagid=<%=one.getIntView("tagid") %>" target="_blank"><h3 class="color-dd2727 mb15"><%=one.getStringView("title") %></h3></a>	
+											<a href="front_news-inner.jsp?page=0&tagid=<%=one.getIntView("tagid") %>" class="line3 color-666666">
 											<div class="mb20 txt-indent">
-											<a href="front_news-inner.jsp?page=0&tagid=<%=one.getIntView("tagid") %>" class="line3 color-666666"><%=one.getStringView("content") %></a>
+											<%=one.getStringView("content") %>
 											</div>
+											</a>
 											<div class="color-666666">来自：
 											<%if(one.getStringView("origin").equals("")){ %>
 											<%=authorxx.get(0).getStringView("username") %>
@@ -276,9 +278,11 @@ if(<%=xwlei%>==5){
 										</div>
 										<div class="cell_primary">
 											<a href="front_news-inner.jsp?page=0&tagid=<%=one.getIntView("tagid") %>" target="_blank"><h3 class="color-dd2727 mb15"><%=one.getStringView("title") %></h3></a>	
+											<a href="front_news-inner.jsp?page=0&tagid=<%=one.getIntView("tagid") %>" class="line3 color-666666">
 											<div class="mb20 txt-indent">
-													<a href="front_news-inner.jsp?page=0&tagid=<%=one.getIntView("tagid") %>" class="line3 color-666666"><%=one.getStringView("content") %></a>
+											<%=one.getStringView("content") %>
 											</div>
+											</a>
 											<div class="color-666666">来自：
 											<%if(one.getStringView("origin").equals("")){ %>
 											<%=authorxx.get(0).getStringView("username") %>
@@ -354,9 +358,11 @@ if(<%=xwlei%>==5){
 									</div>
 									<div class="cell_primary">
 										<a href="front_news-inner.jsp?page=0&tagid=<%=one.getIntView("tagid") %>" target="_blank"><h3 class="color-dd2727 mb15"><%=one.getStringView("title") %></h3></a>	
-										<div class="mb20 txt-indent">
-												<a href="front_news-inner.jsp?page=0&tagid=<%=one.getIntView("tagid") %>" class="line3 color-666666"><%=one.getStringView("content") %></a>
-										</div>
+										<a href="front_news-inner.jsp?page=0&tagid=<%=one.getIntView("tagid") %>" class="line3 color-666666">
+											<div class="mb20 txt-indent">
+											<%=one.getStringView("content") %>
+											</div>
+											</a>
 										
 										<div class="color-666666">来自：
 											<%if(one.getStringView("origin").equals("")){ %>
@@ -433,9 +439,11 @@ if(<%=xwlei%>==5){
 									</div>
 									<div class="cell_primary">
 										<a href="front_news-inner.jsp?page=0&tagid=<%=one.getIntView("tagid") %>" target="_blank"><h3 class="color-dd2727 mb15"><%=one.getStringView("title") %></h3></a>	
-										<div class="mb20 txt-indent">
-												<a href="front_news-inner.jsp?page=0&tagid=<%=one.getIntView("tagid") %>" class="line3 color-666666"><%=one.getStringView("content") %></a>
-										</div>
+										<a href="front_news-inner.jsp?page=0&tagid=<%=one.getIntView("tagid") %>" class="line3 color-666666">
+											<div class="mb20 txt-indent">
+											<%=one.getStringView("content") %>
+											</div>
+											</a>
 										
 										<div class="color-666666">来自：
 											<%if(one.getStringView("origin").equals("")){ %>
@@ -512,9 +520,11 @@ if(<%=xwlei%>==5){
 									</div>
 									<div class="cell_primary">
 										<a href="front_news-inner.jsp?page=0&tagid=<%=one.getIntView("tagid") %>" target="_blank"><h3 class="color-dd2727 mb15"><%=one.getStringView("title") %></h3></a>	
-										<div class="mb20 txt-indent">
-												<a href="front_news-inner.jsp?page=0&tagid=<%=one.getIntView("tagid") %>" class="line3 color-666666"><%=one.getStringView("content") %></a>
-										</div>
+										<a href="front_news-inner.jsp?page=0&tagid=<%=one.getIntView("tagid") %>" class="line3 color-666666">
+											<div class="mb20 txt-indent">
+											<%=one.getStringView("content") %>
+											</div>
+											</a>
 										
 										<div class="color-666666">来自：
 											<%if(one.getStringView("origin").equals("")){ %>
@@ -591,9 +601,11 @@ if(<%=xwlei%>==5){
 									</div>
 									<div class="cell_primary">
 										<a href="front_news-inner.jsp?page=0&tagid=<%=one.getIntView("tagid") %>" target="_blank"><h3 class="color-dd2727 mb15"><%=one.getStringView("title") %></h3></a>	
-										<div class="mb20 txt-indent">
-												<a href="front_news-inner.jsp?page=0&tagid=<%=one.getIntView("tagid") %>" class="line3 color-666666"><%=one.getStringView("content") %></a>
-										</div>
+										<a href="front_news-inner.jsp?page=0&tagid=<%=one.getIntView("tagid") %>" class="line3 color-666666">
+											<div class="mb20 txt-indent">
+											<%=one.getStringView("content") %>
+											</div>
+											</a>
 										
 										<div class="color-666666">来自：
 											<%if(one.getStringView("origin").equals("")){ %>
