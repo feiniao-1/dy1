@@ -225,8 +225,8 @@ if(param.get("Action")!=null && param.get("Action").equals("编辑文章")){
         		<h5 class="mb10">PC封面图<span style="color:red;">*(240*180)</span></h5> 
 					<form action="${pageContext.request.contextPath }/uploadServlet?url=newspublish1&caiid=<%= caiid%>&shuzi=1&page=<%=request.getParameter("page") %>&paixu=<%=request.getParameter("paixu") %>&searchnr=<%= param.get("searchnr")%>" method="post" enctype="multipart/form-data">
 						<div class="mb10">
-						<input type="file" name="attr_file1" style="display:inline-block; width:220px;">
-						<input type="submit" value="上传"> 
+						<input type="file" id="url1" name="img" class="input tips" style="width:25%; float:left;"  value=""  data-toggle="hover" data-place="right" data-image="" />
+						<input type="submit" value="浏览上传" class="button bg-blue margin-left" style="float:left;" > 
 						<%if(shuzi!=null&&shuzi.equals("1")){
 							if(upimg1==null){
 								//session.removeAttribute("fullName2");
@@ -251,16 +251,17 @@ if(param.get("Action")!=null && param.get("Action").equals("编辑文章")){
 							<%} %> 	
 							</div>
 				  	 </form>
+				  	 <br>
 						 <%if((String)session.getAttribute("upimg1")!=null){ %>
 							 	<img alt="" src="../upload/<%=(String)session.getAttribute("upimg1") %>" style="width:200px!important;" height="150px">
 							 <%}else{ %>
-							 	<img alt="" src="../<%=menu.get(0).getStringView("img1") %>" style="width:200px!important;" height="150px">
+							 	<img alt="" src="../<%=menu.get(0).getStringView("img1") %>" style="width:50px!important;" height="50px">
 							 <%} %>
 						<h5 class="mb10">PC详情图片<span style="color:red;">*(798*532)</span></h5> 
 						<form action="${pageContext.request.contextPath }/uploadServlet?url=newspublish1&caiid=<%= caiid%>&shuzi=2&page=<%=request.getParameter("page") %>&paixu=<%=request.getParameter("paixu") %>&searchnr=<%= param.get("searchnr")%>" method="post" enctype="multipart/form-data">
 						<div class="mb10">
-						<input type="file" name="attr_file1" style="display:inline-block; width:220px;">						
-						<input type="submit" value="上传">  	
+						<input type="file" id="url1" name="img" class="input tips" style="width:25%; float:left;"  value=""  data-toggle="hover" data-place="right" data-image="" />
+						<input type="submit" value="浏览上传" class="button bg-blue margin-left" style="float:left;" > 	
 						<%if(shuzi!=null&&shuzi.equals("2")){
 							if(upimg2==null){
 								//session.removeAttribute("fullName2");
@@ -285,16 +286,17 @@ if(param.get("Action")!=null && param.get("Action").equals("编辑文章")){
 							<%} %>
 						</div>
 				  	 </form>
+				  	 <br>
 						 <%if((String)session.getAttribute("upimg2")!=null){ %>
 							 	<img alt="" src="../upload/<%=(String)session.getAttribute("upimg2") %>" style="width:220px!important;" height="150px">
 							 <%}else{ %>
-							 	<img alt="" src="../<%=menu.get(0).getStringView("img2") %>" style="width:220px!important;" height="150px">
+							 	<img alt="" src="../<%=menu.get(0).getStringView("img2") %>" style="width:50px!important;" height="50px">
 							 <%} %>
 					<h5 class="mb10">移动端封面图<span style="color:red;">*</span></h5> 
 					<form action="${pageContext.request.contextPath }/uploadServlet?url=newspublish1&caiid=<%= caiid%>&shuzi=3&page=<%=request.getParameter("page") %>&paixu=<%=request.getParameter("paixu") %>&searchnr=<%= param.get("searchnr")%>" method="post" enctype="multipart/form-data">
 						<div class="mb10">
-						<input type="file" name="attr_file1" style="display:inline-block; width:220px;">
-						<input type="submit" value="上传">  
+						<input type="file" id="url1" name="img" class="input tips" style="width:25%; float:left;"  value=""  data-toggle="hover" data-place="right" data-image="" />
+						<input type="submit" value="浏览上传" class="button bg-blue margin-left" style="float:left;" > 
 						<%if(shuzi!=null&&shuzi.equals("3")){
 							if(upydimg1==null){
 								//session.removeAttribute("fullName2");
@@ -319,16 +321,17 @@ if(param.get("Action")!=null && param.get("Action").equals("编辑文章")){
 							<%} %>
 						</div>
 				  	 </form>
+				  	 <br>
 						 <%if((String)session.getAttribute("upydimg1")!=null){ %>
 							 	<img alt="" src="../upload/<%=(String)session.getAttribute("upydimg1") %>" style="width:120px!important;" height="90px">
 							 <%}else{ %>
-							 	<img alt="" src="../<%=menu.get(0).getStringView("ydimg1") %>" style="width:120px!important;" height="90px">
+							 	<img alt="" src="../<%=menu.get(0).getStringView("ydimg1") %>" style="width:50px!important;" height="50px">
 							 <%} %>
 					<h5 class="mb10">移动端详情图片<span style="color:red;">*</span></h5> 
 					<form action="${pageContext.request.contextPath }/uploadServlet?url=newspublish1&caiid=<%= caiid%>&shuzi=4&page=<%=request.getParameter("page") %>&paixu=<%=request.getParameter("paixu") %>&searchnr=<%= param.get("searchnr")%>" method="post" enctype="multipart/form-data">
 						<div class="mb10">
-						<input type="file" name="attr_file1" style="display:inline-block; width:220px;">
-						<input type="submit" value="上传" style="display:inline-block;">  
+						<input type="file" id="url1" name="img" class="input tips" style="width:25%; float:left;"  value=""  data-toggle="hover" data-place="right" data-image="" />
+						<input type="submit" value="浏览上传" class="button bg-blue margin-left" style="float:left;" >   
 						<%if(shuzi!=null&&shuzi.equals("4")){
 							if(upydimg2==null){
 								//session.removeAttribute("fullName2");
@@ -353,10 +356,11 @@ if(param.get("Action")!=null && param.get("Action").equals("编辑文章")){
 							<%} %>
 						</div>
 				  	 </form>
+				  	 <br>
 						 <%if((String)session.getAttribute("upydimg2")!=null){ %>
 							 	<img alt="" src="../upload/<%=(String)session.getAttribute("upydimg2") %>" style="width:220px!important;" height="150px">
 							 <%}else{ %>
-							 	<img alt="" src="../<%=menu.get(0).getStringView("ydimg2") %>" style="width:220px!important;" height="150px">
+							 	<img alt="" src="../<%=menu.get(0).getStringView("ydimg2") %>" style="width:50px!important;" height="50px">
 							 <%} %>
 				</div>
 	<!-- 图片上传end -->
